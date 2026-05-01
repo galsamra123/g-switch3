@@ -12,7 +12,7 @@ class Game:
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         pygame.display.set_caption('G-switch')
 
-        self.tmx_maps = {0: load_pygame('graphics/map.tmx')}
+        self.tmx_maps = {0: load_pygame('graphics/maptest1.tmx')}
         # Creating a dic that will contain all the level to swtich
         self.current_stage = Level(self.tmx_maps[0])
 
