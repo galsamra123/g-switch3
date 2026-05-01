@@ -1,5 +1,6 @@
 import pygame
 import logging
+import sys
 from pytmx import load_pygame
 from level import Level
 from settings import *
@@ -7,6 +8,7 @@ from settings import *
 
 class Game:
     def __init__(self):
+        self.clock = pygame.time.Clock()
         pygame.init()
         # Create the display surface
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -32,6 +34,7 @@ class Game:
 
             self.current_stage.run()
             pygame.display.update()
+            self.clock.tick(FPS)
 
 
 if __name__ == '__main__':
