@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="300" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="4">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="300" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="6">
  <tileset firstgid="1" name="sheet" tilewidth="32" tileheight="32" tilecount="256" columns="16">
   <image source="setpics/Spritesheet/sheet.png" width="512" height="512"/>
  </tileset>
@@ -60,7 +60,7 @@
  <objectgroup id="3" name="player1" locked="1">
   <object id="2" x="96" y="510.5" width="32.5" height="34"/>
  </objectgroup>
- <objectgroup id="4" name="win" locked="1">
-  <object id="3" x="3164" y="38" width="32" height="446"/>
+ <objectgroup id="4" name="win">
+  <object id="3" x="3103.39" y="7.69697" width="92.6061" height="476.303"/>
  </objectgroup>
 </map>

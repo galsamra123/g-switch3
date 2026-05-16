@@ -14,7 +14,7 @@ class Level:
         self.win_sprites = pygame.sprite.Group()
         self.setup(tmx_map)
         self.camera_x = 0
-        self.camera_xchanger = 5
+        self.camera_xchanger = 2
 
     def setup(self, tmx_map):
         logging.info("LAYERS:")
