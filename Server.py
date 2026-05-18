@@ -31,21 +31,26 @@ def handle_connection(client_socket, client_address):
                 print('game over')
                 for client in clients:
                     protocol_send(client, 'game over'.encode())
+                continue
             if data.decode() == 'again':
                 print('again')
                 for client in clients:
                     protocol_send(client, 'start'.encode())
+                continue
             print(client_address, "sent:", data.decode())
             for client in clients:
                 if client != client_socket:
                     protocol_send(client, data)
 
-    except socket.error as err:
+    except (socket.error, ConnectionError)as err:
         print('received socket exception - ' + str(err))
 
     finally:
         if client_socket in clients:
             clients.remove(client_socket)
+        error_msg = f"0,0,True,False".encode()
+        for client in clients:
+            protocol_send(client, error_msg)
         client_socket.close()
 
 

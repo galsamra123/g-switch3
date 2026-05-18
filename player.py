@@ -22,7 +22,7 @@ class Player(pygame.sprite.Sprite):
         self.gravity = 1
         self.y_changer = 10
         self.y_speed = 0
-        self.x_changer = 4
+        self.x_changer = 6
 
         # collision
         self.collision_sprites = collision_sprites

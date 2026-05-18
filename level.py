@@ -21,7 +21,7 @@ class Level:
         self.p2 = P2((96, 543), p2_surf, self.all_sprites)
 
         self.camera_x = 0
-        self.camera_xchanger = 2
+        self.camera_xchanger = 4
 
     def setup(self, tmx_map):
         logging.info("LAYERS:")
@@ -47,16 +47,20 @@ class Level:
             logger.info(f"x: {obj.x} y: {obj.y}")
 
 
-    def run(self, game_over):
+    def run(self, match_over):
         self.all_sprites.update()
         # if not self.player.is_dead and not self.player.won:
-        if not game_over:
+        if not match_over:
             self.camera_x += self.camera_xchanger
-        if self.player.rect.right < self.camera_x:
-            self.player.die()
+        if not self.player.is_dead and not self.player.won:
+            if self.player.rect.right < self.camera_x:
+                self.player.die()
+
         self.window.fill(('black'))
+
         if hasattr(self, 'bg') and self.bg: # cheks if there is an atribute bg and if not None
             bg_width = self.bg.get_width()
+
             for x in range(0, self.map_width, bg_width):
                 self.window.blit(self.bg, (x - self.camera_x, 0))
             for sprite in self.all_sprites:

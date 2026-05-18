@@ -9,7 +9,7 @@ import socket
 from threading import Thread
 from Network import Connection
 from protocol import *
-
+from datetime import datetime
 
 class Game:
     def __init__(self):
@@ -54,16 +54,15 @@ class Game:
             p1_dead = self.current_stage.player.is_dead
             p1_won = self.current_stage.player.won
 
-            if (p2_dead or p2_won) and (p1_dead or p1_won):
-                self.network.send('game over'.encode())
-                self.game_over = True
+
 
     def run(self):
         while True:
             # 1. Event Loop
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    quit_msg = f"{0},{0},{True},{False}"
+                    player = self.current_stage.player
+                    quit_msg = f"{player.rect.x},{player.rect.y},{True},{False}"
                     self.network.send(quit_msg.encode())
                     pygame.quit()
                     sys.exit()
@@ -77,9 +76,27 @@ class Game:
             if self.started or self.game_over:
                 self.current_stage.run(self.game_over)
 
-            player = self.current_stage.player
-            msg = f"{player.rect.x},{player.rect.y},{player.is_dead},{player.won}"
-            self.network.send(msg.encode())
+                p1_finished = self.current_stage.player.is_dead or self.current_stage.player.won
+                p2_finished = self.current_stage.p2.is_dead or self.current_stage.p2.won
+
+                print(datetime.now(), ": ", "p1 dead:", self.current_stage.player.is_dead)
+                print(datetime.now(), ": ", "p1 won:", self.current_stage.player.won)
+
+                print(datetime.now(), ": ", "p2 dead:", self.current_stage.p2.is_dead)
+                print(datetime.now(), ": ", "p2 won:", self.current_stage.p2.won)
+
+                print("game over:", self.game_over)
+
+                if not self.game_over and p1_finished and p2_finished:
+                    self.network.send('game over'.encode())
+                    self.game_over = True
+                    self.started = False
+
+            if self.started:
+                player = self.current_stage.player
+                msg = f"{player.rect.x},{player.rect.y},{player.is_dead},{player.won}"
+                self.network.send(msg.encode())
+
             pygame.display.update()
             self.clock.tick(FPS)
 
