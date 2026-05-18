@@ -10,8 +10,6 @@ from threading import Thread
 from Network import Connection
 from protocol import *
 
-SERVER_IP = '127.0.0.1'
-
 
 class Game:
     def __init__(self):
