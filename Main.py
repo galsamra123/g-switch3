@@ -28,8 +28,8 @@ class Game:
         self.started = False
 
         Thread(
-            target = self.receive_from_server,
-            daemon = True
+            target=self.receive_from_server,
+            daemon=True
         ).start()
 
     def receive_from_server(self):
@@ -40,11 +40,19 @@ class Game:
             if msg.decode() == "start":
                 self.started = True
                 continue
+            if msg.decode() == 'game over':
+                self.started = False
+                continue
             msg = msg.decode()
             x, y, dead, won = msg.split(',')
             self.current_stage.p2.update_pos(int(x), int(y))
-            self.current_stage.p2.is_dead = dead == 'True'
-            self.current_stage.p2.won = won == 'True'
+            p2_dead = self.current_stage.p2.is_dead = dead == 'True'
+            p2_won = self.current_stage.p2.won = won == 'True'
+            p1_dead = self.current_stage.player.is_dead
+            p1_won = self.current_stage.player.won
+
+            if (p2_dead or p2_won) and (p1_dead or p1_won):
+                self.network.send('game over'.encode())
 
     def run(self):
         while True:

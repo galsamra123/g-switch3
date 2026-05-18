@@ -2,6 +2,7 @@ import sys
 import socket
 from threading import Thread
 from protocol import *
+from player import Player
 
 
 QUEUE_SIZE = 4  # how many people can connect
@@ -26,7 +27,10 @@ def handle_connection(client_socket, client_address):
             if not data:
                 print("Client disconnected:", client_address)
                 break
-
+            if data.decode() == 'game over':
+                print('game over')
+                for client in clients:
+                    protocol_send(client, 'game over'.encode())
             print(client_address, "sent:", data.decode())
             for client in clients:
                 if client != client_socket:

@@ -47,11 +47,9 @@ class Player(pygame.sprite.Sprite):
 
     def die(self):
         self.is_dead = True
-        print("player dead")
 
     def win(self):
         self.won = True
-        print("player win")
 
     def move(self):
         # X movement + horizontal collision
