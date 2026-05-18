@@ -6,7 +6,7 @@ from protocol import *
 
 QUEUE_SIZE = 4  # how many people can connect
 IP = '0.0.0.0'
-PORT = 8080
+PORT = 5002
 MAX_CLIENTS = 2
 clients = []
 
@@ -22,7 +22,7 @@ def handle_connection(client_socket, client_address):
         print('New connection received from ' + client_address[0] + ':' + str(client_address[1]))
 
         while True:
-            confirmation, data = protocol_recive(client_socket)
+            data = protocol_recive(client_socket)
             if not data:
                 print("Client disconnected:", client_address)
                 break
@@ -30,7 +30,7 @@ def handle_connection(client_socket, client_address):
             print(client_address, "sent:", data.decode())
             for client in clients:
                 if client != client_socket:
-                    protocol_send(client, "move", data)
+                    protocol_send(client, data)
 
     except socket.error as err:
         print('received socket exception - ' + str(err))
@@ -55,11 +55,15 @@ def main():
             if len(clients) >= MAX_CLIENTS:
                 print("server full")
                 print("Client disconnected:", client_address)
-                protocol_send(client_socket, "print", "server is full".encode())
+                protocol_send(client_socket, "server is full".encode())
                 client_socket.close()
                 continue
+
             clients.append(client_socket)
-            protocol_send(client_socket, "print", "connected to server".encode())
+            protocol_send(client_socket, "connected to server".encode())
+            if len(clients) == MAX_CLIENTS:
+                for client in clients:
+                    protocol_send(client, "start".encode())
             print('Accepted connection from: ', client_address)
             thread = Thread(target=handle_connection,
                             args=(client_socket, client_address))

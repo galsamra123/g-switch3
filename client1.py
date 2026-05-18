@@ -4,18 +4,17 @@ from protocol import *
 
 
 SERVER_IP = '127.0.0.1'
-SERVER_PORT = 8080
+SERVER_PORT = 5001
 
 
 def receive_msg(client_socket):
     while True:
         try:
-            confirmation, data = protocol_recive(client_socket)
-            if confirmation == "move":
-                x, y = data.decode().split(",")
-                x = int(x)
-                y = int(y)
-                print("other_player = ", "x= ", x, "y= ", y)
+            data = protocol_recive(client_socket)
+            x, y = data.decode().split(",")
+            x = int(x)
+            y = int(y)
+            print("other_player = ", "x= ", x, "y= ", y)
 
         except ValueError:
             print("invalid input: ", data.decode())

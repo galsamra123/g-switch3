@@ -2,6 +2,7 @@ from settings import *
 import pygame
 from sprites import  Sprite
 from player import Player
+from P2 import P2
 import logging
 logger = logging.getLogger(__name__)
 class Level:
@@ -13,6 +14,12 @@ class Level:
         self.death_sprites = pygame.sprite.Group()
         self.win_sprites = pygame.sprite.Group()
         self.setup(tmx_map)
+
+        p2_surf = pygame.image.load("graphics/player2.png").convert()
+        p2_surf.set_colorkey("white")
+        p2_surf = pygame.transform.scale(p2_surf, (TILE_SIZE, TILE_SIZE))
+        self.p2 = P2((96, 543), p2_surf, self.all_sprites)
+
         self.camera_x = 0
         self.camera_xchanger = 2
 
@@ -38,16 +45,18 @@ class Level:
             self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
                                  self.win_sprites,self.map_width,self.map_height)
             logger.info(f"x: {obj.x} y: {obj.y}")
+
+
     def run(self):
         self.all_sprites.update()
-        if not self.player.is_dead and not self.player.won:
-            self.camera_x += self.camera_xchanger
-            if self.player.rect.right < self.camera_x:
-                self.player.die()
-            self.window.fill(('black'))
-            if hasattr(self, 'bg') and self.bg:
-                bg_width = self.bg.get_width()
-                for x in range(0, self.map_width, bg_width):
-                    self.window.blit(self.bg, (x - self.camera_x, 0))
-                for sprite in self.all_sprites:
-                    self.window.blit(sprite.image, (sprite.rect.x-self.camera_x, sprite.rect.y))
+        # if not self.player.is_dead and not self.player.won:
+        self.camera_x += self.camera_xchanger
+        if self.player.rect.right < self.camera_x:
+            self.player.die()
+        self.window.fill(('black'))
+        if hasattr(self, 'bg') and self.bg: # cheks if there is an atribute bg and if not None
+            bg_width = self.bg.get_width()
+            for x in range(0, self.map_width, bg_width):
+                self.window.blit(self.bg, (x - self.camera_x, 0))
+            for sprite in self.all_sprites:
+                self.window.blit(sprite.image, (sprite.rect.x-self.camera_x, sprite.rect.y))

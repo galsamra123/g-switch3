@@ -3,10 +3,12 @@ from settings import *
 
 
 class P2(pygame.sprite.Sprite):
-    def __init__(self, pos, surf, groups,):
+    def __init__(self, pos, surf, groups):
         super().__init__(groups)
         self.image = surf
         self.rect = self.image.get_rect(topleft=pos)
+        self.dead = False
+        self.won = False
 
-    def update(self, x, y):
+    def update_pos(self, x, y):
         self.rect.topleft = (x, y)

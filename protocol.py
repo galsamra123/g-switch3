@@ -8,27 +8,24 @@ HEADER_SIZE = 4
 # big or little indian is set in the operation
 
 
-def protocol_send(sock, confirmation, data):
+def protocol_send(sock, data):
     """
     Send a response message back to the client.
 
     :param sock: Client socket to send data to.
-    :param confirmation: Command result (success/fail).
     :param data: Payload data to send (bytes).
     :return: None
     """
-    msg = confirmation.encode() + b',' + data
-    final_length = struct.pack("!I", len(msg))
-    final_msg = final_length + msg
-    sock.sendall(final_msg)
+    final_length = struct.pack("!I", len(data))
+    sock.sendall(final_length+data)
 
 
 def protocol_recive(sock):
     """
-    Receive a message from the client and return (confirmation, data).
+    Receive a message from the client and return (data).
 
     :param sock: Client socket to read from.
-    :return: Tuple of (confirmation: str, data: bytes)
+    :return:  data as bytes
     """
     recive = 0
     recived = b""
@@ -52,8 +49,4 @@ def protocol_recive(sock):
         recive += len(byts)
         recived += byts
 
-    comma = recived.find(b',')
-    confirmation = recived[:comma].decode()
-    data = recived[comma + 1:]
-
-    return confirmation, data
+    return recived
