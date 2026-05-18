@@ -47,10 +47,11 @@ class Level:
             logger.info(f"x: {obj.x} y: {obj.y}")
 
 
-    def run(self):
+    def run(self, game_over):
         self.all_sprites.update()
         # if not self.player.is_dead and not self.player.won:
-        self.camera_x += self.camera_xchanger
+        if not game_over:
+            self.camera_x += self.camera_xchanger
         if self.player.rect.right < self.camera_x:
             self.player.die()
         self.window.fill(('black'))

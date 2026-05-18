@@ -31,6 +31,10 @@ def handle_connection(client_socket, client_address):
                 print('game over')
                 for client in clients:
                     protocol_send(client, 'game over'.encode())
+            if data.decode() == 'again':
+                print('again')
+                for client in clients:
+                    protocol_send(client, 'start'.encode())
             print(client_address, "sent:", data.decode())
             for client in clients:
                 if client != client_socket:

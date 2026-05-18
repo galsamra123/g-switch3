@@ -26,6 +26,8 @@ class Game:
         # server connection
         self.network = Connection()
         self.started = False
+        self.game_over = False
+        self.i_quit = False
 
         Thread(
             target=self.receive_from_server,
@@ -42,6 +44,7 @@ class Game:
                 continue
             if msg.decode() == 'game over':
                 self.started = False
+                self.game_over = True
                 continue
             msg = msg.decode()
             x, y, dead, won = msg.split(',')
@@ -53,12 +56,15 @@ class Game:
 
             if (p2_dead or p2_won) and (p1_dead or p1_won):
                 self.network.send('game over'.encode())
+                self.game_over = True
 
     def run(self):
         while True:
             # 1. Event Loop
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
+                    quit_msg = f"{0},{0},{True},{False}"
+                    self.network.send(quit_msg.encode())
                     pygame.quit()
                     sys.exit()
 
@@ -68,8 +74,8 @@ class Game:
                         logging.info(self.current_stage.player.gravity)
                         self.current_stage.player.flip()
                         logging.info(self.current_stage.player.gravity)
-            if self.started:
-                self.current_stage.run()
+            if self.started or self.game_over:
+                self.current_stage.run(self.game_over)
 
             player = self.current_stage.player
             msg = f"{player.rect.x},{player.rect.y},{player.is_dead},{player.won}"
