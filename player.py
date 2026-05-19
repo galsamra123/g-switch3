@@ -55,7 +55,7 @@ class Player(pygame.sprite.Sprite):
         # X movement + horizontal collision
         self.rect.x += self.x_changer
         if self.rect.right >= self.map_width:
-            self.rect.right = self.map_width - 32
+            self.rect.right = self.map_width - 128
         self.collision('horizontal')
         # Y movement + vertical collision
         self.y_speed = self.y_changer * self.gravity
@@ -68,12 +68,12 @@ class Player(pygame.sprite.Sprite):
         for sprite in self.collision_sprites:
             if sprite.rect.colliderect(self.rect):  # checks if the player collides with the wall sprites
                 if axis == 'horizontal':  # (x axis)
-                    # left
+                    # player hit the wall from the right -> put his left on wall right
                     logger.info('x.overlap')
                     if self.rect.left <= sprite.rect.right and self.last_rect.left >= sprite.last_rect.right:
                         self.rect.left = sprite.rect.right
 
-                    # right
+                    # player hit the wall from the left -> put his right on wall left
                     if self.rect.right >= sprite.rect.left and self.last_rect.right <= sprite.last_rect.left:
                         self.rect.right = sprite.rect.left
 
@@ -96,6 +96,23 @@ class Player(pygame.sprite.Sprite):
         for sprite in self.win_sprite:
             if sprite.rect.colliderect(self.rect):
                 self.win()
+
+    def collision_with_player(self, other):
+        if self.is_dead or self.won:
+            return
+
+        if not self.rect.colliderect(other.rect):
+            return
+
+        if self.gravity == 1:
+            # falling down: self on top of other
+            if self.rect.bottom >= other.rect.top >= self.last_rect.bottom:
+                self.rect.bottom = other.rect.top
+
+        elif self.gravity == -1:
+            # falling up: self under other
+            if self.rect.top <= other.rect.bottom <= self.last_rect.top:
+                self.rect.top = other.rect.bottom
 
     def update(self):
         if self.is_dead or self.won:

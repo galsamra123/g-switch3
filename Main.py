@@ -11,6 +11,7 @@ from Network import Connection
 from protocol import *
 from datetime import datetime
 
+
 class Game:
     def __init__(self):
         self.clock = pygame.time.Clock()
@@ -49,12 +50,8 @@ class Game:
             msg = msg.decode()
             x, y, dead, won = msg.split(',')
             self.current_stage.p2.update_pos(int(x), int(y))
-            p2_dead = self.current_stage.p2.is_dead = dead == 'True'
-            p2_won = self.current_stage.p2.won = won == 'True'
-            p1_dead = self.current_stage.player.is_dead
-            p1_won = self.current_stage.player.won
-
-
+            self.current_stage.p2.is_dead = dead == 'True'  # comes as text so needed to turn to bool
+            self.current_stage.p2.won = won == 'True'
 
     def run(self):
         while True:
@@ -79,13 +76,8 @@ class Game:
                 p1_finished = self.current_stage.player.is_dead or self.current_stage.player.won
                 p2_finished = self.current_stage.p2.is_dead or self.current_stage.p2.won
 
-                print(datetime.now(), ": ", "p1 dead:", self.current_stage.player.is_dead)
-                print(datetime.now(), ": ", "p1 won:", self.current_stage.player.won)
-
-                print(datetime.now(), ": ", "p2 dead:", self.current_stage.p2.is_dead)
-                print(datetime.now(), ": ", "p2 won:", self.current_stage.p2.won)
-
-                print("game over:", self.game_over)
+                # if game_over == false and both finished trigger happen once cause
+                # right after game_over turns to ==true
 
                 if not self.game_over and p1_finished and p2_finished:
                     self.network.send('game over'.encode())

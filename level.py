@@ -50,9 +50,9 @@ class Level:
     def run(self, match_over):
         self.all_sprites.update()
         # if not self.player.is_dead and not self.player.won:
-        if not match_over:
+        if not match_over: # if match_over == false
             self.camera_x += self.camera_xchanger
-        if not self.player.is_dead and not self.player.won:
+        if not self.player.is_dead and not self.player.won: #if not dead and not won check:
             if self.player.rect.right < self.camera_x:
                 self.player.die()
 
