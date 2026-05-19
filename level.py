@@ -40,7 +40,7 @@ class Level:
             Sprite((obj.x, obj.y),pygame.image.load('graphics/setpics/winflag.png').convert_alpha(),
                    (self.all_sprites, self.win_sprites))
 
-        p2_surf = pygame.image.load("graphics/player2.png").convert()
+        p2_surf = pygame.image.load("graphics/player1.png").convert()
         p2_surf.set_colorkey("white")
         p2_surf = pygame.transform.scale(p2_surf, (TILE_SIZE, TILE_SIZE))
 
@@ -57,13 +57,20 @@ class Level:
 
         else:
             for obj in tmx_map.get_layer_by_name('true_p2spawn'):
-                self.player = Player((obj.x, obj.y), p2_surf, self.all_sprites, self.collisions_sprites, self.death_sprites,
+                self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
                                      self.win_sprites, self.map_width, self.map_height)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
             for obj in tmx_map.get_layer_by_name('player1'):
-                self.p2 = P2((obj.x, obj.y), self.all_sprites)
+                self.p2 = P2((obj.x, obj.y),p2_surf ,self.all_sprites)
                 logger.info(f"x: {obj.x} y: {obj.y}")
+
+    def flip_on_player(self):
+        if self.player.rect.top == self.p2.rect.bottom or self.player.rect.bottom == self.p2.rect.top:
+            self.player.flip_on_player()
+
+
+
 
     def run(self, match_over):
         self.all_sprites.update()

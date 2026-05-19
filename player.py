@@ -7,12 +7,11 @@ logger = logging.getLogger(__name__)
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, groups, collision_sprites, death_sprite, win_sprite, map_width, map_height):
         super().__init__(groups)
-        self.image = pygame.image.load(f"graphics/player1.png").convert()
+        self.image = pygame.image.load(f"graphics/player2.png").convert()
         self.image.set_colorkey('white')
         self.map_width = map_width
         self.map_height = map_height
         self.image = pygame.transform.scale(self.image, (TILE_SIZE, TILE_SIZE))
-
         # rect
         self.rect = self.image.get_rect(topleft=pos)
         self.last_rect = self.rect.copy()
@@ -30,7 +29,7 @@ class Player(pygame.sprite.Sprite):
         self.is_dead = False
         self.won = False
 
-    def on_ground_or_ceiling(self):
+    def on_wall(self):
         test_rect_y = self.last_rect.copy()
         test_rect_y.y += self.gravity  # checks 1 pixel in gravity direction
 
@@ -40,9 +39,12 @@ class Player(pygame.sprite.Sprite):
 
         return False
 
-    def flip(self):
-        if self.on_ground_or_ceiling():
+    def flip_on_wall(self):
+        if self.on_wall():
             self.gravity *= -1
+
+    def flip_on_player(self):
+        self.gravity *= -1
 
     def die(self):
         self.is_dead = True
