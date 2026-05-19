@@ -13729,3 +13729,1663 @@
 2026-05-18 20:36:01,716 - root - INFO - y overlap
 2026-05-18 20:36:01,733 - root - INFO - y overlap
 2026-05-18 20:36:01,749 - root - INFO - y overlap
+2026-05-19 19:02:31,924 - root - INFO - LAYERS:
+2026-05-19 19:02:31,924 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:02:31,924 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:02:31,924 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 19:02:31,924 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:02:31,924 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:02:31,939 - level - INFO - x: 96.0 y: 510.5
+2026-05-19 19:02:38,553 - root - INFO - space pressed
+2026-05-19 19:02:38,554 - root - INFO - 1
+2026-05-19 19:02:38,554 - root - INFO - 1
+2026-05-19 19:08:28,120 - root - INFO - LAYERS:
+2026-05-19 19:08:28,121 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:08:28,121 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:08:28,121 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 19:08:28,121 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:08:28,121 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:08:28,128 - level - INFO - x: 96.0 y: 510.5
+2026-05-19 19:08:28,134 - root - INFO - y overlap
+2026-05-19 19:08:28,150 - root - INFO - y overlap
+2026-05-19 19:08:28,166 - root - INFO - y overlap
+2026-05-19 19:08:28,184 - root - INFO - y overlap
+2026-05-19 19:08:28,201 - root - INFO - y overlap
+2026-05-19 19:08:28,218 - root - INFO - y overlap
+2026-05-19 19:08:28,235 - root - INFO - y overlap
+2026-05-19 19:08:28,251 - root - INFO - y overlap
+2026-05-19 19:08:28,269 - root - INFO - y overlap
+2026-05-19 19:08:28,286 - root - INFO - y overlap
+2026-05-19 19:08:28,302 - root - INFO - y overlap
+2026-05-19 19:08:28,318 - root - INFO - y overlap
+2026-05-19 19:08:28,334 - root - INFO - y overlap
+2026-05-19 19:08:28,351 - root - INFO - y overlap
+2026-05-19 19:08:28,367 - root - INFO - y overlap
+2026-05-19 19:08:28,386 - root - INFO - y overlap
+2026-05-19 19:08:28,402 - root - INFO - y overlap
+2026-05-19 19:08:28,418 - root - INFO - y overlap
+2026-05-19 19:08:28,434 - root - INFO - y overlap
+2026-05-19 19:08:28,451 - root - INFO - y overlap
+2026-05-19 19:08:28,468 - root - INFO - y overlap
+2026-05-19 19:08:28,485 - root - INFO - y overlap
+2026-05-19 19:08:28,501 - root - INFO - y overlap
+2026-05-19 19:08:28,517 - root - INFO - y overlap
+2026-05-19 19:08:28,534 - root - INFO - y overlap
+2026-05-19 19:08:28,550 - root - INFO - y overlap
+2026-05-19 19:08:28,567 - root - INFO - y overlap
+2026-05-19 19:08:28,584 - root - INFO - y overlap
+2026-05-19 19:08:28,601 - root - INFO - y overlap
+2026-05-19 19:08:28,617 - root - INFO - y overlap
+2026-05-19 19:08:28,633 - root - INFO - y overlap
+2026-05-19 19:08:28,650 - root - INFO - y overlap
+2026-05-19 19:08:28,666 - root - INFO - y overlap
+2026-05-19 19:08:28,684 - root - INFO - y overlap
+2026-05-19 19:08:28,700 - root - INFO - y overlap
+2026-05-19 19:08:28,716 - root - INFO - y overlap
+2026-05-19 19:08:28,733 - root - INFO - y overlap
+2026-05-19 19:08:28,750 - root - INFO - y overlap
+2026-05-19 19:08:28,767 - root - INFO - y overlap
+2026-05-19 19:08:28,783 - root - INFO - y overlap
+2026-05-19 19:08:28,800 - root - INFO - y overlap
+2026-05-19 19:08:28,817 - root - INFO - y overlap
+2026-05-19 19:08:28,834 - root - INFO - y overlap
+2026-05-19 19:08:28,851 - root - INFO - y overlap
+2026-05-19 19:08:28,867 - root - INFO - y overlap
+2026-05-19 19:08:28,885 - root - INFO - y overlap
+2026-05-19 19:08:28,901 - root - INFO - y overlap
+2026-05-19 19:08:28,917 - root - INFO - y overlap
+2026-05-19 19:08:28,934 - root - INFO - y overlap
+2026-05-19 19:08:28,951 - root - INFO - y overlap
+2026-05-19 19:08:28,968 - root - INFO - y overlap
+2026-05-19 19:08:28,985 - root - INFO - y overlap
+2026-05-19 19:08:29,001 - root - INFO - y overlap
+2026-05-19 19:08:29,019 - root - INFO - space pressed
+2026-05-19 19:08:29,019 - root - INFO - 1
+2026-05-19 19:08:29,020 - root - INFO - -1
+2026-05-19 19:08:29,706 - root - INFO - y overlap
+2026-05-19 19:08:29,723 - root - INFO - y overlap
+2026-05-19 19:08:29,738 - root - INFO - y overlap
+2026-05-19 19:08:29,755 - root - INFO - y overlap
+2026-05-19 19:08:29,771 - root - INFO - y overlap
+2026-05-19 19:08:29,787 - root - INFO - y overlap
+2026-05-19 19:08:29,803 - root - INFO - y overlap
+2026-05-19 19:08:29,819 - root - INFO - y overlap
+2026-05-19 19:08:29,835 - root - INFO - y overlap
+2026-05-19 19:08:29,851 - root - INFO - y overlap
+2026-05-19 19:08:29,868 - root - INFO - y overlap
+2026-05-19 19:08:29,884 - root - INFO - y overlap
+2026-05-19 19:08:29,901 - root - INFO - y overlap
+2026-05-19 19:08:29,918 - root - INFO - y overlap
+2026-05-19 19:08:29,934 - root - INFO - y overlap
+2026-05-19 19:08:29,951 - root - INFO - y overlap
+2026-05-19 19:08:29,967 - root - INFO - y overlap
+2026-05-19 19:08:29,984 - root - INFO - y overlap
+2026-05-19 19:08:30,001 - root - INFO - space pressed
+2026-05-19 19:08:30,001 - root - INFO - -1
+2026-05-19 19:08:30,002 - root - INFO - 1
+2026-05-19 19:08:30,682 - root - INFO - y overlap
+2026-05-19 19:08:30,698 - root - INFO - y overlap
+2026-05-19 19:08:30,715 - root - INFO - y overlap
+2026-05-19 19:08:30,732 - root - INFO - y overlap
+2026-05-19 19:08:30,750 - root - INFO - y overlap
+2026-05-19 19:08:30,767 - root - INFO - y overlap
+2026-05-19 19:08:30,784 - root - INFO - y overlap
+2026-05-19 19:08:30,800 - root - INFO - y overlap
+2026-05-19 19:08:30,817 - root - INFO - y overlap
+2026-05-19 19:08:30,834 - root - INFO - y overlap
+2026-05-19 19:08:30,850 - root - INFO - y overlap
+2026-05-19 19:08:30,868 - root - INFO - y overlap
+2026-05-19 19:08:30,884 - root - INFO - y overlap
+2026-05-19 19:08:30,901 - root - INFO - y overlap
+2026-05-19 19:08:30,917 - root - INFO - y overlap
+2026-05-19 19:08:30,934 - root - INFO - y overlap
+2026-05-19 19:08:30,951 - root - INFO - y overlap
+2026-05-19 19:08:30,967 - root - INFO - y overlap
+2026-05-19 19:08:30,984 - root - INFO - y overlap
+2026-05-19 19:08:31,000 - root - INFO - y overlap
+2026-05-19 19:08:31,017 - root - INFO - y overlap
+2026-05-19 19:08:31,034 - root - INFO - y overlap
+2026-05-19 19:08:31,051 - root - INFO - y overlap
+2026-05-19 19:08:31,067 - root - INFO - y overlap
+2026-05-19 19:08:31,084 - root - INFO - y overlap
+2026-05-19 19:08:31,101 - root - INFO - y overlap
+2026-05-19 19:08:31,118 - root - INFO - y overlap
+2026-05-19 19:08:31,134 - root - INFO - y overlap
+2026-05-19 19:08:31,151 - root - INFO - y overlap
+2026-05-19 19:08:31,167 - root - INFO - y overlap
+2026-05-19 19:08:31,183 - root - INFO - y overlap
+2026-05-19 19:08:31,199 - root - INFO - y overlap
+2026-05-19 19:08:31,216 - root - INFO - y overlap
+2026-05-19 19:08:31,233 - root - INFO - y overlap
+2026-05-19 19:08:31,249 - root - INFO - y overlap
+2026-05-19 19:08:31,267 - root - INFO - y overlap
+2026-05-19 19:08:31,284 - root - INFO - y overlap
+2026-05-19 19:08:31,301 - root - INFO - y overlap
+2026-05-19 19:08:31,317 - root - INFO - y overlap
+2026-05-19 19:08:31,334 - root - INFO - y overlap
+2026-05-19 19:08:31,350 - root - INFO - y overlap
+2026-05-19 19:08:31,367 - root - INFO - y overlap
+2026-05-19 19:08:31,384 - root - INFO - y overlap
+2026-05-19 19:08:31,400 - root - INFO - y overlap
+2026-05-19 19:08:31,417 - root - INFO - y overlap
+2026-05-19 19:08:31,433 - root - INFO - y overlap
+2026-05-19 19:08:31,449 - root - INFO - y overlap
+2026-05-19 19:08:31,466 - root - INFO - y overlap
+2026-05-19 19:08:31,482 - root - INFO - y overlap
+2026-05-19 19:08:31,498 - root - INFO - y overlap
+2026-05-19 19:08:31,514 - root - INFO - y overlap
+2026-05-19 19:08:31,531 - root - INFO - y overlap
+2026-05-19 19:08:31,547 - root - INFO - y overlap
+2026-05-19 19:08:31,564 - root - INFO - y overlap
+2026-05-19 19:08:31,580 - root - INFO - y overlap
+2026-05-19 19:08:31,596 - root - INFO - y overlap
+2026-05-19 19:08:31,614 - root - INFO - y overlap
+2026-05-19 19:08:31,631 - root - INFO - y overlap
+2026-05-19 19:08:31,648 - root - INFO - y overlap
+2026-05-19 19:08:31,664 - root - INFO - y overlap
+2026-05-19 19:08:31,681 - root - INFO - y overlap
+2026-05-19 19:08:31,696 - root - INFO - y overlap
+2026-05-19 19:08:31,714 - root - INFO - y overlap
+2026-05-19 19:08:31,731 - root - INFO - y overlap
+2026-05-19 19:08:31,747 - root - INFO - y overlap
+2026-05-19 19:08:31,764 - root - INFO - y overlap
+2026-05-19 19:08:31,780 - root - INFO - y overlap
+2026-05-19 19:08:31,797 - root - INFO - y overlap
+2026-05-19 19:08:31,814 - root - INFO - y overlap
+2026-05-19 19:08:31,830 - root - INFO - y overlap
+2026-05-19 19:08:31,847 - root - INFO - y overlap
+2026-05-19 19:08:31,863 - root - INFO - y overlap
+2026-05-19 19:08:31,880 - root - INFO - y overlap
+2026-05-19 19:08:31,896 - root - INFO - y overlap
+2026-05-19 19:08:31,912 - root - INFO - y overlap
+2026-05-19 19:08:31,930 - root - INFO - y overlap
+2026-05-19 19:08:31,946 - root - INFO - y overlap
+2026-05-19 19:08:31,963 - root - INFO - y overlap
+2026-05-19 19:08:31,979 - root - INFO - y overlap
+2026-05-19 19:08:31,996 - root - INFO - y overlap
+2026-05-19 19:08:32,011 - root - INFO - y overlap
+2026-05-19 19:08:32,027 - root - INFO - y overlap
+2026-05-19 19:08:32,044 - root - INFO - y overlap
+2026-05-19 19:08:32,061 - root - INFO - y overlap
+2026-05-19 19:08:32,079 - root - INFO - y overlap
+2026-05-19 19:08:32,095 - root - INFO - y overlap
+2026-05-19 19:08:32,112 - root - INFO - y overlap
+2026-05-19 19:08:32,128 - root - INFO - y overlap
+2026-05-19 19:08:32,145 - root - INFO - y overlap
+2026-05-19 19:08:32,161 - root - INFO - y overlap
+2026-05-19 19:08:32,179 - root - INFO - y overlap
+2026-05-19 19:08:32,196 - root - INFO - y overlap
+2026-05-19 19:08:32,212 - root - INFO - y overlap
+2026-05-19 19:08:32,228 - root - INFO - y overlap
+2026-05-19 19:08:32,244 - root - INFO - y overlap
+2026-05-19 19:08:32,261 - root - INFO - y overlap
+2026-05-19 19:08:32,277 - root - INFO - y overlap
+2026-05-19 19:08:32,294 - root - INFO - y overlap
+2026-05-19 19:08:32,310 - root - INFO - y overlap
+2026-05-19 19:08:32,326 - root - INFO - y overlap
+2026-05-19 19:08:32,343 - root - INFO - y overlap
+2026-05-19 19:08:32,359 - root - INFO - y overlap
+2026-05-19 19:08:32,377 - root - INFO - y overlap
+2026-05-19 19:08:32,394 - root - INFO - y overlap
+2026-05-19 19:08:32,411 - root - INFO - y overlap
+2026-05-19 19:08:32,434 - root - INFO - y overlap
+2026-05-19 19:08:32,451 - root - INFO - y overlap
+2026-05-19 19:08:32,468 - root - INFO - y overlap
+2026-05-19 19:08:32,485 - root - INFO - y overlap
+2026-05-19 19:08:32,502 - root - INFO - y overlap
+2026-05-19 19:08:32,519 - root - INFO - y overlap
+2026-05-19 19:08:32,536 - root - INFO - y overlap
+2026-05-19 19:08:32,553 - root - INFO - y overlap
+2026-05-19 19:08:32,569 - root - INFO - y overlap
+2026-05-19 19:08:32,585 - root - INFO - y overlap
+2026-05-19 19:08:32,601 - root - INFO - y overlap
+2026-05-19 19:08:32,617 - root - INFO - y overlap
+2026-05-19 19:08:32,633 - root - INFO - y overlap
+2026-05-19 19:08:32,651 - root - INFO - y overlap
+2026-05-19 19:08:32,667 - root - INFO - y overlap
+2026-05-19 19:08:32,684 - root - INFO - y overlap
+2026-05-19 19:08:32,700 - root - INFO - y overlap
+2026-05-19 19:08:32,716 - root - INFO - y overlap
+2026-05-19 19:08:32,733 - root - INFO - y overlap
+2026-05-19 19:08:32,750 - root - INFO - y overlap
+2026-05-19 19:08:32,767 - root - INFO - y overlap
+2026-05-19 19:08:32,784 - root - INFO - y overlap
+2026-05-19 19:08:32,801 - root - INFO - y overlap
+2026-05-19 19:08:32,818 - root - INFO - y overlap
+2026-05-19 19:08:32,834 - root - INFO - y overlap
+2026-05-19 19:08:32,851 - root - INFO - y overlap
+2026-05-19 19:08:32,868 - root - INFO - y overlap
+2026-05-19 19:08:32,885 - root - INFO - y overlap
+2026-05-19 19:08:32,902 - root - INFO - y overlap
+2026-05-19 19:08:32,918 - root - INFO - y overlap
+2026-05-19 19:08:32,935 - root - INFO - y overlap
+2026-05-19 19:08:32,952 - root - INFO - y overlap
+2026-05-19 19:08:32,968 - root - INFO - y overlap
+2026-05-19 19:08:32,985 - root - INFO - y overlap
+2026-05-19 19:08:33,001 - root - INFO - y overlap
+2026-05-19 19:08:33,017 - root - INFO - y overlap
+2026-05-19 19:08:33,033 - root - INFO - y overlap
+2026-05-19 19:08:33,049 - root - INFO - y overlap
+2026-05-19 19:08:33,065 - root - INFO - y overlap
+2026-05-19 19:08:33,097 - root - INFO - y overlap
+2026-05-19 19:08:33,114 - root - INFO - y overlap
+2026-05-19 19:08:33,134 - root - INFO - y overlap
+2026-05-19 19:08:33,153 - root - INFO - y overlap
+2026-05-19 19:08:33,170 - root - INFO - y overlap
+2026-05-19 19:08:33,190 - root - INFO - y overlap
+2026-05-19 19:08:33,207 - root - INFO - y overlap
+2026-05-19 19:08:33,224 - root - INFO - y overlap
+2026-05-19 19:08:33,240 - root - INFO - y overlap
+2026-05-19 19:08:33,258 - root - INFO - y overlap
+2026-05-19 19:08:33,277 - root - INFO - y overlap
+2026-05-19 19:08:33,293 - root - INFO - y overlap
+2026-05-19 19:08:33,309 - root - INFO - y overlap
+2026-05-19 19:08:33,326 - root - INFO - y overlap
+2026-05-19 19:08:33,342 - root - INFO - y overlap
+2026-05-19 19:08:33,359 - root - INFO - y overlap
+2026-05-19 19:08:33,375 - root - INFO - y overlap
+2026-05-19 19:08:33,391 - root - INFO - y overlap
+2026-05-19 19:08:33,407 - root - INFO - y overlap
+2026-05-19 19:08:33,424 - root - INFO - y overlap
+2026-05-19 19:08:33,440 - root - INFO - y overlap
+2026-05-19 19:08:33,456 - root - INFO - y overlap
+2026-05-19 19:08:33,472 - root - INFO - y overlap
+2026-05-19 19:08:33,488 - root - INFO - y overlap
+2026-05-19 19:08:33,507 - root - INFO - y overlap
+2026-05-19 19:08:33,524 - root - INFO - y overlap
+2026-05-19 19:08:33,539 - root - INFO - y overlap
+2026-05-19 19:08:33,557 - root - INFO - y overlap
+2026-05-19 19:08:33,576 - root - INFO - y overlap
+2026-05-19 19:08:33,598 - root - INFO - y overlap
+2026-05-19 19:08:33,614 - root - INFO - y overlap
+2026-05-19 19:08:33,631 - root - INFO - y overlap
+2026-05-19 19:08:33,647 - root - INFO - y overlap
+2026-05-19 19:08:33,670 - root - INFO - y overlap
+2026-05-19 19:08:33,686 - root - INFO - y overlap
+2026-05-19 19:08:33,703 - root - INFO - y overlap
+2026-05-19 19:08:33,719 - root - INFO - y overlap
+2026-05-19 19:08:33,736 - root - INFO - y overlap
+2026-05-19 19:08:33,754 - root - INFO - y overlap
+2026-05-19 19:08:33,771 - root - INFO - y overlap
+2026-05-19 19:08:33,789 - root - INFO - y overlap
+2026-05-19 19:08:33,804 - root - INFO - y overlap
+2026-05-19 19:08:33,820 - root - INFO - y overlap
+2026-05-19 19:08:33,836 - root - INFO - y overlap
+2026-05-19 19:08:33,853 - root - INFO - y overlap
+2026-05-19 19:08:33,870 - root - INFO - y overlap
+2026-05-19 19:08:33,887 - root - INFO - y overlap
+2026-05-19 19:08:33,904 - root - INFO - y overlap
+2026-05-19 19:08:33,921 - root - INFO - y overlap
+2026-05-19 19:08:33,937 - root - INFO - y overlap
+2026-05-19 19:08:33,954 - root - INFO - y overlap
+2026-05-19 19:08:33,970 - root - INFO - y overlap
+2026-05-19 19:08:33,987 - root - INFO - y overlap
+2026-05-19 19:08:34,003 - root - INFO - y overlap
+2026-05-19 19:08:34,020 - root - INFO - y overlap
+2026-05-19 19:08:34,036 - root - INFO - y overlap
+2026-05-19 19:08:34,052 - root - INFO - y overlap
+2026-05-19 19:08:34,069 - root - INFO - y overlap
+2026-05-19 19:08:34,086 - root - INFO - y overlap
+2026-05-19 19:08:34,101 - root - INFO - y overlap
+2026-05-19 19:08:34,118 - root - INFO - y overlap
+2026-05-19 19:08:34,134 - root - INFO - y overlap
+2026-05-19 19:08:34,151 - root - INFO - y overlap
+2026-05-19 19:08:34,168 - root - INFO - y overlap
+2026-05-19 19:08:34,186 - root - INFO - y overlap
+2026-05-19 19:08:34,201 - root - INFO - y overlap
+2026-05-19 19:08:34,219 - root - INFO - y overlap
+2026-05-19 19:08:34,235 - root - INFO - y overlap
+2026-05-19 19:08:34,253 - root - INFO - y overlap
+2026-05-19 19:08:34,270 - root - INFO - y overlap
+2026-05-19 19:08:34,286 - root - INFO - y overlap
+2026-05-19 19:08:34,302 - root - INFO - y overlap
+2026-05-19 19:08:34,318 - root - INFO - y overlap
+2026-05-19 19:08:34,334 - root - INFO - y overlap
+2026-05-19 19:08:34,350 - root - INFO - y overlap
+2026-05-19 19:08:34,366 - root - INFO - y overlap
+2026-05-19 19:08:34,383 - root - INFO - y overlap
+2026-05-19 19:08:34,399 - root - INFO - y overlap
+2026-05-19 19:08:34,415 - root - INFO - y overlap
+2026-05-19 19:08:34,434 - root - INFO - y overlap
+2026-05-19 19:08:34,450 - root - INFO - y overlap
+2026-05-19 19:08:34,467 - root - INFO - y overlap
+2026-05-19 19:08:34,485 - root - INFO - y overlap
+2026-05-19 19:08:34,501 - root - INFO - y overlap
+2026-05-19 19:08:34,517 - root - INFO - y overlap
+2026-05-19 19:08:34,533 - root - INFO - y overlap
+2026-05-19 19:08:34,550 - root - INFO - y overlap
+2026-05-19 19:08:34,566 - root - INFO - y overlap
+2026-05-19 19:08:34,583 - root - INFO - y overlap
+2026-05-19 19:08:34,600 - root - INFO - y overlap
+2026-05-19 19:08:34,616 - root - INFO - y overlap
+2026-05-19 19:08:34,632 - root - INFO - y overlap
+2026-05-19 19:08:34,648 - root - INFO - y overlap
+2026-05-19 19:08:34,665 - root - INFO - y overlap
+2026-05-19 19:08:34,681 - root - INFO - y overlap
+2026-05-19 19:08:34,698 - root - INFO - y overlap
+2026-05-19 19:08:34,715 - root - INFO - y overlap
+2026-05-19 19:08:34,732 - root - INFO - y overlap
+2026-05-19 19:08:34,749 - root - INFO - y overlap
+2026-05-19 19:08:34,766 - root - INFO - y overlap
+2026-05-19 19:08:34,783 - root - INFO - y overlap
+2026-05-19 19:08:34,799 - root - INFO - y overlap
+2026-05-19 19:08:34,817 - root - INFO - y overlap
+2026-05-19 19:08:34,833 - root - INFO - y overlap
+2026-05-19 19:08:34,849 - root - INFO - y overlap
+2026-05-19 19:08:34,865 - root - INFO - y overlap
+2026-05-19 19:08:34,882 - root - INFO - y overlap
+2026-05-19 19:08:34,900 - root - INFO - y overlap
+2026-05-19 19:08:34,916 - root - INFO - y overlap
+2026-05-19 19:08:34,932 - root - INFO - y overlap
+2026-05-19 19:08:34,948 - root - INFO - y overlap
+2026-05-19 19:08:34,964 - root - INFO - y overlap
+2026-05-19 19:08:34,981 - root - INFO - y overlap
+2026-05-19 19:08:34,997 - root - INFO - y overlap
+2026-05-19 19:08:35,014 - root - INFO - y overlap
+2026-05-19 19:20:43,078 - root - INFO - LAYERS:
+2026-05-19 19:20:43,079 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:20:43,079 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:20:43,079 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 19:20:43,079 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:20:43,079 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:20:43,085 - level - INFO - x: 96.0 y: 510.5
+2026-05-19 19:20:43,091 - root - INFO - y overlap
+2026-05-19 19:20:43,107 - root - INFO - y overlap
+2026-05-19 19:20:43,125 - root - INFO - y overlap
+2026-05-19 19:20:43,141 - root - INFO - y overlap
+2026-05-19 19:20:43,159 - root - INFO - y overlap
+2026-05-19 19:20:43,176 - root - INFO - y overlap
+2026-05-19 19:20:43,192 - root - INFO - y overlap
+2026-05-19 19:20:43,208 - root - INFO - y overlap
+2026-05-19 19:20:43,225 - root - INFO - y overlap
+2026-05-19 19:20:43,242 - root - INFO - y overlap
+2026-05-19 19:20:43,259 - root - INFO - y overlap
+2026-05-19 19:20:43,276 - root - INFO - y overlap
+2026-05-19 19:20:43,293 - root - INFO - y overlap
+2026-05-19 19:20:43,310 - root - INFO - y overlap
+2026-05-19 19:20:43,327 - root - INFO - y overlap
+2026-05-19 19:20:43,343 - root - INFO - y overlap
+2026-05-19 19:20:43,359 - root - INFO - y overlap
+2026-05-19 19:20:43,375 - root - INFO - y overlap
+2026-05-19 19:20:43,392 - root - INFO - y overlap
+2026-05-19 19:20:43,409 - root - INFO - y overlap
+2026-05-19 19:20:43,425 - root - INFO - y overlap
+2026-05-19 19:20:43,442 - root - INFO - y overlap
+2026-05-19 19:20:43,458 - root - INFO - y overlap
+2026-05-19 19:20:43,474 - root - INFO - y overlap
+2026-05-19 19:20:43,491 - root - INFO - y overlap
+2026-05-19 19:20:43,507 - root - INFO - y overlap
+2026-05-19 19:20:43,523 - root - INFO - y overlap
+2026-05-19 19:20:43,540 - root - INFO - y overlap
+2026-05-19 19:20:43,557 - root - INFO - y overlap
+2026-05-19 19:20:43,575 - root - INFO - y overlap
+2026-05-19 19:20:43,591 - root - INFO - y overlap
+2026-05-19 19:20:43,607 - root - INFO - y overlap
+2026-05-19 19:20:43,623 - root - INFO - y overlap
+2026-05-19 19:20:43,640 - root - INFO - y overlap
+2026-05-19 19:20:43,657 - root - INFO - y overlap
+2026-05-19 19:20:43,673 - root - INFO - y overlap
+2026-05-19 19:20:43,690 - root - INFO - y overlap
+2026-05-19 19:20:43,706 - root - INFO - y overlap
+2026-05-19 19:20:43,724 - root - INFO - y overlap
+2026-05-19 19:20:43,740 - root - INFO - y overlap
+2026-05-19 19:20:43,756 - root - INFO - y overlap
+2026-05-19 19:20:43,774 - root - INFO - y overlap
+2026-05-19 19:20:43,790 - root - INFO - y overlap
+2026-05-19 19:20:43,807 - root - INFO - y overlap
+2026-05-19 19:20:43,825 - root - INFO - y overlap
+2026-05-19 19:20:43,841 - root - INFO - y overlap
+2026-05-19 19:20:43,858 - root - INFO - y overlap
+2026-05-19 19:20:43,874 - root - INFO - y overlap
+2026-05-19 19:20:43,890 - root - INFO - y overlap
+2026-05-19 19:20:43,908 - root - INFO - y overlap
+2026-05-19 19:20:43,924 - root - INFO - y overlap
+2026-05-19 19:20:43,942 - root - INFO - y overlap
+2026-05-19 19:20:43,958 - root - INFO - y overlap
+2026-05-19 19:20:43,974 - root - INFO - y overlap
+2026-05-19 19:20:43,991 - root - INFO - y overlap
+2026-05-19 19:20:44,007 - root - INFO - y overlap
+2026-05-19 19:20:44,024 - root - INFO - y overlap
+2026-05-19 19:20:44,041 - root - INFO - y overlap
+2026-05-19 19:20:44,057 - root - INFO - y overlap
+2026-05-19 19:20:44,074 - root - INFO - y overlap
+2026-05-19 19:20:44,090 - root - INFO - y overlap
+2026-05-19 19:20:44,108 - root - INFO - y overlap
+2026-05-19 19:20:44,124 - root - INFO - y overlap
+2026-05-19 19:20:44,140 - root - INFO - y overlap
+2026-05-19 19:20:44,158 - root - INFO - y overlap
+2026-05-19 19:20:44,180 - root - INFO - y overlap
+2026-05-19 19:20:44,196 - root - INFO - y overlap
+2026-05-19 19:20:44,213 - root - INFO - y overlap
+2026-05-19 19:20:44,230 - root - INFO - y overlap
+2026-05-19 19:20:44,246 - root - INFO - y overlap
+2026-05-19 19:20:44,262 - root - INFO - y overlap
+2026-05-19 19:20:44,279 - root - INFO - y overlap
+2026-05-19 19:20:44,295 - root - INFO - y overlap
+2026-05-19 19:20:44,311 - root - INFO - y overlap
+2026-05-19 19:20:44,329 - root - INFO - y overlap
+2026-05-19 19:20:44,345 - root - INFO - y overlap
+2026-05-19 19:20:44,361 - root - INFO - y overlap
+2026-05-19 19:20:44,377 - root - INFO - y overlap
+2026-05-19 19:20:44,393 - root - INFO - y overlap
+2026-05-19 19:20:44,410 - root - INFO - y overlap
+2026-05-19 19:20:44,427 - root - INFO - y overlap
+2026-05-19 19:20:44,444 - root - INFO - y overlap
+2026-05-19 19:20:44,460 - root - INFO - y overlap
+2026-05-19 19:20:44,477 - root - INFO - y overlap
+2026-05-19 19:20:44,493 - root - INFO - y overlap
+2026-05-19 19:20:44,509 - root - INFO - y overlap
+2026-05-19 19:20:44,525 - root - INFO - y overlap
+2026-05-19 19:20:44,541 - root - INFO - y overlap
+2026-05-19 19:20:44,559 - root - INFO - y overlap
+2026-05-19 19:20:44,575 - root - INFO - y overlap
+2026-05-19 19:20:44,592 - root - INFO - y overlap
+2026-05-19 19:20:44,609 - root - INFO - y overlap
+2026-05-19 19:20:44,626 - root - INFO - y overlap
+2026-05-19 19:20:44,643 - root - INFO - y overlap
+2026-05-19 19:20:44,660 - root - INFO - y overlap
+2026-05-19 19:20:44,676 - root - INFO - y overlap
+2026-05-19 19:20:44,693 - root - INFO - y overlap
+2026-05-19 19:20:44,709 - root - INFO - y overlap
+2026-05-19 19:20:44,726 - root - INFO - y overlap
+2026-05-19 19:20:44,745 - root - INFO - space pressed
+2026-05-19 19:20:44,745 - root - INFO - 1
+2026-05-19 19:20:44,746 - root - INFO - -1
+2026-05-19 19:20:45,434 - root - INFO - y overlap
+2026-05-19 19:20:45,451 - root - INFO - y overlap
+2026-05-19 19:20:45,468 - root - INFO - y overlap
+2026-05-19 19:20:45,485 - root - INFO - y overlap
+2026-05-19 19:20:45,502 - root - INFO - y overlap
+2026-05-19 19:20:45,519 - root - INFO - y overlap
+2026-05-19 19:20:45,535 - root - INFO - y overlap
+2026-05-19 19:20:45,552 - root - INFO - y overlap
+2026-05-19 19:20:45,570 - root - INFO - y overlap
+2026-05-19 19:20:45,587 - root - INFO - y overlap
+2026-05-19 19:20:45,603 - root - INFO - y overlap
+2026-05-19 19:20:45,620 - root - INFO - space pressed
+2026-05-19 19:20:45,621 - root - INFO - -1
+2026-05-19 19:20:45,621 - root - INFO - 1
+2026-05-19 19:20:47,031 - root - INFO - space pressed
+2026-05-19 19:20:47,031 - root - INFO - 1
+2026-05-19 19:20:47,032 - root - INFO - 1
+2026-05-19 19:20:48,693 - root - INFO - space pressed
+2026-05-19 19:20:48,694 - root - INFO - 1
+2026-05-19 19:20:48,694 - root - INFO - 1
+2026-05-19 19:20:49,293 - root - INFO - space pressed
+2026-05-19 19:20:49,294 - root - INFO - 1
+2026-05-19 19:20:49,294 - root - INFO - 1
+2026-05-19 19:20:51,534 - root - INFO - space pressed
+2026-05-19 19:20:51,535 - root - INFO - 1
+2026-05-19 19:20:51,535 - root - INFO - 1
+2026-05-19 19:20:51,787 - root - INFO - space pressed
+2026-05-19 19:20:51,787 - root - INFO - 1
+2026-05-19 19:20:51,787 - root - INFO - 1
+2026-05-19 19:20:52,004 - root - INFO - space pressed
+2026-05-19 19:20:52,004 - root - INFO - 1
+2026-05-19 19:20:52,004 - root - INFO - 1
+2026-05-19 19:20:52,221 - root - INFO - space pressed
+2026-05-19 19:20:52,221 - root - INFO - 1
+2026-05-19 19:20:52,222 - root - INFO - 1
+2026-05-19 19:20:52,402 - root - INFO - space pressed
+2026-05-19 19:20:52,403 - root - INFO - 1
+2026-05-19 19:20:52,403 - root - INFO - 1
+2026-05-19 19:20:52,571 - root - INFO - space pressed
+2026-05-19 19:20:52,572 - root - INFO - 1
+2026-05-19 19:20:52,572 - root - INFO - 1
+2026-05-19 19:20:52,738 - root - INFO - space pressed
+2026-05-19 19:20:52,738 - root - INFO - 1
+2026-05-19 19:20:52,739 - root - INFO - 1
+2026-05-19 19:20:52,905 - root - INFO - space pressed
+2026-05-19 19:20:52,906 - root - INFO - 1
+2026-05-19 19:20:52,906 - root - INFO - 1
+2026-05-19 19:20:53,342 - root - INFO - space pressed
+2026-05-19 19:20:53,343 - root - INFO - 1
+2026-05-19 19:20:53,343 - root - INFO - 1
+2026-05-19 19:20:54,060 - root - INFO - space pressed
+2026-05-19 19:20:54,060 - root - INFO - 1
+2026-05-19 19:20:54,060 - root - INFO - 1
+2026-05-19 19:20:54,514 - root - INFO - space pressed
+2026-05-19 19:20:54,514 - root - INFO - 1
+2026-05-19 19:20:54,515 - root - INFO - 1
+2026-05-19 19:20:54,679 - root - INFO - space pressed
+2026-05-19 19:20:54,679 - root - INFO - 1
+2026-05-19 19:20:54,680 - root - INFO - 1
+2026-05-19 19:20:54,814 - root - INFO - space pressed
+2026-05-19 19:20:54,814 - root - INFO - 1
+2026-05-19 19:20:54,814 - root - INFO - 1
+2026-05-19 19:20:54,980 - root - INFO - space pressed
+2026-05-19 19:20:54,980 - root - INFO - 1
+2026-05-19 19:20:54,980 - root - INFO - 1
+2026-05-19 19:20:55,117 - root - INFO - space pressed
+2026-05-19 19:20:55,117 - root - INFO - 1
+2026-05-19 19:20:55,117 - root - INFO - 1
+2026-05-19 19:20:55,281 - root - INFO - space pressed
+2026-05-19 19:20:55,281 - root - INFO - 1
+2026-05-19 19:20:55,282 - root - INFO - 1
+2026-05-19 19:20:55,449 - root - INFO - space pressed
+2026-05-19 19:20:55,450 - root - INFO - 1
+2026-05-19 19:20:55,450 - root - INFO - 1
+2026-05-19 19:20:57,500 - root - INFO - y overlap
+2026-05-19 19:20:57,516 - root - INFO - y overlap
+2026-05-19 19:20:57,532 - root - INFO - y overlap
+2026-05-19 19:20:57,549 - root - INFO - y overlap
+2026-05-19 19:20:57,566 - root - INFO - y overlap
+2026-05-19 19:20:57,583 - root - INFO - y overlap
+2026-05-19 19:20:57,599 - root - INFO - y overlap
+2026-05-19 19:20:57,616 - root - INFO - y overlap
+2026-05-19 19:20:57,633 - root - INFO - y overlap
+2026-05-19 19:20:57,649 - root - INFO - y overlap
+2026-05-19 19:20:57,666 - root - INFO - y overlap
+2026-05-19 19:20:57,682 - root - INFO - y overlap
+2026-05-19 19:20:57,698 - root - INFO - y overlap
+2026-05-19 19:20:57,715 - root - INFO - y overlap
+2026-05-19 19:20:57,732 - root - INFO - y overlap
+2026-05-19 19:20:57,748 - root - INFO - y overlap
+2026-05-19 19:20:57,765 - root - INFO - y overlap
+2026-05-19 19:20:57,781 - root - INFO - y overlap
+2026-05-19 19:20:57,798 - root - INFO - y overlap
+2026-05-19 19:20:57,814 - root - INFO - y overlap
+2026-05-19 19:20:57,830 - root - INFO - y overlap
+2026-05-19 19:20:57,847 - root - INFO - y overlap
+2026-05-19 19:20:57,864 - root - INFO - y overlap
+2026-05-19 19:20:57,881 - root - INFO - y overlap
+2026-05-19 19:20:57,897 - root - INFO - y overlap
+2026-05-19 19:20:57,913 - root - INFO - y overlap
+2026-05-19 19:20:57,929 - root - INFO - y overlap
+2026-05-19 19:20:57,945 - root - INFO - y overlap
+2026-05-19 19:20:57,963 - root - INFO - y overlap
+2026-05-19 19:20:57,979 - root - INFO - y overlap
+2026-05-19 19:20:57,995 - root - INFO - y overlap
+2026-05-19 19:20:58,011 - root - INFO - y overlap
+2026-05-19 19:20:58,029 - root - INFO - y overlap
+2026-05-19 19:20:58,047 - root - INFO - y overlap
+2026-05-19 19:20:58,063 - root - INFO - y overlap
+2026-05-19 19:20:58,078 - root - INFO - y overlap
+2026-05-19 19:20:58,095 - root - INFO - y overlap
+2026-05-19 19:20:58,111 - root - INFO - y overlap
+2026-05-19 19:20:58,129 - root - INFO - y overlap
+2026-05-19 19:20:58,144 - root - INFO - y overlap
+2026-05-19 19:20:58,162 - root - INFO - y overlap
+2026-05-19 19:20:58,178 - root - INFO - y overlap
+2026-05-19 19:20:58,195 - root - INFO - y overlap
+2026-05-19 19:20:58,211 - root - INFO - y overlap
+2026-05-19 19:20:58,227 - root - INFO - y overlap
+2026-05-19 19:20:58,243 - root - INFO - y overlap
+2026-05-19 19:20:58,260 - root - INFO - y overlap
+2026-05-19 19:20:58,278 - root - INFO - y overlap
+2026-05-19 19:20:58,294 - root - INFO - y overlap
+2026-05-19 19:20:58,311 - root - INFO - y overlap
+2026-05-19 19:20:58,327 - root - INFO - y overlap
+2026-05-19 19:20:58,344 - root - INFO - y overlap
+2026-05-19 19:20:58,362 - root - INFO - y overlap
+2026-05-19 19:20:58,378 - root - INFO - y overlap
+2026-05-19 19:20:58,394 - root - INFO - y overlap
+2026-05-19 19:20:58,411 - root - INFO - y overlap
+2026-05-19 19:20:58,428 - root - INFO - y overlap
+2026-05-19 19:20:58,444 - root - INFO - y overlap
+2026-05-19 19:20:58,461 - root - INFO - y overlap
+2026-05-19 19:20:58,478 - root - INFO - y overlap
+2026-05-19 19:20:58,496 - root - INFO - y overlap
+2026-05-19 19:20:58,511 - root - INFO - y overlap
+2026-05-19 19:20:58,527 - root - INFO - y overlap
+2026-05-19 19:20:58,545 - root - INFO - y overlap
+2026-05-19 19:20:58,561 - root - INFO - y overlap
+2026-05-19 19:20:58,578 - root - INFO - y overlap
+2026-05-19 19:20:58,594 - root - INFO - y overlap
+2026-05-19 19:20:58,610 - root - INFO - y overlap
+2026-05-19 19:20:58,628 - root - INFO - y overlap
+2026-05-19 19:20:58,644 - root - INFO - y overlap
+2026-05-19 19:20:58,661 - root - INFO - y overlap
+2026-05-19 19:20:58,678 - root - INFO - y overlap
+2026-05-19 19:20:58,694 - root - INFO - y overlap
+2026-05-19 19:20:58,712 - root - INFO - y overlap
+2026-05-19 19:20:58,729 - root - INFO - y overlap
+2026-05-19 19:20:58,747 - root - INFO - y overlap
+2026-05-19 19:20:58,763 - root - INFO - y overlap
+2026-05-19 19:20:58,779 - root - INFO - y overlap
+2026-05-19 19:20:58,794 - root - INFO - y overlap
+2026-05-19 19:20:58,810 - root - INFO - y overlap
+2026-05-19 19:20:58,827 - root - INFO - y overlap
+2026-05-19 19:20:58,843 - root - INFO - y overlap
+2026-05-19 19:20:58,859 - root - INFO - y overlap
+2026-05-19 19:20:58,876 - root - INFO - y overlap
+2026-05-19 19:20:58,893 - root - INFO - y overlap
+2026-05-19 19:20:58,909 - root - INFO - y overlap
+2026-05-19 19:20:58,926 - root - INFO - y overlap
+2026-05-19 19:20:58,942 - root - INFO - y overlap
+2026-05-19 19:20:58,959 - root - INFO - y overlap
+2026-05-19 19:20:58,975 - root - INFO - y overlap
+2026-05-19 19:20:58,991 - root - INFO - y overlap
+2026-05-19 19:20:59,009 - root - INFO - y overlap
+2026-05-19 19:20:59,024 - root - INFO - y overlap
+2026-05-19 19:20:59,041 - root - INFO - y overlap
+2026-05-19 19:20:59,057 - root - INFO - y overlap
+2026-05-19 19:20:59,073 - root - INFO - y overlap
+2026-05-19 19:20:59,090 - root - INFO - y overlap
+2026-05-19 19:20:59,107 - root - INFO - y overlap
+2026-05-19 19:21:45,939 - root - INFO - LAYERS:
+2026-05-19 19:21:45,940 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:21:45,940 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:21:45,940 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 19:21:45,940 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:21:45,940 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:21:45,948 - level - INFO - x: 96.0 y: 510.5
+2026-05-19 19:21:45,952 - root - INFO - y overlap
+2026-05-19 19:21:45,954 - root - INFO - y overlap
+2026-05-19 19:21:45,969 - root - INFO - y overlap
+2026-05-19 19:21:45,986 - root - INFO - y overlap
+2026-05-19 19:21:46,002 - root - INFO - y overlap
+2026-05-19 19:21:46,018 - root - INFO - y overlap
+2026-05-19 19:21:46,034 - root - INFO - y overlap
+2026-05-19 19:21:46,050 - root - INFO - y overlap
+2026-05-19 19:21:46,066 - root - INFO - y overlap
+2026-05-19 19:21:46,084 - root - INFO - y overlap
+2026-05-19 19:21:46,101 - root - INFO - y overlap
+2026-05-19 19:21:46,117 - root - INFO - y overlap
+2026-05-19 19:21:46,134 - root - INFO - y overlap
+2026-05-19 19:21:46,152 - root - INFO - y overlap
+2026-05-19 19:21:46,168 - root - INFO - y overlap
+2026-05-19 19:21:46,185 - root - INFO - y overlap
+2026-05-19 19:21:46,200 - root - INFO - y overlap
+2026-05-19 19:21:46,217 - root - INFO - y overlap
+2026-05-19 19:21:46,234 - root - INFO - y overlap
+2026-05-19 19:21:46,250 - root - INFO - y overlap
+2026-05-19 19:21:46,267 - root - INFO - y overlap
+2026-05-19 19:21:46,285 - root - INFO - y overlap
+2026-05-19 19:21:46,302 - root - INFO - y overlap
+2026-05-19 19:21:46,318 - root - INFO - y overlap
+2026-05-19 19:21:46,335 - root - INFO - y overlap
+2026-05-19 19:21:46,356 - root - INFO - y overlap
+2026-05-19 19:21:46,372 - root - INFO - y overlap
+2026-05-19 19:21:46,388 - root - INFO - y overlap
+2026-05-19 19:21:46,405 - root - INFO - y overlap
+2026-05-19 19:21:46,423 - root - INFO - y overlap
+2026-05-19 19:21:46,440 - root - INFO - y overlap
+2026-05-19 19:21:46,456 - root - INFO - y overlap
+2026-05-19 19:21:46,472 - root - INFO - y overlap
+2026-05-19 19:21:46,489 - root - INFO - y overlap
+2026-05-19 19:21:46,505 - root - INFO - y overlap
+2026-05-19 19:21:46,522 - root - INFO - y overlap
+2026-05-19 19:21:46,538 - root - INFO - y overlap
+2026-05-19 19:21:46,554 - root - INFO - y overlap
+2026-05-19 19:21:46,572 - root - INFO - y overlap
+2026-05-19 19:21:46,589 - root - INFO - y overlap
+2026-05-19 19:21:46,606 - root - INFO - y overlap
+2026-05-19 19:21:46,622 - root - INFO - y overlap
+2026-05-19 19:21:46,638 - root - INFO - y overlap
+2026-05-19 19:21:46,656 - root - INFO - y overlap
+2026-05-19 19:21:46,672 - root - INFO - y overlap
+2026-05-19 19:21:46,689 - root - INFO - y overlap
+2026-05-19 19:21:46,706 - root - INFO - y overlap
+2026-05-19 19:21:46,723 - root - INFO - y overlap
+2026-05-19 19:21:46,739 - root - INFO - y overlap
+2026-05-19 19:21:46,756 - root - INFO - y overlap
+2026-05-19 19:21:46,773 - root - INFO - y overlap
+2026-05-19 19:21:46,790 - root - INFO - y overlap
+2026-05-19 19:21:46,807 - root - INFO - y overlap
+2026-05-19 19:21:46,823 - root - INFO - y overlap
+2026-05-19 19:21:46,840 - root - INFO - y overlap
+2026-05-19 19:21:46,857 - root - INFO - y overlap
+2026-05-19 19:21:46,873 - root - INFO - y overlap
+2026-05-19 19:21:46,890 - root - INFO - y overlap
+2026-05-19 19:21:46,906 - root - INFO - y overlap
+2026-05-19 19:21:46,923 - root - INFO - y overlap
+2026-05-19 19:21:46,939 - root - INFO - y overlap
+2026-05-19 19:21:46,957 - root - INFO - y overlap
+2026-05-19 19:21:46,974 - root - INFO - y overlap
+2026-05-19 19:21:46,990 - root - INFO - y overlap
+2026-05-19 19:21:47,006 - root - INFO - y overlap
+2026-05-19 19:21:47,022 - root - INFO - y overlap
+2026-05-19 19:21:47,039 - root - INFO - y overlap
+2026-05-19 19:21:47,056 - root - INFO - y overlap
+2026-05-19 19:21:47,072 - root - INFO - y overlap
+2026-05-19 19:21:47,088 - root - INFO - y overlap
+2026-05-19 19:21:47,104 - root - INFO - y overlap
+2026-05-19 19:21:47,121 - root - INFO - y overlap
+2026-05-19 19:21:47,137 - root - INFO - y overlap
+2026-05-19 19:21:47,153 - root - INFO - y overlap
+2026-05-19 19:21:47,171 - root - INFO - y overlap
+2026-05-19 19:21:47,187 - root - INFO - y overlap
+2026-05-19 19:21:47,204 - root - INFO - y overlap
+2026-05-19 19:21:47,221 - root - INFO - y overlap
+2026-05-19 19:21:47,238 - root - INFO - y overlap
+2026-05-19 19:21:47,255 - root - INFO - y overlap
+2026-05-19 19:21:47,271 - root - INFO - y overlap
+2026-05-19 19:21:47,289 - root - INFO - y overlap
+2026-05-19 19:21:47,306 - root - INFO - y overlap
+2026-05-19 19:21:47,322 - root - INFO - y overlap
+2026-05-19 19:21:47,340 - root - INFO - y overlap
+2026-05-19 19:21:47,356 - root - INFO - y overlap
+2026-05-19 19:21:47,374 - root - INFO - y overlap
+2026-05-19 19:21:47,392 - root - INFO - y overlap
+2026-05-19 19:21:47,409 - root - INFO - y overlap
+2026-05-19 19:21:47,426 - root - INFO - y overlap
+2026-05-19 19:21:47,442 - root - INFO - y overlap
+2026-05-19 19:21:47,460 - root - INFO - y overlap
+2026-05-19 19:21:47,476 - root - INFO - y overlap
+2026-05-19 19:21:47,493 - root - INFO - y overlap
+2026-05-19 19:21:47,510 - root - INFO - y overlap
+2026-05-19 19:21:47,527 - root - INFO - y overlap
+2026-05-19 19:21:47,544 - root - INFO - y overlap
+2026-05-19 19:21:47,560 - root - INFO - y overlap
+2026-05-19 19:21:47,576 - root - INFO - y overlap
+2026-05-19 19:21:47,592 - root - INFO - y overlap
+2026-05-19 19:21:47,608 - root - INFO - y overlap
+2026-05-19 19:21:47,623 - root - INFO - y overlap
+2026-05-19 19:21:47,641 - root - INFO - y overlap
+2026-05-19 19:21:47,658 - root - INFO - y overlap
+2026-05-19 19:21:47,676 - root - INFO - y overlap
+2026-05-19 19:21:47,693 - root - INFO - y overlap
+2026-05-19 19:21:47,709 - root - INFO - y overlap
+2026-05-19 19:21:47,726 - root - INFO - y overlap
+2026-05-19 19:21:47,743 - root - INFO - y overlap
+2026-05-19 19:21:47,760 - root - INFO - y overlap
+2026-05-19 19:21:47,776 - root - INFO - y overlap
+2026-05-19 19:21:47,793 - root - INFO - y overlap
+2026-05-19 19:21:47,810 - root - INFO - y overlap
+2026-05-19 19:21:47,827 - root - INFO - y overlap
+2026-05-19 19:21:47,844 - root - INFO - y overlap
+2026-05-19 19:21:47,860 - root - INFO - y overlap
+2026-05-19 19:21:47,877 - root - INFO - y overlap
+2026-05-19 19:21:47,893 - root - INFO - y overlap
+2026-05-19 19:21:47,909 - root - INFO - y overlap
+2026-05-19 19:21:47,926 - root - INFO - y overlap
+2026-05-19 19:21:47,942 - root - INFO - y overlap
+2026-05-19 19:21:47,959 - root - INFO - y overlap
+2026-05-19 19:21:47,976 - root - INFO - y overlap
+2026-05-19 19:21:47,992 - root - INFO - y overlap
+2026-05-19 19:21:48,010 - root - INFO - y overlap
+2026-05-19 19:21:48,026 - root - INFO - y overlap
+2026-05-19 19:21:48,043 - root - INFO - y overlap
+2026-05-19 19:21:48,060 - root - INFO - y overlap
+2026-05-19 19:21:48,077 - root - INFO - y overlap
+2026-05-19 19:21:48,094 - root - INFO - y overlap
+2026-05-19 19:21:48,111 - root - INFO - y overlap
+2026-05-19 19:21:48,128 - root - INFO - y overlap
+2026-05-19 19:21:48,144 - root - INFO - y overlap
+2026-05-19 19:21:48,161 - root - INFO - y overlap
+2026-05-19 19:21:48,177 - root - INFO - y overlap
+2026-05-19 19:21:48,194 - root - INFO - y overlap
+2026-05-19 19:21:48,210 - root - INFO - y overlap
+2026-05-19 19:21:48,226 - root - INFO - y overlap
+2026-05-19 19:21:48,245 - root - INFO - y overlap
+2026-05-19 19:21:48,262 - root - INFO - y overlap
+2026-05-19 19:21:48,277 - root - INFO - y overlap
+2026-05-19 19:21:48,295 - root - INFO - y overlap
+2026-05-19 19:21:48,311 - root - INFO - y overlap
+2026-05-19 19:21:48,328 - root - INFO - y overlap
+2026-05-19 19:21:48,344 - root - INFO - y overlap
+2026-05-19 19:21:48,362 - root - INFO - space pressed
+2026-05-19 19:21:48,362 - root - INFO - 1
+2026-05-19 19:21:48,362 - root - INFO - -1
+2026-05-19 19:21:49,047 - root - INFO - y overlap
+2026-05-19 19:21:49,063 - root - INFO - y overlap
+2026-05-19 19:21:49,085 - root - INFO - y overlap
+2026-05-19 19:21:49,101 - root - INFO - y overlap
+2026-05-19 19:21:49,117 - root - INFO - y overlap
+2026-05-19 19:21:49,134 - root - INFO - y overlap
+2026-05-19 19:21:49,150 - root - INFO - y overlap
+2026-05-19 19:21:49,168 - root - INFO - y overlap
+2026-05-19 19:21:49,184 - root - INFO - y overlap
+2026-05-19 19:21:49,200 - root - INFO - space pressed
+2026-05-19 19:21:49,200 - root - INFO - -1
+2026-05-19 19:21:49,200 - root - INFO - 1
+2026-05-19 19:21:49,518 - root - INFO - y overlap
+2026-05-19 19:21:49,534 - root - INFO - y overlap
+2026-05-19 19:21:49,551 - root - INFO - y overlap
+2026-05-19 19:21:49,568 - root - INFO - y overlap
+2026-05-19 19:21:49,584 - player - INFO - x.overlap
+2026-05-19 19:21:49,585 - root - INFO - y overlap
+2026-05-19 19:21:49,601 - player - INFO - x.overlap
+2026-05-19 19:21:49,602 - root - INFO - y overlap
+2026-05-19 19:21:49,617 - player - INFO - x.overlap
+2026-05-19 19:21:49,618 - root - INFO - y overlap
+2026-05-19 19:21:49,634 - player - INFO - x.overlap
+2026-05-19 19:21:49,635 - root - INFO - y overlap
+2026-05-19 19:21:49,651 - player - INFO - x.overlap
+2026-05-19 19:21:49,652 - root - INFO - y overlap
+2026-05-19 19:21:49,669 - player - INFO - x.overlap
+2026-05-19 19:21:49,670 - root - INFO - y overlap
+2026-05-19 19:21:49,685 - player - INFO - x.overlap
+2026-05-19 19:21:49,686 - root - INFO - y overlap
+2026-05-19 19:21:49,702 - player - INFO - x.overlap
+2026-05-19 19:21:49,703 - root - INFO - y overlap
+2026-05-19 19:21:49,719 - player - INFO - x.overlap
+2026-05-19 19:21:49,719 - root - INFO - y overlap
+2026-05-19 19:21:49,734 - player - INFO - x.overlap
+2026-05-19 19:21:49,735 - root - INFO - y overlap
+2026-05-19 19:21:49,751 - player - INFO - x.overlap
+2026-05-19 19:21:49,751 - root - INFO - y overlap
+2026-05-19 19:21:49,766 - player - INFO - x.overlap
+2026-05-19 19:21:49,767 - root - INFO - y overlap
+2026-05-19 19:21:49,783 - player - INFO - x.overlap
+2026-05-19 19:21:49,784 - root - INFO - y overlap
+2026-05-19 19:21:49,800 - player - INFO - x.overlap
+2026-05-19 19:21:49,801 - root - INFO - y overlap
+2026-05-19 19:21:49,816 - player - INFO - x.overlap
+2026-05-19 19:21:49,816 - root - INFO - y overlap
+2026-05-19 19:21:49,832 - player - INFO - x.overlap
+2026-05-19 19:21:49,833 - root - INFO - y overlap
+2026-05-19 19:21:49,849 - player - INFO - x.overlap
+2026-05-19 19:21:49,850 - root - INFO - y overlap
+2026-05-19 19:21:49,865 - player - INFO - x.overlap
+2026-05-19 19:21:49,866 - root - INFO - y overlap
+2026-05-19 19:21:49,882 - player - INFO - x.overlap
+2026-05-19 19:21:49,883 - root - INFO - y overlap
+2026-05-19 19:21:49,899 - player - INFO - x.overlap
+2026-05-19 19:21:49,900 - root - INFO - y overlap
+2026-05-19 19:21:49,915 - player - INFO - x.overlap
+2026-05-19 19:21:49,916 - root - INFO - y overlap
+2026-05-19 19:21:49,933 - player - INFO - x.overlap
+2026-05-19 19:21:49,933 - root - INFO - y overlap
+2026-05-19 19:21:49,949 - player - INFO - x.overlap
+2026-05-19 19:21:49,950 - root - INFO - y overlap
+2026-05-19 19:21:49,966 - player - INFO - x.overlap
+2026-05-19 19:21:49,967 - root - INFO - y overlap
+2026-05-19 19:21:49,982 - player - INFO - x.overlap
+2026-05-19 19:21:49,983 - root - INFO - y overlap
+2026-05-19 19:21:49,998 - player - INFO - x.overlap
+2026-05-19 19:21:49,999 - root - INFO - y overlap
+2026-05-19 19:21:50,016 - player - INFO - x.overlap
+2026-05-19 19:21:50,016 - root - INFO - y overlap
+2026-05-19 19:21:50,032 - player - INFO - x.overlap
+2026-05-19 19:21:50,033 - root - INFO - y overlap
+2026-05-19 19:21:50,049 - player - INFO - x.overlap
+2026-05-19 19:21:50,050 - root - INFO - y overlap
+2026-05-19 19:21:50,066 - player - INFO - x.overlap
+2026-05-19 19:21:50,067 - root - INFO - y overlap
+2026-05-19 19:21:50,082 - player - INFO - x.overlap
+2026-05-19 19:21:50,083 - root - INFO - y overlap
+2026-05-19 19:21:50,100 - player - INFO - x.overlap
+2026-05-19 19:21:50,100 - root - INFO - y overlap
+2026-05-19 19:21:50,117 - player - INFO - x.overlap
+2026-05-19 19:21:50,118 - root - INFO - y overlap
+2026-05-19 19:21:50,135 - player - INFO - x.overlap
+2026-05-19 19:21:50,135 - root - INFO - y overlap
+2026-05-19 19:21:50,151 - player - INFO - x.overlap
+2026-05-19 19:21:50,152 - root - INFO - y overlap
+2026-05-19 19:21:50,166 - player - INFO - x.overlap
+2026-05-19 19:21:50,167 - root - INFO - y overlap
+2026-05-19 19:21:50,183 - root - INFO - space pressed
+2026-05-19 19:21:50,184 - root - INFO - 1
+2026-05-19 19:21:50,184 - root - INFO - -1
+2026-05-19 19:21:50,185 - player - INFO - x.overlap
+2026-05-19 19:21:50,202 - player - INFO - x.overlap
+2026-05-19 19:21:50,219 - player - INFO - x.overlap
+2026-05-19 19:21:50,235 - player - INFO - x.overlap
+2026-05-19 19:21:50,503 - root - INFO - y overlap
+2026-05-19 19:21:50,519 - root - INFO - y overlap
+2026-05-19 19:21:50,537 - root - INFO - y overlap
+2026-05-19 19:21:50,553 - root - INFO - y overlap
+2026-05-19 19:21:50,570 - root - INFO - y overlap
+2026-05-19 19:21:50,587 - root - INFO - y overlap
+2026-05-19 19:21:50,604 - root - INFO - y overlap
+2026-05-19 19:21:50,620 - root - INFO - y overlap
+2026-05-19 19:21:50,637 - root - INFO - y overlap
+2026-05-19 19:21:50,654 - root - INFO - y overlap
+2026-05-19 19:21:50,671 - root - INFO - y overlap
+2026-05-19 19:21:50,688 - root - INFO - space pressed
+2026-05-19 19:21:50,689 - root - INFO - -1
+2026-05-19 19:21:50,689 - root - INFO - 1
+2026-05-19 19:21:50,966 - root - INFO - y overlap
+2026-05-19 19:21:50,986 - root - INFO - y overlap
+2026-05-19 19:21:51,006 - root - INFO - y overlap
+2026-05-19 19:21:51,023 - root - INFO - y overlap
+2026-05-19 19:21:51,043 - root - INFO - y overlap
+2026-05-19 19:21:51,062 - root - INFO - y overlap
+2026-05-19 19:21:51,083 - root - INFO - y overlap
+2026-05-19 19:21:51,100 - root - INFO - y overlap
+2026-05-19 19:21:51,116 - root - INFO - y overlap
+2026-05-19 19:21:51,132 - root - INFO - y overlap
+2026-05-19 19:21:51,149 - root - INFO - y overlap
+2026-05-19 19:21:51,166 - root - INFO - y overlap
+2026-05-19 19:21:51,182 - root - INFO - y overlap
+2026-05-19 19:21:51,199 - root - INFO - y overlap
+2026-05-19 19:21:51,216 - root - INFO - y overlap
+2026-05-19 19:21:51,232 - root - INFO - y overlap
+2026-05-19 19:21:51,248 - root - INFO - y overlap
+2026-05-19 19:21:51,264 - root - INFO - y overlap
+2026-05-19 19:21:51,281 - root - INFO - y overlap
+2026-05-19 19:21:51,297 - root - INFO - y overlap
+2026-05-19 19:21:51,313 - root - INFO - y overlap
+2026-05-19 19:21:51,335 - root - INFO - y overlap
+2026-05-19 19:21:51,352 - root - INFO - y overlap
+2026-05-19 19:21:51,383 - root - INFO - y overlap
+2026-05-19 19:21:51,399 - root - INFO - y overlap
+2026-05-19 19:21:51,415 - root - INFO - y overlap
+2026-05-19 19:21:51,431 - root - INFO - y overlap
+2026-05-19 19:21:51,447 - root - INFO - y overlap
+2026-05-19 19:21:51,463 - root - INFO - y overlap
+2026-05-19 19:21:51,478 - root - INFO - y overlap
+2026-05-19 19:21:51,495 - root - INFO - y overlap
+2026-05-19 19:21:51,511 - root - INFO - y overlap
+2026-05-19 19:21:51,528 - root - INFO - y overlap
+2026-05-19 19:21:51,545 - root - INFO - y overlap
+2026-05-19 19:21:51,561 - root - INFO - y overlap
+2026-05-19 19:21:51,577 - root - INFO - y overlap
+2026-05-19 19:21:51,592 - root - INFO - y overlap
+2026-05-19 19:21:51,609 - root - INFO - y overlap
+2026-05-19 19:21:51,625 - root - INFO - y overlap
+2026-05-19 19:21:51,641 - root - INFO - y overlap
+2026-05-19 19:21:51,657 - root - INFO - y overlap
+2026-05-19 19:21:51,674 - root - INFO - y overlap
+2026-05-19 19:21:51,691 - root - INFO - y overlap
+2026-05-19 19:21:51,708 - root - INFO - y overlap
+2026-05-19 19:21:51,725 - root - INFO - y overlap
+2026-05-19 19:21:51,741 - root - INFO - y overlap
+2026-05-19 19:21:51,757 - root - INFO - y overlap
+2026-05-19 19:21:51,773 - root - INFO - y overlap
+2026-05-19 19:21:51,791 - root - INFO - y overlap
+2026-05-19 19:21:51,807 - root - INFO - y overlap
+2026-05-19 19:21:51,824 - root - INFO - y overlap
+2026-05-19 19:21:51,841 - root - INFO - y overlap
+2026-05-19 19:21:51,859 - root - INFO - y overlap
+2026-05-19 19:21:51,877 - root - INFO - y overlap
+2026-05-19 19:21:51,893 - root - INFO - y overlap
+2026-05-19 19:21:51,909 - root - INFO - y overlap
+2026-05-19 19:21:51,925 - root - INFO - y overlap
+2026-05-19 19:21:51,941 - root - INFO - y overlap
+2026-05-19 19:21:51,957 - root - INFO - y overlap
+2026-05-19 19:21:51,975 - root - INFO - y overlap
+2026-05-19 19:21:51,991 - root - INFO - y overlap
+2026-05-19 19:21:52,008 - root - INFO - y overlap
+2026-05-19 19:21:52,026 - root - INFO - y overlap
+2026-05-19 19:21:52,042 - root - INFO - y overlap
+2026-05-19 19:21:52,059 - root - INFO - y overlap
+2026-05-19 19:21:52,076 - root - INFO - y overlap
+2026-05-19 19:21:52,092 - root - INFO - y overlap
+2026-05-19 19:21:52,109 - root - INFO - y overlap
+2026-05-19 19:21:52,125 - root - INFO - y overlap
+2026-05-19 19:21:52,141 - root - INFO - y overlap
+2026-05-19 19:21:52,157 - player - INFO - x.overlap
+2026-05-19 19:21:52,157 - root - INFO - y overlap
+2026-05-19 19:21:52,173 - player - INFO - x.overlap
+2026-05-19 19:21:52,174 - root - INFO - y overlap
+2026-05-19 19:21:52,191 - player - INFO - x.overlap
+2026-05-19 19:21:52,191 - root - INFO - y overlap
+2026-05-19 19:21:52,208 - player - INFO - x.overlap
+2026-05-19 19:21:52,208 - root - INFO - y overlap
+2026-05-19 19:21:52,225 - player - INFO - x.overlap
+2026-05-19 19:21:52,225 - root - INFO - y overlap
+2026-05-19 19:21:52,241 - player - INFO - x.overlap
+2026-05-19 19:21:52,241 - root - INFO - y overlap
+2026-05-19 19:21:52,257 - player - INFO - x.overlap
+2026-05-19 19:21:52,257 - root - INFO - y overlap
+2026-05-19 19:21:52,273 - player - INFO - x.overlap
+2026-05-19 19:21:52,274 - root - INFO - y overlap
+2026-05-19 19:21:52,291 - player - INFO - x.overlap
+2026-05-19 19:21:52,291 - root - INFO - y overlap
+2026-05-19 19:21:52,307 - player - INFO - x.overlap
+2026-05-19 19:21:52,308 - root - INFO - y overlap
+2026-05-19 19:21:52,323 - player - INFO - x.overlap
+2026-05-19 19:21:52,324 - root - INFO - y overlap
+2026-05-19 19:21:52,339 - player - INFO - x.overlap
+2026-05-19 19:21:52,340 - root - INFO - y overlap
+2026-05-19 19:21:52,355 - player - INFO - x.overlap
+2026-05-19 19:21:52,356 - root - INFO - y overlap
+2026-05-19 19:21:52,373 - player - INFO - x.overlap
+2026-05-19 19:21:52,373 - root - INFO - y overlap
+2026-05-19 19:21:52,390 - player - INFO - x.overlap
+2026-05-19 19:21:52,390 - root - INFO - y overlap
+2026-05-19 19:21:52,407 - player - INFO - x.overlap
+2026-05-19 19:21:52,407 - root - INFO - y overlap
+2026-05-19 19:21:52,423 - player - INFO - x.overlap
+2026-05-19 19:21:52,424 - root - INFO - y overlap
+2026-05-19 19:21:52,440 - player - INFO - x.overlap
+2026-05-19 19:21:52,440 - root - INFO - y overlap
+2026-05-19 19:21:52,457 - player - INFO - x.overlap
+2026-05-19 19:21:52,457 - root - INFO - y overlap
+2026-05-19 19:21:52,473 - player - INFO - x.overlap
+2026-05-19 19:21:52,474 - root - INFO - y overlap
+2026-05-19 19:21:52,490 - player - INFO - x.overlap
+2026-05-19 19:21:52,491 - root - INFO - y overlap
+2026-05-19 19:21:52,508 - player - INFO - x.overlap
+2026-05-19 19:21:52,508 - root - INFO - y overlap
+2026-05-19 19:21:52,524 - player - INFO - x.overlap
+2026-05-19 19:21:52,524 - root - INFO - y overlap
+2026-05-19 19:21:52,540 - player - INFO - x.overlap
+2026-05-19 19:21:52,541 - root - INFO - y overlap
+2026-05-19 19:21:52,557 - player - INFO - x.overlap
+2026-05-19 19:21:52,557 - root - INFO - y overlap
+2026-05-19 19:21:52,573 - root - INFO - space pressed
+2026-05-19 19:21:52,574 - root - INFO - 1
+2026-05-19 19:21:52,574 - root - INFO - -1
+2026-05-19 19:21:52,574 - player - INFO - x.overlap
+2026-05-19 19:21:52,589 - player - INFO - x.overlap
+2026-05-19 19:21:52,605 - player - INFO - x.overlap
+2026-05-19 19:21:52,622 - player - INFO - x.overlap
+2026-05-19 19:21:52,640 - player - INFO - x.overlap
+2026-05-19 19:21:52,658 - player - INFO - x.overlap
+2026-05-19 19:21:52,673 - player - INFO - x.overlap
+2026-05-19 19:21:52,775 - root - INFO - y overlap
+2026-05-19 19:21:52,791 - root - INFO - y overlap
+2026-05-19 19:21:52,807 - root - INFO - y overlap
+2026-05-19 19:21:52,824 - root - INFO - y overlap
+2026-05-19 19:21:52,841 - root - INFO - y overlap
+2026-05-19 19:21:52,857 - root - INFO - y overlap
+2026-05-19 19:21:52,874 - root - INFO - y overlap
+2026-05-19 19:21:52,890 - root - INFO - y overlap
+2026-05-19 19:21:52,906 - root - INFO - y overlap
+2026-05-19 19:21:52,923 - root - INFO - y overlap
+2026-05-19 19:21:52,940 - root - INFO - y overlap
+2026-05-19 19:21:52,956 - root - INFO - y overlap
+2026-05-19 19:21:52,973 - root - INFO - y overlap
+2026-05-19 19:21:52,989 - root - INFO - y overlap
+2026-05-19 19:21:53,006 - root - INFO - y overlap
+2026-05-19 19:21:53,022 - root - INFO - y overlap
+2026-05-19 19:21:53,039 - root - INFO - y overlap
+2026-05-19 19:21:53,055 - root - INFO - y overlap
+2026-05-19 19:21:53,071 - root - INFO - y overlap
+2026-05-19 19:21:53,088 - root - INFO - y overlap
+2026-05-19 19:21:53,105 - root - INFO - y overlap
+2026-05-19 19:21:53,122 - root - INFO - y overlap
+2026-05-19 19:21:53,139 - root - INFO - y overlap
+2026-05-19 19:21:53,157 - root - INFO - y overlap
+2026-05-19 19:21:53,180 - root - INFO - y overlap
+2026-05-19 19:21:53,197 - root - INFO - y overlap
+2026-05-19 19:21:53,214 - root - INFO - y overlap
+2026-05-19 19:21:53,230 - root - INFO - y overlap
+2026-05-19 19:21:53,248 - root - INFO - y overlap
+2026-05-19 19:21:53,265 - root - INFO - y overlap
+2026-05-19 19:21:53,282 - root - INFO - y overlap
+2026-05-19 19:21:53,298 - root - INFO - y overlap
+2026-05-19 19:21:53,316 - root - INFO - y overlap
+2026-05-19 19:21:53,331 - root - INFO - y overlap
+2026-05-19 19:21:53,348 - root - INFO - y overlap
+2026-05-19 19:21:53,366 - root - INFO - y overlap
+2026-05-19 19:21:53,382 - root - INFO - y overlap
+2026-05-19 19:21:53,400 - root - INFO - y overlap
+2026-05-19 19:21:53,417 - root - INFO - y overlap
+2026-05-19 19:21:53,433 - root - INFO - y overlap
+2026-05-19 19:21:53,450 - root - INFO - y overlap
+2026-05-19 19:21:53,467 - root - INFO - y overlap
+2026-05-19 19:21:53,484 - root - INFO - y overlap
+2026-05-19 19:21:53,502 - root - INFO - y overlap
+2026-05-19 19:21:53,518 - root - INFO - y overlap
+2026-05-19 19:21:53,534 - root - INFO - y overlap
+2026-05-19 19:21:53,551 - root - INFO - y overlap
+2026-05-19 19:21:53,567 - root - INFO - y overlap
+2026-05-19 19:21:53,583 - root - INFO - y overlap
+2026-05-19 19:21:53,600 - root - INFO - y overlap
+2026-05-19 19:21:53,617 - root - INFO - y overlap
+2026-05-19 19:21:53,634 - root - INFO - space pressed
+2026-05-19 19:21:53,634 - root - INFO - -1
+2026-05-19 19:21:53,635 - root - INFO - 1
+2026-05-19 19:21:54,165 - root - INFO - y overlap
+2026-05-19 19:21:54,182 - root - INFO - y overlap
+2026-05-19 19:21:54,200 - root - INFO - y overlap
+2026-05-19 19:21:54,217 - root - INFO - y overlap
+2026-05-19 19:21:54,234 - root - INFO - y overlap
+2026-05-19 19:21:54,250 - root - INFO - y overlap
+2026-05-19 19:21:54,266 - root - INFO - y overlap
+2026-05-19 19:21:54,283 - root - INFO - y overlap
+2026-05-19 19:21:54,299 - root - INFO - space pressed
+2026-05-19 19:21:54,300 - root - INFO - 1
+2026-05-19 19:21:54,300 - root - INFO - -1
+2026-05-19 19:21:55,285 - root - INFO - space pressed
+2026-05-19 19:21:55,285 - root - INFO - -1
+2026-05-19 19:21:55,286 - root - INFO - -1
+2026-05-19 19:31:00,106 - root - INFO - LAYERS:
+2026-05-19 19:31:00,106 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:31:00,106 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:31:00,106 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 19:31:00,106 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:31:00,106 - level - INFO - true_p2spawn <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:31:00,106 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:31:00,114 - level - INFO - x: 96.0 y: 511.938
+2026-05-19 19:31:00,118 - root - INFO - y overlap
+2026-05-19 19:31:00,120 - root - INFO - y overlap
+2026-05-19 19:31:00,136 - root - INFO - y overlap
+2026-05-19 19:31:00,153 - root - INFO - y overlap
+2026-05-19 19:31:00,170 - root - INFO - y overlap
+2026-05-19 19:31:00,188 - root - INFO - y overlap
+2026-05-19 19:31:00,204 - root - INFO - y overlap
+2026-05-19 19:31:00,221 - root - INFO - y overlap
+2026-05-19 19:31:00,238 - root - INFO - y overlap
+2026-05-19 19:31:00,255 - root - INFO - y overlap
+2026-05-19 19:31:00,272 - root - INFO - y overlap
+2026-05-19 19:31:00,289 - root - INFO - y overlap
+2026-05-19 19:31:00,305 - root - INFO - y overlap
+2026-05-19 19:31:00,322 - root - INFO - y overlap
+2026-05-19 19:31:00,338 - root - INFO - y overlap
+2026-05-19 19:31:00,356 - root - INFO - y overlap
+2026-05-19 19:31:00,372 - root - INFO - y overlap
+2026-05-19 19:31:00,389 - root - INFO - y overlap
+2026-05-19 19:31:00,406 - root - INFO - y overlap
+2026-05-19 19:31:00,423 - root - INFO - y overlap
+2026-05-19 19:31:00,439 - root - INFO - y overlap
+2026-05-19 19:31:00,456 - root - INFO - y overlap
+2026-05-19 19:31:00,472 - root - INFO - y overlap
+2026-05-19 19:31:00,489 - root - INFO - y overlap
+2026-05-19 19:31:00,507 - root - INFO - y overlap
+2026-05-19 19:31:00,523 - root - INFO - y overlap
+2026-05-19 19:31:00,540 - root - INFO - y overlap
+2026-05-19 19:31:00,557 - root - INFO - y overlap
+2026-05-19 19:31:00,574 - root - INFO - y overlap
+2026-05-19 19:31:00,590 - root - INFO - y overlap
+2026-05-19 19:31:00,607 - root - INFO - y overlap
+2026-05-19 19:31:00,623 - root - INFO - y overlap
+2026-05-19 19:31:00,640 - root - INFO - y overlap
+2026-05-19 19:31:00,658 - root - INFO - y overlap
+2026-05-19 19:31:00,675 - root - INFO - y overlap
+2026-05-19 19:31:00,691 - root - INFO - y overlap
+2026-05-19 19:31:00,709 - root - INFO - y overlap
+2026-05-19 19:31:00,726 - root - INFO - y overlap
+2026-05-19 19:31:00,743 - root - INFO - y overlap
+2026-05-19 19:31:00,760 - root - INFO - y overlap
+2026-05-19 19:31:00,777 - root - INFO - y overlap
+2026-05-19 19:31:00,795 - root - INFO - y overlap
+2026-05-19 19:31:00,810 - root - INFO - y overlap
+2026-05-19 19:31:00,827 - root - INFO - y overlap
+2026-05-19 19:31:00,843 - root - INFO - y overlap
+2026-05-19 19:31:00,860 - root - INFO - y overlap
+2026-05-19 19:31:00,877 - root - INFO - y overlap
+2026-05-19 19:31:00,893 - root - INFO - y overlap
+2026-05-19 19:31:00,910 - root - INFO - y overlap
+2026-05-19 19:31:00,926 - root - INFO - y overlap
+2026-05-19 19:31:00,943 - root - INFO - y overlap
+2026-05-19 19:31:00,959 - root - INFO - y overlap
+2026-05-19 19:31:00,977 - root - INFO - y overlap
+2026-05-19 19:31:00,994 - root - INFO - y overlap
+2026-05-19 19:31:01,010 - root - INFO - y overlap
+2026-05-19 19:31:01,028 - root - INFO - y overlap
+2026-05-19 19:31:01,044 - root - INFO - y overlap
+2026-05-19 19:31:01,060 - root - INFO - y overlap
+2026-05-19 19:31:01,077 - root - INFO - y overlap
+2026-05-19 19:31:01,093 - root - INFO - y overlap
+2026-05-19 19:31:01,109 - root - INFO - y overlap
+2026-05-19 19:31:01,125 - root - INFO - y overlap
+2026-05-19 19:31:01,141 - root - INFO - y overlap
+2026-05-19 19:31:01,158 - root - INFO - y overlap
+2026-05-19 19:31:01,175 - root - INFO - y overlap
+2026-05-19 19:31:01,192 - root - INFO - y overlap
+2026-05-19 19:31:01,208 - root - INFO - y overlap
+2026-05-19 19:31:01,225 - root - INFO - y overlap
+2026-05-19 19:31:01,242 - root - INFO - y overlap
+2026-05-19 19:31:01,259 - root - INFO - y overlap
+2026-05-19 19:31:01,276 - root - INFO - y overlap
+2026-05-19 19:31:01,294 - root - INFO - y overlap
+2026-05-19 19:31:01,311 - root - INFO - y overlap
+2026-05-19 19:31:01,327 - root - INFO - y overlap
+2026-05-19 19:31:01,343 - root - INFO - y overlap
+2026-05-19 19:31:01,360 - root - INFO - y overlap
+2026-05-19 19:31:01,377 - root - INFO - y overlap
+2026-05-19 19:31:01,394 - root - INFO - y overlap
+2026-05-19 19:31:01,411 - root - INFO - y overlap
+2026-05-19 19:31:01,427 - root - INFO - y overlap
+2026-05-19 19:31:01,445 - root - INFO - y overlap
+2026-05-19 19:31:01,461 - root - INFO - y overlap
+2026-05-19 19:31:01,478 - root - INFO - y overlap
+2026-05-19 19:31:01,495 - root - INFO - y overlap
+2026-05-19 19:31:01,512 - root - INFO - y overlap
+2026-05-19 19:31:01,529 - root - INFO - y overlap
+2026-05-19 19:31:01,547 - root - INFO - y overlap
+2026-05-19 19:31:01,564 - root - INFO - y overlap
+2026-05-19 19:31:01,581 - root - INFO - y overlap
+2026-05-19 19:31:01,597 - root - INFO - y overlap
+2026-05-19 19:31:01,614 - root - INFO - y overlap
+2026-05-19 19:31:01,630 - root - INFO - y overlap
+2026-05-19 19:31:01,646 - root - INFO - y overlap
+2026-05-19 19:31:01,663 - root - INFO - y overlap
+2026-05-19 19:31:01,681 - root - INFO - y overlap
+2026-05-19 19:31:01,697 - root - INFO - y overlap
+2026-05-19 19:31:01,714 - root - INFO - y overlap
+2026-05-19 19:31:01,732 - root - INFO - y overlap
+2026-05-19 19:31:01,749 - root - INFO - y overlap
+2026-05-19 19:31:01,765 - root - INFO - y overlap
+2026-05-19 19:31:01,784 - root - INFO - space pressed
+2026-05-19 19:31:01,785 - root - INFO - 1
+2026-05-19 19:31:01,785 - root - INFO - -1
+2026-05-19 19:31:02,598 - player - INFO - x.overlap
+2026-05-19 19:31:02,614 - player - INFO - x.overlap
+2026-05-19 19:31:02,631 - player - INFO - x.overlap
+2026-05-19 19:31:18,531 - root - INFO - LAYERS:
+2026-05-19 19:31:18,532 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:31:18,532 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 19:31:18,532 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 19:31:18,532 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:31:18,532 - level - INFO - true_p2spawn <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:31:18,532 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 19:31:18,539 - level - INFO - x: 96.0 y: 511.938
+2026-05-19 19:31:22,691 - root - INFO - y overlap
+2026-05-19 19:31:22,707 - root - INFO - y overlap
+2026-05-19 19:31:22,723 - root - INFO - y overlap
+2026-05-19 19:31:22,739 - root - INFO - y overlap
+2026-05-19 19:31:22,755 - root - INFO - y overlap
+2026-05-19 19:31:22,772 - root - INFO - y overlap
+2026-05-19 19:31:22,789 - root - INFO - y overlap
+2026-05-19 19:31:22,806 - root - INFO - y overlap
+2026-05-19 19:31:22,824 - root - INFO - y overlap
+2026-05-19 19:31:22,841 - root - INFO - y overlap
+2026-05-19 19:31:22,858 - root - INFO - y overlap
+2026-05-19 19:31:22,874 - root - INFO - y overlap
+2026-05-19 19:31:22,891 - root - INFO - y overlap
+2026-05-19 19:31:22,907 - root - INFO - y overlap
+2026-05-19 19:31:22,925 - root - INFO - y overlap
+2026-05-19 19:31:22,941 - root - INFO - y overlap
+2026-05-19 19:31:22,957 - root - INFO - y overlap
+2026-05-19 19:31:22,973 - root - INFO - y overlap
+2026-05-19 19:31:22,989 - root - INFO - y overlap
+2026-05-19 19:31:23,005 - root - INFO - y overlap
+2026-05-19 19:31:23,022 - root - INFO - y overlap
+2026-05-19 19:31:23,038 - root - INFO - y overlap
+2026-05-19 19:31:23,055 - root - INFO - y overlap
+2026-05-19 19:31:23,072 - root - INFO - y overlap
+2026-05-19 19:31:23,088 - root - INFO - y overlap
+2026-05-19 19:31:23,105 - root - INFO - y overlap
+2026-05-19 19:31:23,122 - root - INFO - y overlap
+2026-05-19 19:31:23,138 - root - INFO - y overlap
+2026-05-19 19:31:23,155 - root - INFO - y overlap
+2026-05-19 19:31:23,171 - root - INFO - y overlap
+2026-05-19 19:31:23,188 - root - INFO - y overlap
+2026-05-19 19:31:23,205 - root - INFO - y overlap
+2026-05-19 19:31:23,223 - root - INFO - y overlap
+2026-05-19 19:31:23,240 - root - INFO - y overlap
+2026-05-19 19:31:23,256 - root - INFO - y overlap
+2026-05-19 19:31:23,273 - root - INFO - y overlap
+2026-05-19 19:31:23,290 - root - INFO - y overlap
+2026-05-19 19:31:23,308 - root - INFO - y overlap
+2026-05-19 19:31:23,324 - root - INFO - y overlap
+2026-05-19 19:31:23,341 - root - INFO - y overlap
+2026-05-19 19:31:23,357 - root - INFO - y overlap
+2026-05-19 19:31:23,375 - root - INFO - y overlap
+2026-05-19 19:31:23,392 - root - INFO - y overlap
+2026-05-19 19:31:23,408 - root - INFO - y overlap
+2026-05-19 19:31:23,424 - root - INFO - y overlap
+2026-05-19 19:31:23,442 - root - INFO - y overlap
+2026-05-19 19:31:23,459 - root - INFO - y overlap
+2026-05-19 19:31:23,476 - root - INFO - y overlap
+2026-05-19 19:31:23,492 - root - INFO - y overlap
+2026-05-19 19:31:23,507 - root - INFO - y overlap
+2026-05-19 19:31:23,525 - root - INFO - y overlap
+2026-05-19 19:31:23,540 - root - INFO - y overlap
+2026-05-19 19:31:23,557 - root - INFO - y overlap
+2026-05-19 19:31:23,573 - root - INFO - y overlap
+2026-05-19 19:31:23,590 - root - INFO - y overlap
+2026-05-19 19:31:23,605 - root - INFO - y overlap
+2026-05-19 19:31:23,623 - root - INFO - y overlap
+2026-05-19 19:31:23,640 - root - INFO - y overlap
+2026-05-19 19:31:23,656 - root - INFO - y overlap
+2026-05-19 19:31:23,674 - root - INFO - y overlap
+2026-05-19 19:31:23,693 - root - INFO - y overlap
+2026-05-19 19:31:23,709 - root - INFO - y overlap
+2026-05-19 19:31:23,726 - root - INFO - y overlap
+2026-05-19 19:31:23,745 - root - INFO - y overlap
+2026-05-19 19:31:23,762 - root - INFO - y overlap
+2026-05-19 19:31:23,778 - root - INFO - y overlap
+2026-05-19 19:31:23,794 - root - INFO - y overlap
+2026-05-19 19:31:23,809 - root - INFO - y overlap
+2026-05-19 19:31:23,825 - root - INFO - y overlap
+2026-05-19 19:31:23,841 - root - INFO - y overlap
+2026-05-19 19:31:23,858 - root - INFO - y overlap
+2026-05-19 19:31:23,874 - root - INFO - y overlap
+2026-05-19 19:31:23,891 - root - INFO - y overlap
+2026-05-19 19:31:23,908 - root - INFO - y overlap
+2026-05-19 19:31:23,925 - root - INFO - y overlap
+2026-05-19 19:31:23,942 - root - INFO - y overlap
+2026-05-19 19:31:23,959 - root - INFO - y overlap
+2026-05-19 19:31:23,976 - root - INFO - y overlap
+2026-05-19 19:31:23,992 - root - INFO - y overlap
+2026-05-19 19:31:24,008 - root - INFO - y overlap
+2026-05-19 19:31:24,025 - root - INFO - y overlap
+2026-05-19 19:31:24,042 - root - INFO - y overlap
+2026-05-19 19:31:24,059 - root - INFO - y overlap
+2026-05-19 19:31:24,076 - root - INFO - y overlap
+2026-05-19 19:31:24,093 - root - INFO - y overlap
+2026-05-19 19:31:24,111 - root - INFO - y overlap
+2026-05-19 19:31:24,128 - root - INFO - y overlap
+2026-05-19 19:31:24,144 - root - INFO - y overlap
+2026-05-19 19:31:24,160 - root - INFO - y overlap
+2026-05-19 19:31:24,177 - root - INFO - y overlap
+2026-05-19 19:31:24,194 - root - INFO - y overlap
+2026-05-19 19:31:24,211 - root - INFO - y overlap
+2026-05-19 19:31:24,227 - root - INFO - y overlap
+2026-05-19 19:31:24,244 - root - INFO - y overlap
+2026-05-19 19:31:24,260 - root - INFO - y overlap
+2026-05-19 19:31:24,277 - root - INFO - y overlap
+2026-05-19 19:31:24,294 - root - INFO - y overlap
+2026-05-19 19:31:24,310 - root - INFO - y overlap
+2026-05-19 19:31:24,327 - root - INFO - y overlap
+2026-05-19 19:31:24,344 - root - INFO - y overlap
+2026-05-19 19:31:24,360 - root - INFO - y overlap
+2026-05-19 19:31:24,376 - root - INFO - y overlap
+2026-05-19 19:31:24,393 - root - INFO - y overlap
+2026-05-19 19:31:24,410 - root - INFO - y overlap
+2026-05-19 19:31:24,427 - root - INFO - y overlap
+2026-05-19 19:31:24,444 - root - INFO - y overlap
+2026-05-19 19:31:24,460 - root - INFO - y overlap
+2026-05-19 19:31:24,476 - root - INFO - y overlap
+2026-05-19 19:31:24,493 - root - INFO - y overlap
+2026-05-19 19:31:24,511 - root - INFO - y overlap
+2026-05-19 19:31:24,527 - root - INFO - y overlap
+2026-05-19 19:31:24,543 - root - INFO - y overlap
+2026-05-19 19:31:24,561 - root - INFO - y overlap
+2026-05-19 19:31:24,577 - root - INFO - y overlap
+2026-05-19 19:31:24,593 - root - INFO - y overlap
+2026-05-19 19:31:24,610 - root - INFO - y overlap
+2026-05-19 19:31:24,628 - root - INFO - y overlap
+2026-05-19 19:31:24,644 - root - INFO - y overlap
+2026-05-19 19:31:24,661 - root - INFO - y overlap
+2026-05-19 19:31:24,678 - root - INFO - y overlap
+2026-05-19 19:31:24,695 - root - INFO - y overlap
+2026-05-19 19:31:24,712 - root - INFO - y overlap
+2026-05-19 19:31:24,728 - root - INFO - y overlap
+2026-05-19 19:31:24,744 - root - INFO - y overlap
+2026-05-19 19:31:24,761 - root - INFO - y overlap
+2026-05-19 19:31:24,779 - root - INFO - y overlap
+2026-05-19 19:31:24,796 - root - INFO - y overlap
+2026-05-19 19:31:24,812 - root - INFO - y overlap
+2026-05-19 19:31:24,829 - root - INFO - y overlap
+2026-05-19 19:31:24,845 - root - INFO - y overlap
+2026-05-19 19:31:24,862 - root - INFO - y overlap
+2026-05-19 19:31:24,879 - root - INFO - y overlap
+2026-05-19 19:31:24,896 - root - INFO - y overlap
+2026-05-19 19:31:24,913 - root - INFO - y overlap
+2026-05-19 19:31:24,929 - root - INFO - y overlap
+2026-05-19 19:31:24,945 - root - INFO - y overlap
+2026-05-19 19:31:24,963 - root - INFO - y overlap
+2026-05-19 19:31:24,979 - root - INFO - y overlap
+2026-05-19 19:31:24,996 - root - INFO - y overlap
+2026-05-19 19:31:25,012 - root - INFO - y overlap
+2026-05-19 19:31:25,030 - root - INFO - y overlap
+2026-05-19 19:31:25,046 - root - INFO - y overlap
+2026-05-19 19:31:25,063 - root - INFO - y overlap
+2026-05-19 19:31:25,080 - root - INFO - y overlap
+2026-05-19 19:31:25,096 - root - INFO - y overlap
+2026-05-19 19:31:25,113 - root - INFO - y overlap
+2026-05-19 19:31:25,130 - root - INFO - y overlap
+2026-05-19 19:31:25,148 - root - INFO - y overlap
+2026-05-19 19:31:25,166 - root - INFO - y overlap
+2026-05-19 19:31:25,183 - root - INFO - y overlap
+2026-05-19 19:31:25,200 - root - INFO - y overlap
+2026-05-19 19:31:25,218 - root - INFO - y overlap
+2026-05-19 19:31:25,234 - root - INFO - y overlap
+2026-05-19 19:31:25,251 - root - INFO - y overlap
+2026-05-19 19:31:25,267 - root - INFO - y overlap
+2026-05-19 19:31:25,284 - root - INFO - y overlap
+2026-05-19 19:31:25,301 - root - INFO - y overlap
+2026-05-19 19:31:25,318 - root - INFO - y overlap
+2026-05-19 19:31:25,335 - root - INFO - y overlap
+2026-05-19 19:31:25,352 - root - INFO - y overlap
+2026-05-19 19:31:25,369 - root - INFO - y overlap
+2026-05-19 19:31:25,387 - root - INFO - space pressed
+2026-05-19 19:31:25,387 - root - INFO - 1
+2026-05-19 19:31:25,388 - root - INFO - -1
+2026-05-19 19:31:25,724 - player - INFO - x.overlap
+2026-05-19 19:31:25,741 - player - INFO - x.overlap
+2026-05-19 19:31:25,758 - player - INFO - x.overlap
+2026-05-19 19:31:26,076 - root - INFO - y overlap
+2026-05-19 19:31:26,092 - root - INFO - y overlap
+2026-05-19 19:31:26,109 - root - INFO - space pressed
+2026-05-19 19:31:26,109 - root - INFO - -1
+2026-05-19 19:31:26,109 - root - INFO - 1
+2026-05-19 19:31:26,391 - player - INFO - x.overlap
+2026-05-19 19:31:26,407 - player - INFO - x.overlap
+2026-05-19 19:31:26,424 - player - INFO - x.overlap
+2026-05-19 19:31:26,424 - root - INFO - y overlap
+2026-05-19 19:31:26,440 - player - INFO - x.overlap
+2026-05-19 19:31:26,440 - root - INFO - y overlap
+2026-05-19 19:31:26,457 - player - INFO - x.overlap
+2026-05-19 19:31:26,457 - root - INFO - y overlap
+2026-05-19 19:31:26,474 - player - INFO - x.overlap
+2026-05-19 19:31:26,474 - root - INFO - y overlap
+2026-05-19 19:31:26,491 - player - INFO - x.overlap
+2026-05-19 19:31:26,492 - root - INFO - y overlap
+2026-05-19 19:31:26,508 - player - INFO - x.overlap
+2026-05-19 19:31:26,527 - root - INFO - y overlap
+2026-05-19 19:31:26,535 - player - INFO - x.overlap
+2026-05-19 19:31:26,535 - root - INFO - y overlap
+2026-05-19 19:31:26,552 - player - INFO - x.overlap
+2026-05-19 19:31:26,552 - root - INFO - y overlap
+2026-05-19 19:31:26,568 - player - INFO - x.overlap
+2026-05-19 19:31:26,569 - root - INFO - y overlap
+2026-05-19 19:31:26,586 - root - INFO - space pressed
+2026-05-19 19:31:26,586 - root - INFO - 1
+2026-05-19 19:31:26,587 - root - INFO - -1
+2026-05-19 19:31:26,587 - player - INFO - x.overlap
+2026-05-19 19:31:26,603 - player - INFO - x.overlap
+2026-05-19 19:31:26,619 - player - INFO - x.overlap
+2026-05-19 19:31:26,636 - player - INFO - x.overlap
+2026-05-19 19:31:26,901 - root - INFO - y overlap
+2026-05-19 19:31:26,918 - root - INFO - y overlap
+2026-05-19 19:31:26,935 - root - INFO - y overlap
+2026-05-19 19:31:26,950 - root - INFO - y overlap
+2026-05-19 19:31:26,967 - root - INFO - y overlap
+2026-05-19 19:31:26,984 - root - INFO - y overlap
+2026-05-19 19:31:27,001 - root - INFO - y overlap
+2026-05-19 19:31:27,016 - root - INFO - y overlap
+2026-05-19 19:31:27,033 - root - INFO - space pressed
+2026-05-19 19:31:27,034 - root - INFO - -1
+2026-05-19 19:31:27,034 - root - INFO - 1
+2026-05-19 19:31:27,301 - root - INFO - y overlap
+2026-05-19 19:31:27,318 - root - INFO - y overlap
+2026-05-19 19:31:27,335 - root - INFO - y overlap
+2026-05-19 19:31:27,351 - root - INFO - y overlap
+2026-05-19 19:31:27,367 - root - INFO - y overlap
+2026-05-19 19:31:27,384 - root - INFO - y overlap
+2026-05-19 19:31:27,399 - root - INFO - y overlap
+2026-05-19 19:31:27,416 - root - INFO - y overlap
+2026-05-19 19:31:27,432 - root - INFO - y overlap
+2026-05-19 19:31:27,448 - root - INFO - y overlap
+2026-05-19 19:31:27,465 - root - INFO - y overlap
+2026-05-19 19:31:27,482 - root - INFO - y overlap
+2026-05-19 19:31:27,499 - root - INFO - y overlap
+2026-05-19 19:31:27,515 - root - INFO - y overlap
+2026-05-19 19:31:27,532 - root - INFO - y overlap
+2026-05-19 19:31:27,549 - root - INFO - y overlap
+2026-05-19 19:31:27,566 - root - INFO - y overlap
+2026-05-19 19:31:27,583 - root - INFO - y overlap
+2026-05-19 19:31:27,601 - root - INFO - y overlap
+2026-05-19 19:31:27,618 - root - INFO - y overlap
+2026-05-19 19:31:27,634 - root - INFO - y overlap
+2026-05-19 19:31:27,651 - root - INFO - y overlap
+2026-05-19 19:31:27,668 - root - INFO - y overlap
+2026-05-19 19:31:27,684 - root - INFO - y overlap
+2026-05-19 19:31:27,701 - root - INFO - y overlap
+2026-05-19 19:31:27,717 - root - INFO - y overlap
+2026-05-19 19:31:27,734 - root - INFO - y overlap
+2026-05-19 19:31:27,750 - root - INFO - y overlap
+2026-05-19 19:31:27,767 - root - INFO - y overlap
+2026-05-19 19:31:27,783 - root - INFO - y overlap
+2026-05-19 19:31:27,800 - root - INFO - y overlap
+2026-05-19 19:31:27,817 - root - INFO - y overlap
+2026-05-19 19:31:27,833 - root - INFO - y overlap
+2026-05-19 19:31:27,849 - root - INFO - y overlap
+2026-05-19 19:31:27,867 - root - INFO - y overlap
+2026-05-19 19:31:27,884 - root - INFO - y overlap
+2026-05-19 19:31:27,908 - root - INFO - y overlap
+2026-05-19 19:31:27,925 - root - INFO - y overlap
+2026-05-19 19:31:27,941 - root - INFO - y overlap
+2026-05-19 19:31:27,958 - root - INFO - y overlap
+2026-05-19 19:31:27,975 - root - INFO - y overlap
+2026-05-19 19:31:27,991 - root - INFO - y overlap
+2026-05-19 19:31:28,009 - root - INFO - y overlap
+2026-05-19 19:31:28,026 - root - INFO - y overlap
+2026-05-19 19:31:28,044 - root - INFO - y overlap
+2026-05-19 19:31:28,061 - root - INFO - y overlap
+2026-05-19 19:31:28,077 - root - INFO - y overlap
+2026-05-19 19:31:28,094 - root - INFO - y overlap
+2026-05-19 19:31:28,112 - root - INFO - y overlap
+2026-05-19 19:31:28,128 - root - INFO - y overlap
+2026-05-19 19:31:28,144 - root - INFO - y overlap
+2026-05-19 19:31:28,162 - root - INFO - y overlap
+2026-05-19 19:31:28,178 - root - INFO - y overlap
+2026-05-19 19:31:28,194 - root - INFO - y overlap
+2026-05-19 19:31:28,211 - root - INFO - y overlap
+2026-05-19 19:31:28,227 - root - INFO - y overlap
+2026-05-19 19:31:28,244 - root - INFO - y overlap
+2026-05-19 19:31:28,260 - root - INFO - y overlap
+2026-05-19 19:31:28,276 - root - INFO - y overlap
+2026-05-19 19:31:28,294 - root - INFO - y overlap
+2026-05-19 19:31:28,310 - root - INFO - y overlap
+2026-05-19 19:31:28,327 - root - INFO - space pressed
+2026-05-19 19:31:28,327 - root - INFO - 1
+2026-05-19 19:31:28,327 - root - INFO - -1
+2026-05-19 19:31:28,528 - root - INFO - y overlap
+2026-05-19 19:31:28,544 - root - INFO - y overlap
+2026-05-19 19:31:28,560 - root - INFO - y overlap
+2026-05-19 19:31:28,575 - root - INFO - y overlap
+2026-05-19 19:31:28,592 - root - INFO - y overlap
+2026-05-19 19:31:28,609 - root - INFO - y overlap
+2026-05-19 19:31:28,626 - root - INFO - y overlap
+2026-05-19 19:31:28,643 - root - INFO - y overlap
+2026-05-19 19:31:28,659 - root - INFO - y overlap
+2026-05-19 19:31:28,676 - root - INFO - y overlap
+2026-05-19 19:31:28,692 - root - INFO - y overlap
+2026-05-19 19:31:28,708 - root - INFO - y overlap
+2026-05-19 19:31:28,725 - root - INFO - y overlap
+2026-05-19 19:31:28,742 - root - INFO - y overlap
+2026-05-19 19:31:28,758 - root - INFO - y overlap
+2026-05-19 19:31:28,775 - root - INFO - y overlap
+2026-05-19 19:31:28,791 - root - INFO - y overlap
+2026-05-19 19:31:28,808 - root - INFO - y overlap
+2026-05-19 19:31:28,824 - root - INFO - y overlap
+2026-05-19 19:31:28,841 - root - INFO - y overlap
+2026-05-19 19:31:28,857 - root - INFO - y overlap
+2026-05-19 19:31:28,876 - root - INFO - y overlap
+2026-05-19 19:31:28,892 - root - INFO - y overlap
+2026-05-19 19:31:28,908 - root - INFO - y overlap
+2026-05-19 19:31:28,924 - root - INFO - y overlap
+2026-05-19 19:31:28,941 - root - INFO - y overlap
+2026-05-19 19:31:28,957 - root - INFO - y overlap
+2026-05-19 19:31:28,975 - root - INFO - y overlap
+2026-05-19 19:31:28,991 - root - INFO - y overlap
+2026-05-19 19:31:29,008 - root - INFO - y overlap
+2026-05-19 19:31:29,025 - root - INFO - y overlap
+2026-05-19 19:31:29,040 - root - INFO - y overlap
+2026-05-19 19:31:29,058 - root - INFO - y overlap
+2026-05-19 19:31:29,074 - root - INFO - y overlap
+2026-05-19 19:31:29,092 - root - INFO - y overlap
+2026-05-19 19:31:29,108 - root - INFO - y overlap
+2026-05-19 19:31:29,125 - root - INFO - y overlap
+2026-05-19 19:31:29,141 - root - INFO - y overlap
+2026-05-19 19:31:29,158 - root - INFO - y overlap
+2026-05-19 19:31:29,175 - root - INFO - y overlap
+2026-05-19 19:31:29,192 - root - INFO - y overlap
+2026-05-19 19:31:29,208 - root - INFO - y overlap
+2026-05-19 19:31:29,224 - root - INFO - y overlap
+2026-05-19 19:31:29,241 - root - INFO - y overlap
+2026-05-19 19:31:29,262 - root - INFO - y overlap
+2026-05-19 19:31:29,278 - root - INFO - y overlap
+2026-05-19 19:31:29,294 - root - INFO - y overlap
+2026-05-19 19:31:29,312 - root - INFO - y overlap
+2026-05-19 19:31:29,329 - root - INFO - y overlap
+2026-05-19 19:31:29,346 - root - INFO - y overlap
+2026-05-19 19:31:29,362 - root - INFO - y overlap
+2026-05-19 19:31:29,378 - root - INFO - y overlap
+2026-05-19 19:31:29,395 - root - INFO - y overlap
+2026-05-19 19:31:29,411 - root - INFO - y overlap
+2026-05-19 19:31:29,427 - root - INFO - y overlap
+2026-05-19 19:31:29,444 - root - INFO - y overlap
+2026-05-19 19:31:29,461 - root - INFO - y overlap
+2026-05-19 19:31:29,478 - root - INFO - y overlap
+2026-05-19 19:31:29,494 - root - INFO - y overlap
+2026-05-19 19:31:29,511 - root - INFO - y overlap
+2026-05-19 19:31:29,528 - root - INFO - space pressed
+2026-05-19 19:31:29,528 - root - INFO - -1
+2026-05-19 19:31:29,528 - root - INFO - 1
+2026-05-19 19:31:30,057 - root - INFO - y overlap
+2026-05-19 19:31:30,073 - root - INFO - y overlap
+2026-05-19 19:31:30,090 - root - INFO - y overlap
+2026-05-19 19:31:30,107 - root - INFO - y overlap
+2026-05-19 19:31:30,124 - root - INFO - y overlap
+2026-05-19 19:31:30,140 - root - INFO - y overlap
+2026-05-19 19:31:30,157 - root - INFO - y overlap
+2026-05-19 19:31:30,174 - root - INFO - y overlap
+2026-05-19 19:31:30,191 - root - INFO - y overlap
+2026-05-19 19:31:30,207 - root - INFO - y overlap
+2026-05-19 19:31:30,224 - root - INFO - y overlap
+2026-05-19 19:31:30,240 - root - INFO - y overlap
+2026-05-19 19:31:30,256 - root - INFO - y overlap
+2026-05-19 19:31:30,273 - root - INFO - y overlap
+2026-05-19 19:31:30,290 - root - INFO - y overlap
+2026-05-19 19:31:30,307 - root - INFO - y overlap
+2026-05-19 19:31:30,324 - root - INFO - y overlap
+2026-05-19 19:31:30,341 - root - INFO - y overlap
+2026-05-19 19:31:30,358 - root - INFO - y overlap
+2026-05-19 19:31:30,374 - root - INFO - y overlap
+2026-05-19 19:31:30,390 - root - INFO - y overlap
+2026-05-19 19:31:30,408 - root - INFO - y overlap
+2026-05-19 19:31:30,424 - root - INFO - y overlap
+2026-05-19 19:31:30,441 - root - INFO - y overlap
+2026-05-19 19:31:30,457 - root - INFO - y overlap
+2026-05-19 19:31:30,474 - root - INFO - y overlap
+2026-05-19 19:31:30,491 - root - INFO - y overlap
+2026-05-19 19:31:30,507 - root - INFO - y overlap
+2026-05-19 19:31:30,525 - root - INFO - y overlap
+2026-05-19 19:31:30,540 - root - INFO - y overlap
+2026-05-19 19:31:30,558 - root - INFO - y overlap
+2026-05-19 19:31:30,575 - root - INFO - y overlap
+2026-05-19 19:31:30,591 - root - INFO - y overlap
+2026-05-19 19:31:30,607 - root - INFO - y overlap
+2026-05-19 19:31:30,622 - root - INFO - y overlap
+2026-05-19 19:31:30,639 - root - INFO - y overlap
+2026-05-19 19:31:30,655 - root - INFO - y overlap
+2026-05-19 19:31:30,673 - root - INFO - y overlap
+2026-05-19 19:31:30,689 - root - INFO - y overlap
+2026-05-19 19:31:30,705 - root - INFO - y overlap
+2026-05-19 19:31:30,721 - root - INFO - y overlap
+2026-05-19 19:31:30,738 - root - INFO - y overlap
+2026-05-19 19:31:30,755 - root - INFO - y overlap
+2026-05-19 19:31:30,771 - root - INFO - y overlap
+2026-05-19 19:31:30,787 - root - INFO - y overlap
+2026-05-19 19:31:30,803 - root - INFO - y overlap
+2026-05-19 19:31:30,820 - root - INFO - y overlap
+2026-05-19 19:31:30,837 - root - INFO - y overlap
+2026-05-19 19:31:30,853 - root - INFO - y overlap
+2026-05-19 19:31:30,869 - root - INFO - y overlap
+2026-05-19 19:31:30,886 - root - INFO - y overlap
+2026-05-19 19:31:30,903 - root - INFO - y overlap
+2026-05-19 19:31:30,919 - root - INFO - y overlap
+2026-05-19 19:31:30,937 - root - INFO - y overlap
+2026-05-19 19:31:30,954 - root - INFO - y overlap
+2026-05-19 19:31:30,971 - root - INFO - y overlap
+2026-05-19 19:31:30,987 - root - INFO - y overlap
+2026-05-19 19:31:31,003 - root - INFO - y overlap
+2026-05-19 19:31:31,019 - root - INFO - y overlap
+2026-05-19 19:31:31,036 - root - INFO - y overlap
+2026-05-19 19:31:31,053 - root - INFO - y overlap
+2026-05-19 19:31:31,071 - root - INFO - y overlap
+2026-05-19 19:31:31,088 - root - INFO - y overlap
+2026-05-19 19:31:31,104 - root - INFO - y overlap
+2026-05-19 19:31:31,121 - root - INFO - y overlap
+2026-05-19 19:31:31,136 - root - INFO - y overlap
+2026-05-19 19:31:31,154 - root - INFO - y overlap
+2026-05-19 19:31:31,170 - root - INFO - y overlap
+2026-05-19 19:31:31,187 - root - INFO - y overlap
+2026-05-19 19:31:31,204 - root - INFO - y overlap
+2026-05-19 19:31:31,220 - root - INFO - y overlap
+2026-05-19 19:31:31,238 - root - INFO - y overlap
+2026-05-19 19:31:31,254 - root - INFO - y overlap
+2026-05-19 19:31:31,271 - root - INFO - y overlap
+2026-05-19 20:51:28,627 - root - INFO - LAYERS:
+2026-05-19 20:51:28,628 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 20:51:28,628 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 20:51:28,628 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 20:51:28,628 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:51:28,628 - level - INFO - true_p2spawn <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:51:28,628 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:52:05,664 - root - INFO - LAYERS:
+2026-05-19 20:52:05,664 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 20:52:05,664 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 20:52:05,664 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 20:52:05,665 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:52:05,665 - level - INFO - true_p2spawn <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:52:05,665 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:56:46,605 - root - INFO - LAYERS:
+2026-05-19 20:56:46,606 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 20:56:46,606 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 20:56:46,606 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 20:56:46,606 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:56:46,606 - level - INFO - true_p2spawn <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:56:46,606 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:56:46,613 - level - INFO - x: 96.0 y: 511.938
+2026-05-19 20:57:33,520 - root - INFO - LAYERS:
+2026-05-19 20:57:33,520 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 20:57:33,520 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-19 20:57:33,520 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-19 20:57:33,520 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:57:33,520 - level - INFO - true_p2spawn <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:57:33,521 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-19 20:57:33,533 - level - INFO - x: 96.0 y: 511.938
+2026-05-19 20:57:33,534 - level - INFO - x: 96.003 y: 96.0

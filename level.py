@@ -6,19 +6,18 @@ from P2 import P2
 import logging
 logger = logging.getLogger(__name__)
 class Level:
-    def __init__(self, tmx_map):
+    def __init__(self, tmx_map, player_id):
         self.window = pygame.display.get_surface()
         self.all_sprites = pygame.sprite.Group()
         # creates List<Sprite> allSprites = new List<Sprite>();
         self.collisions_sprites = pygame.sprite.Group()
         self.death_sprites = pygame.sprite.Group()
         self.win_sprites = pygame.sprite.Group()
+        self.player_id = player_id
         self.setup(tmx_map)
 
-        p2_surf = pygame.image.load("graphics/player2.png").convert()
-        p2_surf.set_colorkey("white")
-        p2_surf = pygame.transform.scale(p2_surf, (TILE_SIZE, TILE_SIZE))
-        self.p2 = P2((96, 543), p2_surf, self.all_sprites)
+
+
 
         self.camera_x = 0
         self.camera_xchanger = 4
@@ -41,14 +40,34 @@ class Level:
             Sprite((obj.x, obj.y),pygame.image.load('graphics/setpics/winflag.png').convert_alpha(),
                    (self.all_sprites, self.win_sprites))
 
-        for obj in tmx_map.get_layer_by_name('player1'):
-            self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
-                                 self.win_sprites,self.map_width,self.map_height)
-            logger.info(f"x: {obj.x} y: {obj.y}")
+        p2_surf = pygame.image.load("graphics/player2.png").convert()
+        p2_surf.set_colorkey("white")
+        p2_surf = pygame.transform.scale(p2_surf, (TILE_SIZE, TILE_SIZE))
 
+        if self.player_id == 1:
+
+            for obj in tmx_map.get_layer_by_name('player1'):
+                self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
+                                     self.win_sprites,self.map_width,self.map_height)
+                logger.info(f"x: {obj.x} y: {obj.y}")
+
+            for obj in tmx_map.get_layer_by_name('true_p2spawn'):
+                self.p2 = P2((obj.x, obj.y), p2_surf, self.all_sprites)
+                logger.info(f"x: {obj.x} y: {obj.y}")
+
+        else:
+            for obj in tmx_map.get_layer_by_name('true_p2spawn'):
+                self.player = Player((obj.x, obj.y), p2_surf, self.all_sprites, self.collisions_sprites, self.death_sprites,
+                                     self.win_sprites, self.map_width, self.map_height)
+                logger.info(f"x: {obj.x} y: {obj.y}")
+
+            for obj in tmx_map.get_layer_by_name('player1'):
+                self.p2 = P2((obj.x, obj.y), self.all_sprites)
+                logger.info(f"x: {obj.x} y: {obj.y}")
 
     def run(self, match_over):
         self.all_sprites.update()
+        self.player.collision_with_player(self.p2)
         # if not self.player.is_dead and not self.player.won:
         if not match_over: # if match_over == false
             self.camera_x += self.camera_xchanger

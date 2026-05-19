@@ -20,16 +20,18 @@ class Game:
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         pygame.display.set_caption('G-switch')
 
+        self.network = Connection()
+        self.player_id = self.network.get_id()
+        print(self.player_id)
+
         self.tmx_maps = {0: load_pygame('graphics/maptest1.tmx')}
-        # Creating a dic that will contain all the level to swtich
-        self.current_stage = Level(self.tmx_maps[0])
+        # Creating a dic that will contain all the level to switch
+        self.current_stage = Level(self.tmx_maps[0], self.player_id)
 
         # server connection
-        self.network = Connection()
         self.started = False
         self.game_over = False
         self.i_quit = False
-
         Thread(
             target=self.receive_from_server,
             daemon=True
@@ -40,14 +42,16 @@ class Game:
             msg = self.network.receive()
             if msg is None:
                 break
-            if msg.decode() == "start":
+            msg = msg.decode()
+
+            if msg == "start":
                 self.started = True
                 continue
-            if msg.decode() == 'game over':
+            if msg == 'game over':
                 self.started = False
                 self.game_over = True
                 continue
-            msg = msg.decode()
+
             x, y, dead, won = msg.split(',')
             self.current_stage.p2.update_pos(int(x), int(y))
             self.current_stage.p2.is_dead = dead == 'True'  # comes as text so needed to turn to bool

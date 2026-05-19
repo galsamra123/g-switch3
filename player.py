@@ -1,7 +1,6 @@
 import logging
 import pygame
 from settings import *
-
 logger = logging.getLogger(__name__)
 
 
@@ -36,7 +35,7 @@ class Player(pygame.sprite.Sprite):
         test_rect_y.y += self.gravity  # checks 1 pixel in gravity direction
 
         for sprite in self.collision_sprites:
-            if test_rect_y.colliderect(sprite.rect):
+            if test_rect_y.colliderect(sprite.rect):  # if there is a collide with collision sprites (only walls)
                 return True
 
         return False

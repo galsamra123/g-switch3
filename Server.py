@@ -73,7 +73,9 @@ def main():
                 continue
 
             clients.append(client_socket)
-            protocol_send(client_socket, "connected to server".encode())
+            player_id = len(clients)
+            print(client_address,"Player id:", player_id)
+            protocol_send(client_socket, f"id,{player_id}".encode())
             if len(clients) == MAX_CLIENTS:
                 for client in clients:
                     protocol_send(client, "start".encode())

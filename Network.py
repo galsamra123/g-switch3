@@ -8,7 +8,8 @@ class Connection:
         self.server = '127.0.0.1'
         self.port = 5002
         self.addr = (self.server, self.port)
-        self.connect()
+
+        self.first_msg = self.connect()
 
     def connect(self):
         try:
@@ -17,6 +18,18 @@ class Connection:
         except (ConnectionError, socket.error) as e:
             print(f"{type(e).__name__}: {e}")
             return None
+
+    def get_id(self):
+        msg = self.first_msg
+        if msg is None:
+            raise ConnectionError("No message")
+        msg = msg.decode()
+
+        if msg.startswith('id,'):
+
+            return int(msg.split(',')[1])
+
+        raise ValueError(f"Expected id message, got: {msg}")
 
     def send(self, data):
         try:
