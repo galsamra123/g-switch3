@@ -48,7 +48,7 @@ class Level:
 
             for obj in tmx_map.get_layer_by_name('player1'):
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
-                                     self.win_sprites,self.map_width,self.map_height)
+                                     self.win_sprites,self.map_width,self.map_height, self.player_id)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
             for obj in tmx_map.get_layer_by_name('true_p2spawn'):
@@ -58,7 +58,7 @@ class Level:
         else:
             for obj in tmx_map.get_layer_by_name('true_p2spawn'):
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
-                                     self.win_sprites, self.map_width, self.map_height)
+                                     self.win_sprites, self.map_width, self.map_height, self.player_id)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
             for obj in tmx_map.get_layer_by_name('player1'):

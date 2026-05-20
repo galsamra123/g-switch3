@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, groups, collision_sprites, death_sprite, win_sprite, map_width, map_height):
+    def __init__(self, pos, groups, collision_sprites, death_sprite, win_sprite, map_width, map_height, my_id):
         super().__init__(groups)
         self.image = pygame.image.load(f"graphics/player2.png").convert()
         self.image.set_colorkey('white')
@@ -17,7 +17,13 @@ class Player(pygame.sprite.Sprite):
         self.last_rect = self.rect.copy()
 
         # movement
-        self.gravity = 1
+        self.id = my_id
+        if self.id == 1:
+            self.gravity = 1
+
+        else:
+            self.gravity = -1
+
         self.y_changer = 10
         self.y_speed = 0
         self.x_changer = 6
