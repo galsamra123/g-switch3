@@ -3,9 +3,9 @@ from protocol import *
 
 
 class Connection:
-    def __init__(self):
+    def __init__(self, serverip):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server = '127.0.0.1'
+        self.server = serverip
         self.port = 5002
         self.addr = (self.server, self.port)
 
