@@ -40,7 +40,7 @@ class Level:
             Sprite((obj.x, obj.y),pygame.image.load('graphics/setpics/winflag.png').convert_alpha(),
                    (self.all_sprites, self.win_sprites))
 
-        p2_surf = pygame.image.load("graphics/player1.png").convert()
+        p2_surf = pygame.image.load("graphics/player164.png").convert()
         p2_surf.set_colorkey("white")
         p2_surf = pygame.transform.scale(p2_surf, (TILE_SIZE, TILE_SIZE))
 
@@ -68,6 +68,15 @@ class Level:
     def flip_on_player(self):
         if self.player.rect.top == self.p2.rect.bottom or self.player.rect.bottom == self.p2.rect.top:
             self.player.flip_on_player()
+
+
+    def points(self):
+        progress = self.player.max_x / self.map_width
+        score = progress * 100
+        return score
+
+
+
 
 
 

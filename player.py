@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, groups, collision_sprites, death_sprite, win_sprite, map_width, map_height, my_id):
         super().__init__(groups)
-        self.image = pygame.image.load(f"graphics/player2.png").convert()
+        self.image = pygame.image.load(f"graphics/player264.png").convert()
         self.image.set_colorkey('white')
         self.map_width = map_width
         self.map_height = map_height
@@ -27,6 +27,7 @@ class Player(pygame.sprite.Sprite):
         self.y_changer = 10
         self.y_speed = 0
         self.x_changer = 6
+        self.max_x = self.rect.x
 
         # collision
         self.collision_sprites = collision_sprites
@@ -126,3 +127,5 @@ class Player(pygame.sprite.Sprite):
             return
         self.last_rect = self.rect.copy()
         self.move()
+        if self.rect.x > self.max_x:
+            self.max_x = self.rect.x

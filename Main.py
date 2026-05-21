@@ -102,7 +102,7 @@ class Game:
             except ValueError as e:
                 logging.error(f"error is: {e}")
 
-        self.tmx_maps = {0: load_pygame('graphics/maptest1.tmx')}
+        self.tmx_maps = {0: load_pygame('graphics/level1.tmx')}
         # Creating a dic that will contain all the level to switch
 
         self.current_stage = Level(self.tmx_maps[0], self.player_id)
@@ -130,6 +130,7 @@ class Game:
             if msg == 'game over':
                 self.started = False
                 self.game_over = True
+                #  self.network.send(f"score,{self.current_stage.points().encode()}")
                 continue
 
             x, y, dead, won = msg.split(',')

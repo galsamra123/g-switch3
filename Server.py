@@ -10,6 +10,9 @@ IP = '0.0.0.0'
 PORT = 5002
 MAX_CLIENTS = 2
 clients = []
+scores = {}
+level_scores = {}
+current_level = 0
 
 
 def handle_connection(client_socket, client_address):
@@ -37,6 +40,13 @@ def handle_connection(client_socket, client_address):
                 for client in clients:
                     protocol_send(client, 'start'.encode())
                 continue
+
+            if data.decode().startswith('score,'):
+                parts = data.decode().split(',')  # creats a list of id,score according to the send in main
+                player_id = int(parts[1])
+                score = float(parts[2])
+                # i stopped here
+                player_score = (data.decode().split(',')[1])
             print(client_address, "sent:", data.decode())
             for client in clients:
                 if client != client_socket:
