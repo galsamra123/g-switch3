@@ -1329,3 +1329,27 @@
 2026-05-22 16:20:08,044 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
 2026-05-22 16:20:08,062 - level - INFO - x: 96.6667 y: 574.0
 2026-05-22 16:20:08,062 - level - INFO - x: 95.3333 y: 96.6667
+2026-05-22 16:37:00,293 - root - ERROR - error is: No message
+2026-05-22 16:37:00,312 - root - ERROR - error is: No message
+2026-05-22 16:37:04,186 - root - INFO - LAYERS:
+2026-05-22 16:37:04,186 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-22 16:37:04,186 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-22 16:37:04,186 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-22 16:37:04,186 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-22 16:37:04,186 - level - INFO - player2 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-22 16:37:04,186 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-22 16:37:04,194 - level - INFO - x: 95.3333 y: 96.6667
+2026-05-22 16:37:04,194 - level - INFO - x: 96.6667 y: 574.0
+2026-05-22 16:37:04,195 - player - INFO - x.overlap
+2026-05-22 16:37:04,195 - root - INFO - y overlap
+2026-05-22 16:37:04,197 - player - INFO - x.overlap
+2026-05-22 16:37:04,197 - root - INFO - y overlap
+2026-05-22 16:37:04,214 - player - INFO - x.overlap
+2026-05-22 16:37:04,215 - root - INFO - y overlap
+2026-05-22 16:37:04,232 - player - INFO - x.overlap
+2026-05-22 16:37:06,279 - root - INFO - space pressed
+2026-05-22 16:37:06,279 - root - INFO - -1
+2026-05-22 16:37:06,279 - root - INFO - -1
+2026-05-22 16:37:10,931 - root - INFO - space pressed
+2026-05-22 16:37:10,931 - root - INFO - -1
+2026-05-22 16:37:10,931 - root - INFO - -1
