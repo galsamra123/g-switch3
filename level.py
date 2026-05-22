@@ -20,7 +20,7 @@ class Level:
 
 
         self.camera_x = 0
-        self.camera_xchanger = 1
+        self.camera_xchanger = 3
 
     def setup(self, tmx_map):
         logging.info("LAYERS:")
@@ -48,7 +48,7 @@ class Level:
 
             for obj in tmx_map.get_layer_by_name('player1'):
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
-                                     self.win_sprites,self.map_width,self.map_height, self.player_id)
+                                     self.win_sprites,self.camera_x, self.map_height, self.player_id)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
             for obj in tmx_map.get_layer_by_name('player2'):
@@ -58,7 +58,7 @@ class Level:
         else:
             for obj in tmx_map.get_layer_by_name('player2'):
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
-                                     self.win_sprites, self.map_width, self.map_height, self.player_id)
+                                     self.win_sprites, self.camera_x, self.map_height, self.player_id)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
             for obj in tmx_map.get_layer_by_name('player1'):
