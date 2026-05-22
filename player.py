@@ -126,15 +126,19 @@ class Player(pygame.sprite.Sprite):
         if not self.rect.colliderect(other.rect):
             return
 
+        overlap = 12
         if self.gravity == 1:
             # falling down: self on top of other
-            if self.rect.bottom >= other.rect.top >= self.last_rect.bottom:
+            if self.last_rect.bottom <= other.rect.top + overlap:
+                # if last frame player bottom was 12px wide near p2 top
                 self.rect.bottom = other.rect.top
-
+                self.y_speed = 0  # landed on somthing so stop falling
         elif self.gravity == -1:
             # falling up: self under other
-            if self.rect.top <= other.rect.bottom <= self.last_rect.top:
+            if self.last_rect.top >= other.rect.bottom + overlap:
+                # if last frame player top was 12px wide near p2 bottom
                 self.rect.top = other.rect.bottom
+                self.y_speed = 0  # landed on somthing so stop falling
 
     def update(self):
         if self.is_dead or self.won:

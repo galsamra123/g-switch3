@@ -78,7 +78,15 @@ class Level:
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
     def flip_on_player(self):
-        if self.player.rect.top == self.p2.rect.bottom or self.player.rect.bottom == self.p2.rect.top:
+        if not self.player.rect.colliderect(self.p2):
+            return
+        overlap = 12
+        # if the player is falling down and is 12 px or less near p2 than u can flip on him
+        player_on_p2 = (self.player.gravity == 1 and abs(self.player.rect.bottom - self.p2.rect.top) <= overlap)
+        # if the player is falling up and is 12 px or less near p2 than u can flip on him
+        player_under_p2 = (self.player.gravity == -1 and abs(self.player.rect.top - self.p2.rect.bottom) <= overlap)
+
+        if player_on_p2 or player_under_p2:
             self.player.flip_on_player()
 
     def points(self):
