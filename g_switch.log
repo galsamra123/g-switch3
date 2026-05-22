@@ -1156,3 +1156,176 @@
 2026-05-20 20:27:41,890 - root - INFO - y overlap
 2026-05-20 20:27:41,906 - root - INFO - y overlap
 2026-05-20 20:27:41,923 - root - INFO - y overlap
+2026-05-21 18:35:52,094 - root - INFO - LAYERS:
+2026-05-21 18:35:52,094 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 18:35:52,094 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 18:35:52,094 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-21 18:35:52,095 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 18:35:52,095 - level - INFO - player2 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 18:35:52,095 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 18:35:52,112 - level - INFO - x: 63.25 y: 575.75
+2026-05-21 18:40:25,478 - root - INFO - LAYERS:
+2026-05-21 18:40:25,478 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 18:40:25,478 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 18:40:25,478 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-21 18:40:25,478 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 18:40:25,479 - level - INFO - player2 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 18:40:25,479 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 18:40:25,487 - level - INFO - x: 63.25 y: 575.75
+2026-05-21 18:40:25,487 - level - INFO - x: 62.75 y: 127.5
+2026-05-21 18:40:49,689 - root - INFO - y overlap
+2026-05-21 18:40:49,697 - root - INFO - y overlap
+2026-05-21 18:40:49,713 - root - INFO - y overlap
+2026-05-21 18:40:49,731 - root - INFO - y overlap
+2026-05-21 18:40:49,747 - root - INFO - y overlap
+2026-05-21 18:40:49,765 - root - INFO - y overlap
+2026-05-21 18:40:49,781 - root - INFO - y overlap
+2026-05-21 18:40:49,798 - root - INFO - y overlap
+2026-05-21 18:40:49,814 - root - INFO - y overlap
+2026-05-21 18:40:49,830 - root - INFO - y overlap
+2026-05-21 18:40:49,846 - root - INFO - y overlap
+2026-05-21 18:40:49,864 - root - INFO - y overlap
+2026-05-21 18:40:49,880 - root - INFO - y overlap
+2026-05-21 18:40:49,897 - root - INFO - y overlap
+2026-05-21 18:40:49,913 - root - INFO - y overlap
+2026-05-21 18:40:49,930 - root - INFO - y overlap
+2026-05-21 18:40:49,946 - root - INFO - y overlap
+2026-05-21 18:40:49,963 - root - INFO - y overlap
+2026-05-21 18:40:49,979 - root - INFO - y overlap
+2026-05-21 18:40:49,995 - root - INFO - y overlap
+2026-05-21 18:40:50,011 - root - INFO - y overlap
+2026-05-21 18:40:50,028 - root - INFO - y overlap
+2026-05-21 18:40:50,044 - root - INFO - y overlap
+2026-05-21 18:40:50,060 - root - INFO - y overlap
+2026-05-21 18:40:50,077 - root - INFO - y overlap
+2026-05-21 18:40:50,094 - root - INFO - y overlap
+2026-05-21 18:40:50,111 - root - INFO - y overlap
+2026-05-21 18:40:50,128 - root - INFO - y overlap
+2026-05-21 18:40:50,145 - root - INFO - y overlap
+2026-05-21 18:40:50,161 - root - INFO - y overlap
+2026-05-21 18:40:50,178 - root - INFO - y overlap
+2026-05-21 18:40:50,194 - root - INFO - y overlap
+2026-05-21 18:40:50,211 - root - INFO - y overlap
+2026-05-21 18:40:50,228 - root - INFO - y overlap
+2026-05-21 18:40:50,245 - root - INFO - y overlap
+2026-05-21 18:40:50,261 - root - INFO - y overlap
+2026-05-21 18:40:50,277 - root - INFO - y overlap
+2026-05-21 18:40:50,294 - root - INFO - y overlap
+2026-05-21 18:40:50,311 - root - INFO - y overlap
+2026-05-21 18:40:50,327 - root - INFO - y overlap
+2026-05-21 18:40:50,344 - root - INFO - y overlap
+2026-05-21 18:40:50,360 - root - INFO - y overlap
+2026-05-21 18:40:50,377 - root - INFO - y overlap
+2026-05-21 18:40:50,393 - root - INFO - y overlap
+2026-05-21 18:40:50,409 - root - INFO - y overlap
+2026-05-21 18:40:50,425 - root - INFO - y overlap
+2026-05-21 18:40:50,442 - root - INFO - y overlap
+2026-05-21 18:40:50,459 - root - INFO - y overlap
+2026-05-21 18:40:50,475 - root - INFO - y overlap
+2026-05-21 18:40:50,492 - root - INFO - y overlap
+2026-05-21 18:40:50,509 - root - INFO - y overlap
+2026-05-21 18:40:50,526 - root - INFO - y overlap
+2026-05-21 18:40:50,543 - root - INFO - y overlap
+2026-05-21 18:40:50,559 - root - INFO - y overlap
+2026-05-21 18:40:50,576 - root - INFO - y overlap
+2026-05-21 18:40:50,592 - root - INFO - y overlap
+2026-05-21 18:40:50,608 - root - INFO - y overlap
+2026-05-21 18:40:50,624 - root - INFO - y overlap
+2026-05-21 18:40:50,641 - root - INFO - y overlap
+2026-05-21 18:40:50,658 - root - INFO - y overlap
+2026-05-21 18:40:50,674 - root - INFO - y overlap
+2026-05-21 18:40:50,691 - root - INFO - y overlap
+2026-05-21 18:40:50,707 - root - INFO - y overlap
+2026-05-21 18:40:50,723 - root - INFO - y overlap
+2026-05-21 18:40:50,739 - root - INFO - y overlap
+2026-05-21 18:40:50,755 - root - INFO - y overlap
+2026-05-21 18:40:50,773 - root - INFO - y overlap
+2026-05-21 18:40:50,789 - root - INFO - y overlap
+2026-05-21 18:40:50,804 - root - INFO - y overlap
+2026-05-21 18:40:50,820 - root - INFO - y overlap
+2026-05-21 18:40:50,837 - root - INFO - y overlap
+2026-05-21 18:40:50,853 - root - INFO - y overlap
+2026-05-21 18:40:50,870 - root - INFO - y overlap
+2026-05-21 18:40:50,887 - root - INFO - y overlap
+2026-05-21 18:40:50,903 - root - INFO - y overlap
+2026-05-21 18:40:50,921 - root - INFO - y overlap
+2026-05-21 18:40:50,936 - root - INFO - y overlap
+2026-05-21 18:40:50,953 - root - INFO - y overlap
+2026-05-21 18:40:50,970 - root - INFO - y overlap
+2026-05-21 18:40:50,988 - root - INFO - y overlap
+2026-05-21 18:40:51,004 - root - INFO - y overlap
+2026-05-21 18:40:51,021 - root - INFO - y overlap
+2026-05-21 18:40:51,038 - root - INFO - y overlap
+2026-05-21 18:40:51,054 - root - INFO - y overlap
+2026-05-21 18:40:51,071 - root - INFO - y overlap
+2026-05-21 18:40:51,088 - root - INFO - y overlap
+2026-05-21 19:06:58,448 - root - INFO - LAYERS:
+2026-05-21 19:06:58,448 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 19:06:58,448 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 19:06:58,448 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-21 19:06:58,449 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:06:58,449 - level - INFO - player2 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:06:58,449 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:11:39,998 - root - INFO - LAYERS:
+2026-05-21 19:11:39,998 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 19:11:39,998 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 19:11:39,998 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-21 19:11:39,998 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:11:39,998 - level - INFO - player2 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:11:39,998 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:16:03,817 - root - INFO - LAYERS:
+2026-05-21 19:16:03,817 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 19:16:03,817 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-21 19:16:03,818 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-21 19:16:03,818 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:16:03,818 - level - INFO - player2 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:16:03,818 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-21 19:16:03,824 - level - INFO - x: 62.75 y: 127.5
+2026-05-21 19:16:03,824 - level - INFO - x: 63.25 y: 575.75
+2026-05-21 19:16:03,825 - player - INFO - x.overlap
+2026-05-21 19:16:03,825 - player - INFO - x.overlap
+2026-05-21 19:16:03,825 - root - INFO - y overlap
+2026-05-21 19:16:03,827 - player - INFO - x.overlap
+2026-05-21 19:16:03,827 - player - INFO - x.overlap
+2026-05-21 19:16:03,827 - root - INFO - y overlap
+2026-05-21 19:16:03,843 - player - INFO - x.overlap
+2026-05-21 19:16:03,843 - player - INFO - x.overlap
+2026-05-21 19:16:03,843 - root - INFO - y overlap
+2026-05-21 19:16:03,859 - player - INFO - x.overlap
+2026-05-21 19:16:03,859 - player - INFO - x.overlap
+2026-05-21 19:16:03,859 - root - INFO - y overlap
+2026-05-21 19:16:03,875 - player - INFO - x.overlap
+2026-05-21 19:16:03,881 - player - INFO - x.overlap
+2026-05-21 19:16:03,881 - root - INFO - y overlap
+2026-05-21 19:16:03,892 - player - INFO - x.overlap
+2026-05-21 19:16:03,893 - player - INFO - x.overlap
+2026-05-21 19:16:03,893 - root - INFO - y overlap
+2026-05-21 19:16:03,910 - player - INFO - x.overlap
+2026-05-21 19:16:03,910 - player - INFO - x.overlap
+2026-05-21 19:16:03,911 - root - INFO - y overlap
+2026-05-21 19:16:03,926 - player - INFO - x.overlap
+2026-05-21 19:16:03,926 - player - INFO - x.overlap
+2026-05-21 19:16:03,927 - root - INFO - y overlap
+2026-05-21 19:16:03,942 - player - INFO - x.overlap
+2026-05-21 19:16:03,942 - player - INFO - x.overlap
+2026-05-21 19:16:03,943 - root - INFO - y overlap
+2026-05-21 19:16:03,959 - player - INFO - x.overlap
+2026-05-21 19:16:03,959 - player - INFO - x.overlap
+2026-05-21 19:16:03,959 - root - INFO - y overlap
+2026-05-21 19:16:03,974 - player - INFO - x.overlap
+2026-05-21 19:16:03,975 - player - INFO - x.overlap
+2026-05-21 19:16:03,975 - root - INFO - y overlap
+2026-05-21 19:16:03,990 - player - INFO - x.overlap
+2026-05-21 19:16:03,990 - player - INFO - x.overlap
+2026-05-21 19:16:03,991 - root - INFO - y overlap
+2026-05-21 19:16:04,007 - player - INFO - x.overlap
+2026-05-21 19:16:04,007 - player - INFO - x.overlap
+2026-05-22 16:20:08,044 - root - INFO - LAYERS:
+2026-05-22 16:20:08,044 - level - INFO - wall <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-22 16:20:08,044 - level - INFO - death <class 'pytmx.pytmx.TiledTileLayer'>
+2026-05-22 16:20:08,044 - level - INFO - background <class 'pytmx.pytmx.TiledImageLayer'>
+2026-05-22 16:20:08,044 - level - INFO - player1 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-22 16:20:08,044 - level - INFO - player2 <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-22 16:20:08,044 - level - INFO - win <class 'pytmx.pytmx.TiledObjectGroup'>
+2026-05-22 16:20:08,062 - level - INFO - x: 96.6667 y: 574.0
+2026-05-22 16:20:08,062 - level - INFO - x: 95.3333 y: 96.6667

@@ -20,7 +20,7 @@ class Level:
 
 
         self.camera_x = 0
-        self.camera_xchanger = 4
+        self.camera_xchanger = 1
 
     def setup(self, tmx_map):
         logging.info("LAYERS:")
@@ -40,7 +40,7 @@ class Level:
             Sprite((obj.x, obj.y),pygame.image.load('graphics/setpics/winflag.png').convert_alpha(),
                    (self.all_sprites, self.win_sprites))
 
-        p2_surf = pygame.image.load("graphics/player164.png").convert()
+        p2_surf = pygame.image.load("graphics/player132.png").convert()
         p2_surf.set_colorkey("white")
         p2_surf = pygame.transform.scale(p2_surf, (TILE_SIZE, TILE_SIZE))
 
@@ -51,12 +51,12 @@ class Level:
                                      self.win_sprites,self.map_width,self.map_height, self.player_id)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
-            for obj in tmx_map.get_layer_by_name('true_p2spawn'):
+            for obj in tmx_map.get_layer_by_name('player2'):
                 self.p2 = P2((obj.x, obj.y), p2_surf, self.all_sprites)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
         else:
-            for obj in tmx_map.get_layer_by_name('true_p2spawn'):
+            for obj in tmx_map.get_layer_by_name('player2'):
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
                                      self.win_sprites, self.map_width, self.map_height, self.player_id)
                 logger.info(f"x: {obj.x} y: {obj.y}")

@@ -84,7 +84,7 @@ def main():
 
             clients.append(client_socket)
             player_id = len(clients)
-            print(client_address,"Player id:", player_id)
+            print(client_address, "Player id:", player_id)
             protocol_send(client_socket, f"id,{player_id}".encode())
             if len(clients) == MAX_CLIENTS:
                 for client in clients:
