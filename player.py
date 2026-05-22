@@ -5,13 +5,17 @@ logger = logging.getLogger(__name__)
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, groups, collision_sprites, death_sprite, win_sprite, camera_x, map_height, my_id):
-        super().__init__(groups)
-        self.image = pygame.image.load(f"graphics/player232.png").convert()
+    def __init__(self, pos, group, collision_sprites, death_sprite, speed_sprites, win_sprite, map_height, my_id):
+        super().__init__(group)
+        self.image = pygame.image.load(f"graphics/player232.png").convert()  # loads player2 picture
         self.image.set_colorkey('white')
-        self.camera_x = camera_x
-        self.map_height = map_height
         self.image = pygame.transform.scale(self.image, (TILE_SIZE, TILE_SIZE))
+
+        self.camera_x = 0
+        self.limit_x = int(WINDOW_WIDTH * 0.75)
+        self.min_x = int(WINDOW_WIDTH * 0.25)
+        self.limit = False  # did the player reached the 3/4 of the screen
+        self.map_height = map_height
         # rect
         self.rect = self.image.get_rect(topleft=pos)
         self.last_rect = self.rect.copy()
@@ -32,6 +36,7 @@ class Player(pygame.sprite.Sprite):
         # collision
         self.collision_sprites = collision_sprites
         self.death_sprites = death_sprite
+        self.speed_sprites = speed_sprites
         self.win_sprite = win_sprite
         self.is_dead = False
         self.won = False
@@ -62,8 +67,13 @@ class Player(pygame.sprite.Sprite):
     def move(self):
         # X movement + horizontal collision
         self.rect.x += self.x_changer
-        if self.rect.right >= self.camera_x - self.camera_x / 4:
-            self.rect.right = self.camera_x - self.camera_x / 4
+        limit_x = self.camera_x + self.limit_x
+        min_x = self.camera_x + self.min_x
+        if self.rect.right >= limit_x:
+            self.limit = True
+        if self.rect.left <= min_x:
+            self.limit = False
+
         self.collision('horizontal')
         # Y movement + vertical collision
         self.y_speed = self.y_changer * self.gravity
@@ -100,6 +110,10 @@ class Player(pygame.sprite.Sprite):
         for sprite in self.death_sprites:
             if sprite.rect.colliderect(self.rect):
                 self.die()
+
+        #for sprite in self.speed_sprites:
+            #if self.limit and sprite.rect.colliderect(self.rect):
+               # self.x_changer = 7
 
         for sprite in self.win_sprite:
             if sprite.rect.colliderect(self.rect):

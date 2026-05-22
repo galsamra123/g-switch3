@@ -5,6 +5,7 @@ from protocol import *
 class Connection:
     def __init__(self, serverip):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.client_socket.settimeout(3)  # when connect() happens wait 3 seconds
         self.server = serverip
         self.port = 5002
         self.addr = (self.server, self.port)
@@ -14,10 +15,13 @@ class Connection:
     def connect(self):
         try:
             self.client_socket.connect(self.addr)
+            self.client_socket.settimeout(None)  # if connect succeed remove timeout
             return protocol_recive(self.client_socket)
-        except (ConnectionError, socket.error) as e:
+
+        except (ConnectionError, socket.error, socket.timeout) as e:
             print(f"{type(e).__name__}: {e}")
-            return None
+            self.client_socket.close()  # if after 3 seconds of error nothing happens stop
+            raise ConnectionError("Connection error")
 
     def get_id(self):
         msg = self.first_msg
