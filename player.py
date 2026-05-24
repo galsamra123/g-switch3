@@ -122,23 +122,44 @@ class Player(pygame.sprite.Sprite):
     def collision_with_player(self, other):
         if self.is_dead or self.won:
             return
-
-        if not self.rect.colliderect(other.rect):
+        if other.is_dead or other.won:
             return
 
-        overlap = 12
+        other_platform = other.rect.inflate(20, 0)  # make p2 hitbox 20 px larger on x
+
+        horizontal_overlap = (self.rect.right > other_platform.left and self.rect.left< other_platform.right)
+        if not horizontal_overlap:
+            return
+
+        margin = abs(self.y_speed) + 4
+
         if self.gravity == 1:
-            # falling down: self on top of other
-            if self.last_rect.bottom <= other.rect.top + overlap:
-                # if last frame player bottom was 12px wide near p2 top
-                self.rect.bottom = other.rect.top
-                self.y_speed = 0  # landed on somthing so stop falling
+            # gravity pulls me down:
+            # if last frame I was above p2, and now I crossed/touched p2's top,
+            # place me on top of p2 like he is a floor
+            crossed_top = (
+                    self.last_rect.bottom <= other_platform.top + margin
+                    and self.rect.bottom >= other_platform.top
+            )
+
+            if crossed_top:
+                self.rect.bottom = other_platform.top
+                self.y_speed = 0
+
         elif self.gravity == -1:
-            # falling up: self under other
-            if self.last_rect.top >= other.rect.bottom + overlap:
-                # if last frame player top was 12px wide near p2 bottom
-                self.rect.top = other.rect.bottom
-                self.y_speed = 0  # landed on somthing so stop falling
+            # gravity pulls me up:
+            # if last frame I was under p2, and now I crossed/touched p2's bottom,
+            # place me under p2 like he is a ceiling/floor above me
+            crossed_bottom = (
+                    self.last_rect.top >= other_platform.bottom - margin
+                    and self.rect.top <= other_platform.bottom
+            )
+
+            if crossed_bottom:
+                self.rect.top = other_platform.bottom
+                self.y_speed = 0
+
+
 
     def update(self):
         if self.is_dead or self.won:

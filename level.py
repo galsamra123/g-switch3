@@ -98,6 +98,7 @@ class Level:
         self.player.camera_x = self.camera_x  # changes the self.camera_x in player innit
         self.player.update()
         self.player.collision_with_player(self.p2)
+        self.player.collision('vertical')
 
         alive_right = []
         alive_left = []
