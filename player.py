@@ -40,8 +40,6 @@ class Player(pygame.sprite.Sprite):
         self.win_sprite = win_sprite
         self.is_dead = False
         self.won = False
-        self.on_player = False
-
 
     def on_wall(self):
         test_rect_y = self.last_rect.copy()
@@ -122,17 +120,19 @@ class Player(pygame.sprite.Sprite):
                 self.win()
 
     def collision_with_player(self, other):
-        self.on_player = False
-        if self.is_dead or self.won:
-            return self.on_player
-        if other.is_dead or other.won:
-            return self.on_player
 
-        other_platform = other.rect.inflate(20, 0)  # make p2 hitbox 20 px larger on x
+        if self.is_dead or self.won:
+            return False
+
+        if other.is_dead or other.won:
+            return False
+
+        other_platform = other.rect.inflate(14, 0)  # make p2 hitbox 20 px larger on x
 
         horizontal_overlap = (self.rect.right > other_platform.left and self.rect.left < other_platform.right)
+
         if not horizontal_overlap:
-            return self.on_player
+            return False
 
         margin = abs(self.y_speed) + 4  # player can jump more px and then the bottom/top won't be exactly the same
         # the abs for when gravity is -1 and then y speed < 0
@@ -143,17 +143,15 @@ class Player(pygame.sprite.Sprite):
             # place player on top of p2 like he is a floor
             crossed_top = (
                     self.last_rect.bottom <= other_platform.top + margin  # player last bottom <= p2top + player px jump
-                    and self.rect.bottom >= other_platform.top  # player is currently below p2
+                    and self.rect.bottom >= other_platform.top  # player bottom reached or passed p2 top
             )
 
             if crossed_top:
+                other_dx = other.rect.x - other.last_rect.x
+                self.rect.x += other_dx
                 self.rect.bottom = other_platform.top  # put them together
                 self.y_speed = 0  # stop player fall
-                self.on_player = True
-                return self.on_player
-            else:
-                self.on_player = False
-                return self.on_player
+                return True
 
         elif self.gravity == -1:
             # gravity pulls player up:
@@ -166,13 +164,12 @@ class Player(pygame.sprite.Sprite):
             )
 
             if crossed_bottom:
+                other_dx = other.rect.x - other.last_rect.x
+                self.rect.x += other_dx
                 self.rect.top = other_platform.bottom
                 self.y_speed = 0
-                self.on_player = True
-                return self.on_player
-            else:
-                self.on_player = False
-                return self.on_player
+                return True
+
         return False
 
     def update(self):

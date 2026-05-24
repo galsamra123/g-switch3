@@ -80,11 +80,12 @@ class Level:
     def flip_on_player(self):
         if self.player.is_dead or self.player.won:
             return
+
         if self.p2.is_dead or self.p2.won:
             return
 
         if self.player.on_player:
-            self.player.gravity = self.player.flip_on_player()
+            self.player.flip_on_player()
 
     def points(self):
         progress = self.player.max_x / self.map_width
@@ -120,6 +121,9 @@ class Level:
 
             elif leader_right >= WINDOW_WIDTH * 0.75:  # if the leader is about to get close to run out of space speed
                 self.camera_xchanger = 7  # up a little
+
+            else:
+                self.camera_xchanger = 5
 
         # if not self.player.is_dead and not self.player.won:
         if not match_over:  # if match_over == false
