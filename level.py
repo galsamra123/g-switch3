@@ -140,4 +140,12 @@ class Level:
             for x in range(0, self.map_width, bg_width):
                 self.window.blit(self.bg, (x - self.camera_x, 0))
             for sprite in self.all_sprites:
-                self.window.blit(sprite.image, (sprite.rect.x - self.camera_x, sprite.rect.y))
+
+                if sprite == self.p2:
+                    sprite.smoth_draw()
+
+                    self.window.blit(sprite.image, (sprite.draw_x - self.camera_x, sprite.draw_y))
+
+                else:
+                    self.window.blit(sprite.image, (sprite.rect.x - self.camera_x, sprite.rect.y))
+

@@ -40,6 +40,7 @@ class Player(pygame.sprite.Sprite):
         self.win_sprite = win_sprite
         self.is_dead = False
         self.won = False
+        self.on_player = False
 
     def on_wall(self):
         test_rect_y = self.last_rect.copy()
@@ -120,6 +121,7 @@ class Player(pygame.sprite.Sprite):
                 self.win()
 
     def collision_with_player(self, other):
+        self.on_player = False
 
         if self.is_dead or self.won:
             return False
@@ -147,10 +149,9 @@ class Player(pygame.sprite.Sprite):
             )
 
             if crossed_top:
-                other_dx = other.rect.x - other.last_rect.x
-                self.rect.x += other_dx
                 self.rect.bottom = other_platform.top  # put them together
                 self.y_speed = 0  # stop player fall
+                self.on_player = True
                 return True
 
         elif self.gravity == -1:
@@ -164,10 +165,9 @@ class Player(pygame.sprite.Sprite):
             )
 
             if crossed_bottom:
-                other_dx = other.rect.x - other.last_rect.x
-                self.rect.x += other_dx
                 self.rect.top = other_platform.bottom
                 self.y_speed = 0
+                self.on_player = True
                 return True
 
         return False
