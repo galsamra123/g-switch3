@@ -153,8 +153,10 @@ class Game:
                     if event.key == pygame.K_SPACE:
                         logging.info('space pressed')
                         logging.info(self.current_stage.player.gravity)
+                        before_flip_gravity = self.current_stage.player.gravity
                         self.current_stage.player.flip_on_wall()
-                        self.current_stage.flip_on_player()
+                        if self.current_stage.player.gravity == before_flip_gravity:  # if wall flip not happen
+                            self.current_stage.flip_on_player()
                         logging.info(self.current_stage.player.gravity)
             if self.started or self.game_over:
                 self.current_stage.run(self.game_over)

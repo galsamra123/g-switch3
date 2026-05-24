@@ -78,16 +78,13 @@ class Level:
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
     def flip_on_player(self):
-        if not self.player.rect.colliderect(self.p2):
+        if self.player.is_dead or self.player.won:
             return
-        overlap = 12
-        # if the player is falling down and is 12 px or less near p2 than u can flip on him
-        player_on_p2 = (self.player.gravity == 1 and abs(self.player.rect.bottom - self.p2.rect.top) <= overlap)
-        # if the player is falling up and is 12 px or less near p2 than u can flip on him
-        player_under_p2 = (self.player.gravity == -1 and abs(self.player.rect.top - self.p2.rect.bottom) <= overlap)
+        if self.p2.is_dead or self.p2.won:
+            return
 
-        if player_on_p2 or player_under_p2:
-            self.player.flip_on_player()
+        if self.player.on_player:
+            self.player.gravity = self.player.flip_on_player()
 
     def points(self):
         progress = self.player.max_x / self.map_width

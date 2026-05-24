@@ -40,6 +40,8 @@ class Player(pygame.sprite.Sprite):
         self.win_sprite = win_sprite
         self.is_dead = False
         self.won = False
+        self.on_player = False
+
 
     def on_wall(self):
         test_rect_y = self.last_rect.copy()
@@ -120,46 +122,58 @@ class Player(pygame.sprite.Sprite):
                 self.win()
 
     def collision_with_player(self, other):
+        self.on_player = False
         if self.is_dead or self.won:
-            return
+            return self.on_player
         if other.is_dead or other.won:
-            return
+            return self.on_player
 
         other_platform = other.rect.inflate(20, 0)  # make p2 hitbox 20 px larger on x
 
-        horizontal_overlap = (self.rect.right > other_platform.left and self.rect.left< other_platform.right)
+        horizontal_overlap = (self.rect.right > other_platform.left and self.rect.left < other_platform.right)
         if not horizontal_overlap:
-            return
+            return self.on_player
 
-        margin = abs(self.y_speed) + 4
+        margin = abs(self.y_speed) + 4  # player can jump more px and then the bottom/top won't be exactly the same
+        # the abs for when gravity is -1 and then y speed < 0
 
         if self.gravity == 1:
-            # gravity pulls me down:
-            # if last frame I was above p2, and now I crossed/touched p2's top,
-            # place me on top of p2 like he is a floor
+            # gravity pulls player down:
+            # if last frame player was above p2, and now player crossed/touched p2's top,
+            # place player on top of p2 like he is a floor
             crossed_top = (
-                    self.last_rect.bottom <= other_platform.top + margin
-                    and self.rect.bottom >= other_platform.top
+                    self.last_rect.bottom <= other_platform.top + margin  # player last bottom <= p2top + player px jump
+                    and self.rect.bottom >= other_platform.top  # player is currently below p2
             )
 
             if crossed_top:
-                self.rect.bottom = other_platform.top
-                self.y_speed = 0
+                self.rect.bottom = other_platform.top  # put them together
+                self.y_speed = 0  # stop player fall
+                self.on_player = True
+                return self.on_player
+            else:
+                self.on_player = False
+                return self.on_player
 
         elif self.gravity == -1:
-            # gravity pulls me up:
-            # if last frame I was under p2, and now I crossed/touched p2's bottom,
-            # place me under p2 like he is a ceiling/floor above me
+            # gravity pulls player up:
+            # if last frame player was under p2, and now player crossed/touched p2's bottom,
+            # place player under p2 like he is a ceiling/floor above player
             crossed_bottom = (
-                    self.last_rect.top >= other_platform.bottom - margin
-                    and self.rect.top <= other_platform.bottom
+                    self.last_rect.top >= other_platform.bottom - margin  # player last top below or close to
+                    # p2 bottom
+                    and self.rect.top <= other_platform.bottom  # did player top reached / passed p2 bottom
             )
 
             if crossed_bottom:
                 self.rect.top = other_platform.bottom
                 self.y_speed = 0
-
-
+                self.on_player = True
+                return self.on_player
+            else:
+                self.on_player = False
+                return self.on_player
+        return False
 
     def update(self):
         if self.is_dead or self.won:
