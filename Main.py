@@ -1,16 +1,13 @@
+
 import pygame
 import logging
 import sys
 
-from pygame.constants import K_BACKSPACE
 from pytmx import load_pygame
 from level import Level
 from settings import *
-import socket
 from threading import Thread
 from Network import Connection
-from protocol import *
-from datetime import datetime
 
 
 def input_serverip(screen, clock, num):
@@ -26,7 +23,6 @@ def input_serverip(screen, clock, num):
         title1 = title1_font.render("input the server IPv4", True, "white")
         title2 = title2_font.render(input_text, True, "white")
         title3 = title3_font.render("press ENTER to connect", True, "gray")
-        # title4 = title2_font.render("great you submitted, waiting for other player...", True, "gray")
         new_title = title2_font.render("wrong ip try again", True, "red")
 
         screen.blit(title, (WINDOW_WIDTH / 2 - title.get_width() / 2, WINDOW_HEIGHT / 4))
@@ -112,10 +108,22 @@ class Game:
         self.started = False
         self.game_over = False
         self.winner_id = None
+        self.winner_txt = ""
         Thread(
             target=self.receive_from_server,
             daemon=True
         ).start()
+
+    def winner_screen(self, winner, screen):
+        title_font = pygame.font.Font(None, 100)
+        title1_font = pygame.font.Font(None, 50)
+        screen.fill("black")
+        title = title_font.render(winner, True, "white")
+        titel1 = title1_font.render("for restart press R", True, "gray")
+
+        screen.blit(title, (WINDOW_WIDTH / 2 - title.get_width() / 2, WINDOW_HEIGHT / 2))
+        screen.blit(titel1, (WINDOW_WIDTH / 2 - titel1.get_width() / 2,
+                             WINDOW_HEIGHT / 2 - title.get_height() - 25))
 
     def receive_from_server(self):
         while True:
@@ -131,8 +139,13 @@ class Game:
             if msg.startswith('result,'):
                 string, winner_id, loser_id = msg.split(',')
                 self.winner_id = int(winner_id)
+                if self.winner_id == self.player_id:
+                    winner = "YOU WIN"
+                else:
+                    winner = "YOU LOSE"
                 self.started = False
                 self.game_over = True
+                self.winner_txt = winner
                 continue
             x, y, dead, won = msg.split(',')
             self.current_stage.p2.update_pos(int(x), int(y))
@@ -174,6 +187,9 @@ class Game:
                         logging.info(self.current_stage.player.gravity)
             if self.started or self.game_over:
                 self.current_stage.run(self.game_over)
+
+            if self.game_over:
+                self.winner_screen(self.winner_txt, self.display_surface)
 
             if self.started:
                 player = self.current_stage.player
