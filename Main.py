@@ -1,13 +1,40 @@
-
 import pygame
 import logging
 import sys
-
 from pytmx import load_pygame
 from level import Level
 from settings import *
 from threading import Thread
 from Network import Connection
+logger = logging.getLogger(__name__)
+
+
+def setup_logging():
+    formatter = logging.Formatter(
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    )
+
+    files = {
+        "__main__": "main.log",
+        "level": "level.log",
+        "player": "player.log",
+        "Network": "network.log",
+        "protocol": "protocol.log",
+        "P2": "p2.log",
+        "sprites": "sprites.log",
+    }
+
+    for module_name, log_file in files.items():
+        module_logger = logging.getLogger(module_name)
+        module_logger.setLevel(logging.INFO)
+        module_logger.propagate = False
+
+        module_logger.handlers.clear()
+
+        handler = logging.FileHandler(log_file, mode="w")
+        handler.setFormatter(formatter)
+
+        module_logger.addHandler(handler)
 
 
 def input_serverip(screen, clock, num):
@@ -89,14 +116,15 @@ class Game:
                 self.network = Connection(server_ip)
                 self.player_id = self.network.get_id()
                 self.ip_success = True
+                logger.info(f"connected to {server_ip} and my id is: {self.player_id}")
                 wait_for_others(self.display_surface)
 
             except ConnectionError as e:
-                logging.error(f"error is: {e}")
+                logger.error(f"error is: {e}")
                 self.num_of_ip += 1
 
             except ValueError as e:
-                logging.error(f"error is: {e}")
+                logger.error(f"error is: {e}")
 
         self.tmx_maps = {0: load_pygame('graphics/maptest1.tmx')}
         # Creating a dic that will contain all the level to switch
@@ -129,8 +157,10 @@ class Game:
         while True:
             msg = self.network.receive()
             if msg is None:
+                logger.critical("msg is None")
                 break
             msg = msg.decode()
+            logger.info(f"msg is: {msg}")
 
             if msg == "start":
                 self.started = True
@@ -140,7 +170,7 @@ class Game:
                 try:
                     string, winner_id, loser_id = msg.split(',')
                 except ValueError as e:
-                    logging.error(f"error is: {e}")
+                    logger.error(f"error is: {e}")
                     continue
                 self.winner_id = int(winner_id)
                 self.winner_txt = "OTHER PLAYER DISCONNECTED"
@@ -152,7 +182,7 @@ class Game:
                 try:
                     string, winner_id, loser_id = msg.split(',')
                 except ValueError as e:
-                    logging.error(f"error is: {e}")
+                    logger.error(f"error is: {e}")
                     continue
                 self.winner_id = int(winner_id)
                 if self.winner_id == self.player_id:
@@ -166,7 +196,7 @@ class Game:
             try:
                 x, y, dead, won = msg.split(',')
             except ValueError as e:
-                logging.error(f"error is: {e}")
+                logger.error(f"error is: {e}")
                 continue
             self.current_stage.p2.update_pos(int(x), int(y))
             self.current_stage.p2.is_dead = dead == 'True'  # comes as text so needed to turn to bool
@@ -177,7 +207,7 @@ class Game:
             self.network.client_socket.close()
 
         except OSError as e:
-            print(f"socket already close: {e}")
+            logger.error(f"socket already close: {e}")
 
         self.__init__()
 
@@ -188,23 +218,26 @@ class Game:
                 if event.type == pygame.QUIT:
                     player = self.current_stage.player
                     quit_msg = f"{player.rect.x},{player.rect.y},{True},{False}"
+                    logger.critical("player disconnects")
                     self.network.send(quit_msg.encode())
                     pygame.quit()
                     sys.exit()
 
                 if event.type == pygame.KEYDOWN:
+                    logger.info('key pressed')
                     if self.game_over:
                         if event.key == pygame.K_r:
+                            logger.info('restart')
                             self.restart()
 
                     elif event.key == pygame.K_SPACE:
-                        logging.info('space pressed')
-                        logging.info(self.current_stage.player.gravity)
+                        logger.info('space pressed')
+                        logger.info(f"my gravity is {self.current_stage.player.gravity}")
                         before_flip_gravity = self.current_stage.player.gravity
                         self.current_stage.player.flip_on_wall()
                         if self.current_stage.player.gravity == before_flip_gravity:  # if wall flip not happen
                             self.current_stage.flip_on_player()
-                        logging.info(self.current_stage.player.gravity)
+                        logger.info(f"my gravity now is {self.current_stage.player.gravity}")
             if self.started or self.game_over:
                 self.current_stage.run(self.game_over)
 
@@ -221,10 +254,6 @@ class Game:
 
 
 if __name__ == '__main__':
-    logging.basicConfig(
-        filename="g_switch.log",
-        level=logging.INFO,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    )
+    setup_logging()
     game = Game()
     game.run()

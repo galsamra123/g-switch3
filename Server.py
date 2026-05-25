@@ -2,7 +2,6 @@ import socket
 from threading import Thread
 from protocol import *
 import logging
-logger = logging.getLogger(__name__)
 
 
 QUEUE_SIZE = 4  # how many people can connect
@@ -26,19 +25,19 @@ def handle_connection(client_socket, client_address):
     global game_over, match_started
 
     try:
-        print('New connection received from ' + client_address[0] + ':' + str(client_address[1]))
+        logging.info('New connection received from ' + client_address[0] + ':' + str(client_address[1]))
 
         while True:
             data = protocol_recive(client_socket)  # recive b"x,y,dead,won"
             if not data:
-                print("Client disconnected:", client_address)
+                logging.info(f"Client disconnected: {client_address}")
                 break
             msg = data.decode()
 
             try:
                 x, y, dead, won = msg.split(',')
             except ValueError as e:
-                print(f"error: {e}")
+                logging.error(f"error: {e}")
                 continue
 
             player_id = client_ids[client_socket]  # get from the dir the player id
@@ -47,12 +46,12 @@ def handle_connection(client_socket, client_address):
                 # if game not over check if the player finished already(dad/won)
                 if dead == "True":
                     players_finished[player_id] = 'dead'
-                    print(f"player: {player_id} died")
-                    print(f"players_finished: {players_finished}")
+                    logging.info(f"player: {player_id} died")
+                    logging.info(f"players_finished: {players_finished}")
                 elif won == "True":
                     players_finished[player_id] = 'won'
-                    print("PLAYER", player_id, "WON")
-                    print("players_finished:", players_finished)
+                    logging.info(f"PLAYER {player_id} WON")
+                    logging.info(f"players_finished: {players_finished}")
 
             for client in clients:
                 if client != client_socket:
@@ -82,14 +81,14 @@ def handle_connection(client_socket, client_address):
 
                 game_over = True
                 score_msg = f"result,{winner_id},{loser_id}"
-                print("GAME OVER RESULT:", score_msg)
+                logging.info(f"GAME OVER RESULT: {score_msg}")
                 for client in clients:
                     protocol_send(client, score_msg.encode())
 
-            print(client_address, "sent:", data.decode())
+            logging.info(f"{client_address} sent: {data.decode()}")
 
     except (socket.error, ConnectionError)as err:
-        print('received socket exception - ' + str(err))
+        logging.error('received socket exception - ' + str(err))
 
     finally:
         disconnected_id = client_ids.get(client_socket)
@@ -97,12 +96,12 @@ def handle_connection(client_socket, client_address):
             clients.remove(client_socket)  # remove this socket from the clients list
         if client_socket in client_ids:
             del client_ids[client_socket]
-            print("CLIENT DISCONNECTED")
-            print("clients left:", len(clients))
-            print("match_started:", match_started, "game_over:", game_over)
+            logging.info("CLIENT DISCONNECTED")
+            logging.info(f"clients left: {len(clients)}")
+            logging.info(f"match_started: {match_started} game_over: {game_over}")
             # remove client socket from the id dir
         if len(clients) == 0:
-            print("SERVER RESET - READY FOR NEW MATCH")
+            logging.info("SERVER RESET - READY FOR NEW MATCH")
             match_started = False
             game_over = False
             players_finished.clear()
@@ -128,16 +127,16 @@ def main():
     try:
         server_socket.bind((IP, PORT))
         server_socket.listen(QUEUE_SIZE)
-        print("Listening for connections on port %d" % PORT)
+        logging.info("Listening for connections on port %d" % PORT)
 
         while True:
             client_socket, client_address = server_socket.accept()
-            print("new connect try")
-            print("clients:", len(clients), "matches started:", match_started, "game over:", game_over)
+            logging.info("new connect try")
+            logging.info(f"clients: {len(clients)} matches started: {match_started} game over: {game_over}")
 
             if len(clients) >= MAX_CLIENTS or match_started:
-                print("server full")
-                print("Client disconnected:", client_address)
+                logging.info("server full")
+                logging.info(f"Client disconnected: {client_address}")
                 protocol_send(client_socket, "server is full".encode())
                 client_socket.close()
                 continue
@@ -145,23 +144,27 @@ def main():
             clients.append(client_socket)
             player_id = len(clients)
             client_ids[client_socket] = player_id  # adds to the dir client socket: id
-            print(client_address, "Player id:", player_id)
+            logging.info(f"{client_address} Player id: {player_id}")
             protocol_send(client_socket, f"id,{player_id}".encode())
             if len(clients) == MAX_CLIENTS:
-                print("match started")
+                logging.info("match started")
                 for client in clients:
                     protocol_send(client, "start".encode())
                     match_started = True
-            print('Accepted connection from: ', client_address)
+            logging.info(f'Accepted connection from: {client_address}')
             thread = Thread(target=handle_connection,
                             args=(client_socket, client_address))
             thread.start()
     except socket.error as err:
-        print('received socket exception - ' + str(err))
+        logging.error('received socket exception - ' + str(err))
     finally:
         server_socket.close()
 
 
 if __name__ == "__main__":
-    # Call the main handler function
+    logging.basicConfig(
+        filename="server.log",
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    )
     main()

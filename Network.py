@@ -1,5 +1,7 @@
 import socket
 from protocol import *
+import logging
+logger = logging.getLogger(__name__)
 
 
 class Connection:
@@ -16,17 +18,20 @@ class Connection:
         try:
             self.client_socket.connect(self.addr)
             self.client_socket.settimeout(None)  # if connect succeed remove timeout
+            logger.info(f"{self.client_socket} is Connected to server")
             return protocol_recive(self.client_socket)
 
         except (ConnectionError, socket.error, socket.timeout) as e:
-            print(f"{type(e).__name__}: {e}")
+            logger.error(f"{type(e).__name__}: {e}")
             self.client_socket.close()  # if after 3 seconds of error nothing happens stop
             raise ConnectionError("Connection error")
 
     def get_id(self):
         msg = self.first_msg
         if msg is None:
-            raise ConnectionError("No message")
+            logger.critical("msg is none")
+            raise ConnectionError()
+
         msg = msg.decode()
 
         if msg.startswith('id,'):
@@ -40,7 +45,7 @@ class Connection:
             protocol_send(self.client_socket, data)
 
         except (ConnectionError, socket.error) as e:
-            print(f"{type(e).__name__}: {e}")
+            logger.error(f"{type(e).__name__}: {e}")
             return None
 
     def receive(self):
@@ -48,5 +53,5 @@ class Connection:
             return protocol_recive(self.client_socket)
 
         except (ConnectionError, socket.error) as e:
-            print(f"{type(e).__name__}: {e}")
+            logger.error(f"{type(e).__name__}: {e}")
             return None

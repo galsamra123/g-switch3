@@ -1,0 +1,1 @@
+2026-05-25 15:55:23,526 - Network - INFO - <socket.socket fd=1424, family=2, type=1, proto=0, laddr=('127.0.0.1', 59990), raddr=('127.0.0.1', 5002)> is Connected to server
