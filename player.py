@@ -129,14 +129,14 @@ class Player(pygame.sprite.Sprite):
         if other.is_dead or other.won:
             return False
 
-        other_platform = other.rect.inflate(14, 0)  # make p2 hitbox 20 px larger on x
+        other_platform = other.rect.inflate(80, 0)  # make p2 hitbox 20 px larger on x
 
         horizontal_overlap = (self.rect.right > other_platform.left and self.rect.left < other_platform.right)
 
         if not horizontal_overlap:
             return False
 
-        margin = abs(self.y_speed) + 4  # player can jump more px and then the bottom/top won't be exactly the same
+        margin = abs(self.y_speed) + 12  # player can jump more px and then the bottom/top won't be exactly the same
         # the abs for when gravity is -1 and then y speed < 0
 
         if self.gravity == 1:

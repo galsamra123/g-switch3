@@ -95,8 +95,6 @@ class Level:
     def run(self, match_over):
         self.player.camera_x = self.camera_x  # changes the self.camera_x in player innit
         self.player.update()
-        self.player.collision_with_player(self.p2)
-        self.player.collision('vertical')
 
         alive_right = []
         alive_left = []
@@ -122,8 +120,6 @@ class Level:
             elif leader_right >= WINDOW_WIDTH * 0.75:  # if the leader is about to get close to run out of space speed
                 self.camera_xchanger = 7  # up a little
 
-            else:
-                self.camera_xchanger = 5
 
         # if not self.player.is_dead and not self.player.won:
         if not match_over:  # if match_over == false
@@ -148,4 +144,3 @@ class Level:
 
                 else:
                     self.window.blit(sprite.image, (sprite.rect.x - self.camera_x, sprite.rect.y))
-
