@@ -136,8 +136,24 @@ class Game:
                 self.started = True
                 continue
 
+            if msg.startswith('disconnect,'):
+                try:
+                    string, winner_id, loser_id = msg.split(',')
+                except ValueError as e:
+                    logging.error(f"error is: {e}")
+                    continue
+                self.winner_id = int(winner_id)
+                self.winner_txt = "OTHER PLAYER DISCONNECTED"
+                self.started = False
+                self.game_over = True
+                continue
+
             if msg.startswith('result,'):
-                string, winner_id, loser_id = msg.split(',')
+                try:
+                    string, winner_id, loser_id = msg.split(',')
+                except ValueError as e:
+                    logging.error(f"error is: {e}")
+                    continue
                 self.winner_id = int(winner_id)
                 if self.winner_id == self.player_id:
                     winner = "YOU WIN"
@@ -147,7 +163,11 @@ class Game:
                 self.game_over = True
                 self.winner_txt = winner
                 continue
-            x, y, dead, won = msg.split(',')
+            try:
+                x, y, dead, won = msg.split(',')
+            except ValueError as e:
+                logging.error(f"error is: {e}")
+                continue
             self.current_stage.p2.update_pos(int(x), int(y))
             self.current_stage.p2.is_dead = dead == 'True'  # comes as text so needed to turn to bool
             self.current_stage.p2.won = won == 'True'

@@ -106,7 +106,7 @@ def handle_connection(client_socket, client_address):
             match_started = False
             game_over = False
             players_finished.clear()
-        if not game_over and disconnected_id is not None:
+        if disconnected_id is not None and len(clients) > 0:
             loser_id = disconnected_id
             if loser_id == 1:
                 winner_id = 2
@@ -114,7 +114,7 @@ def handle_connection(client_socket, client_address):
                 winner_id = 1
             game_over = True
             disconnect_msg = "0,0,True,False"
-            score_msg = f"result,{winner_id},{loser_id}"
+            score_msg = f"disconnect,{winner_id},{loser_id}"
             for client in clients:
                 protocol_send(client, disconnect_msg.encode())
                 protocol_send(client, score_msg.encode())
