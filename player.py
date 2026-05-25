@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, group, collision_sprites, death_sprite, speed_sprites, win_sprite, map_height, my_id):
+    def __init__(self, pos, group, collision_sprites, death_sprite, win_sprite, map_height, my_id):
         super().__init__(group)
         self.image = pygame.image.load(f"graphics/player232.png").convert()  # loads player2 picture
         self.image.set_colorkey('white')
@@ -33,7 +33,6 @@ class Player(pygame.sprite.Sprite):
         # collision
         self.collision_sprites = collision_sprites
         self.death_sprites = death_sprite
-        self.speed_sprites = speed_sprites
         self.win_sprite = win_sprite
         self.is_dead = False
         self.won = False

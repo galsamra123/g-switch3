@@ -15,7 +15,6 @@ class Level:
         # creates List<Sprite> allSprites = new List<Sprite>();
         self.collisions_sprites = pygame.sprite.Group()
         self.death_sprites = pygame.sprite.Group()
-        self.speed_sprites = pygame.sprite.Group()
         self.win_sprites = pygame.sprite.Group()
         self.player_id = player_id
         self.camera_x = 0
@@ -44,9 +43,6 @@ class Level:
         for x, y, surf in tmx_map.get_layer_by_name('death').tiles():
             Sprite((x * TILE_SIZE, y * TILE_SIZE), surf, (self.all_sprites, self.death_sprites))
 
-        for x, y, surf in tmx_map.get_layer_by_name('speed').tiles():
-            Sprite((x * TILE_SIZE, y * TILE_SIZE), surf, (self.all_sprites, self.speed_sprites))
-
         for obj in tmx_map.get_layer_by_name('win'):
             Sprite((obj.x, obj.y), pygame.image.load('graphics/setpics/winflag.png').convert_alpha(),
                    (self.all_sprites, self.win_sprites))
@@ -59,7 +55,7 @@ class Level:
 
             for obj in tmx_map.get_layer_by_name('player1'):
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
-                                     self.speed_sprites, self.win_sprites, self.map_height, self.player_id)
+                                     self.win_sprites, self.map_height, self.player_id)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
             for obj in tmx_map.get_layer_by_name('player2'):
@@ -69,7 +65,7 @@ class Level:
         else:
             for obj in tmx_map.get_layer_by_name('player2'):
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collisions_sprites, self.death_sprites,
-                                     self.speed_sprites, self.win_sprites, self.map_height, self.player_id)
+                                     self.win_sprites, self.map_height, self.player_id)
                 logger.info(f"x: {obj.x} y: {obj.y}")
 
             for obj in tmx_map.get_layer_by_name('player1'):
