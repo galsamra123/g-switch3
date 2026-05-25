@@ -112,8 +112,8 @@ class Player(pygame.sprite.Sprite):
             if sprite.rect.colliderect(self.rect):
                 self.die()
 
-        #for sprite in self.speed_sprites:
-            #if self.limit and sprite.rect.colliderect(self.rect):
+        # for sprite in self.speed_sprites:
+            # if self.limit and sprite.rect.colliderect(self.rect):
                # self.x_changer = 7
 
         for sprite in self.win_sprite:

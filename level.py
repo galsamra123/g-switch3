@@ -87,13 +87,9 @@ class Level:
         if self.player.on_player:
             self.player.flip_on_player()
 
-    def points(self):
-        progress = self.player.max_x / self.map_width
-        score = progress * 100
-        return score
-
     def run(self, match_over):
         self.player.camera_x = self.camera_x  # changes the self.camera_x in player innit
+        self.player.collision_with_player(self.p2)
         self.player.update()
 
         alive_right = []

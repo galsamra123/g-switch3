@@ -14,7 +14,7 @@ from datetime import datetime
 
 
 def input_serverip(screen, clock, num):
-    title_font = pygame.font.Font(None,  75)
+    title_font = pygame.font.Font(None, 75)
     title1_font = pygame.font.Font(None, 50)
     title2_font = pygame.font.Font(None, 32)
     title3_font = pygame.font.Font(None, 25)
@@ -29,8 +29,8 @@ def input_serverip(screen, clock, num):
         # title4 = title2_font.render("great you submitted, waiting for other player...", True, "gray")
         new_title = title2_font.render("wrong ip try again", True, "red")
 
-        screen.blit(title, (WINDOW_WIDTH/2 - title.get_width() / 2, WINDOW_HEIGHT / 4))
-        screen.blit(title1, (WINDOW_WIDTH/2 - title1.get_width() / 2, WINDOW_HEIGHT / 2))
+        screen.blit(title, (WINDOW_WIDTH / 2 - title.get_width() / 2, WINDOW_HEIGHT / 4))
+        screen.blit(title1, (WINDOW_WIDTH / 2 - title1.get_width() / 2, WINDOW_HEIGHT / 2))
         pygame.draw.rect(screen, "white", pygame.Rect(WINDOW_WIDTH / 2 - 200, 250, 400, 60), 2)
         screen.blit(title2, (WINDOW_WIDTH / 2 - 190, 270))
         screen.blit(title3, (WINDOW_WIDTH / 2 - title3.get_width() / 2, 450))
@@ -111,7 +111,7 @@ class Game:
         # server connection
         self.started = False
         self.game_over = False
-        self.i_quit = False
+        self.winner_id = None
         Thread(
             target=self.receive_from_server,
             daemon=True
@@ -127,16 +127,26 @@ class Game:
             if msg == "start":
                 self.started = True
                 continue
-            if msg == 'game over':
+
+            if msg.startswith('result,'):
+                string, winner_id, loser_id = msg.split(',')
+                self.winner_id = int(winner_id)
                 self.started = False
                 self.game_over = True
-                #  self.network.send(f"score,{self.current_stage.points().encode()}")
                 continue
-
             x, y, dead, won = msg.split(',')
             self.current_stage.p2.update_pos(int(x), int(y))
             self.current_stage.p2.is_dead = dead == 'True'  # comes as text so needed to turn to bool
             self.current_stage.p2.won = won == 'True'
+
+    def restart(self):
+        try:
+            self.network.client_socket.close()
+
+        except OSError as e:
+            print(f"socket already close: {e}")
+
+        self.__init__()
 
     def run(self):
         while True:
@@ -150,7 +160,11 @@ class Game:
                     sys.exit()
 
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_SPACE:
+                    if self.game_over:
+                        if event.key == pygame.K_r:
+                            self.restart()
+
+                    elif event.key == pygame.K_SPACE:
                         logging.info('space pressed')
                         logging.info(self.current_stage.player.gravity)
                         before_flip_gravity = self.current_stage.player.gravity
@@ -160,17 +174,6 @@ class Game:
                         logging.info(self.current_stage.player.gravity)
             if self.started or self.game_over:
                 self.current_stage.run(self.game_over)
-
-                p1_finished = self.current_stage.player.is_dead or self.current_stage.player.won
-                p2_finished = self.current_stage.p2.is_dead or self.current_stage.p2.won
-
-                # if game_over == false and both finished trigger happen once cause
-                # right after game_over turns to ==true
-
-                if not self.game_over and p1_finished and p2_finished:
-                    self.network.send('game over'.encode())
-                    self.game_over = True
-                    self.started = False
 
             if self.started:
                 player = self.current_stage.player

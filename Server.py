@@ -1,8 +1,8 @@
-import sys
 import socket
 from threading import Thread
 from protocol import *
-from player import Player
+import logging
+logger = logging.getLogger(__name__)
 
 
 QUEUE_SIZE = 4  # how many people can connect
@@ -10,9 +10,10 @@ IP = '0.0.0.0'
 PORT = 5002
 MAX_CLIENTS = 2
 clients = []
-scores = {}
-level_scores = {}
-current_level = 0
+client_ids = {}
+players_finished = {}
+game_over = False
+match_started = False
 
 
 def handle_connection(client_socket, client_address):
@@ -22,49 +23,106 @@ def handle_connection(client_socket, client_address):
     :param client_address: the remote address
     :return: None
     """
+    global game_over, match_started
+
     try:
         print('New connection received from ' + client_address[0] + ':' + str(client_address[1]))
 
         while True:
-            data = protocol_recive(client_socket)
+            data = protocol_recive(client_socket)  # recive b"x,y,dead,won"
             if not data:
                 print("Client disconnected:", client_address)
                 break
-            if data.decode() == 'game over':
-                print('game over')
-                for client in clients:
-                    protocol_send(client, 'game over'.encode())
-                continue
-            if data.decode() == 'again':
-                print('again')
-                for client in clients:
-                    protocol_send(client, 'start'.encode())
+            msg = data.decode()
+
+            try:
+                x, y, dead, won = msg.split(',')
+            except ValueError as e:
+                print(f"error: {e}")
                 continue
 
-            if data.decode().startswith('score,'):
-                parts = data.decode().split(',')  # creats a list of id,score according to the send in main
-                player_id = int(parts[1])
-                score = float(parts[2])
-                # i stopped here
-                player_score = (data.decode().split(',')[1])
-            print(client_address, "sent:", data.decode())
+            player_id = client_ids[client_socket]  # get from the dir the player id
+
+            if not game_over and player_id not in players_finished:
+                # if game not over check if the player finished already(dad/won)
+                if dead == "True":
+                    players_finished[player_id] = 'dead'
+                    print(f"player: {player_id} died")
+                    print(f"players_finished: {players_finished}")
+                elif won == "True":
+                    players_finished[player_id] = 'won'
+                    print("PLAYER", player_id, "WON")
+                    print("players_finished:", players_finished)
+
             for client in clients:
                 if client != client_socket:
-                    protocol_send(client, data)
+                    protocol_send(client, data)  # data = the recive from the start
+
+            if not game_over and len(players_finished) == 2:
+                p1_result = players_finished.get(1)
+                p2_result = players_finished.get(2)
+
+                if p1_result == 'won' and p2_result == 'dead':
+                    winner_id = 1
+                    loser_id = 2
+                elif p1_result == 'dead' and p2_result == 'won':
+                    winner_id = 2
+                    loser_id = 1
+                else:  # both win take first finisher or both lose take last finisher
+                    finishers = list(players_finished.keys())  # puts the keys of the dic into a list by order
+                    first = finishers[0]
+                    second = finishers[1]
+
+                    if p1_result == 'won' and p2_result == 'won':
+                        winner_id = first
+                        loser_id = second
+                    else:  # both died
+                        winner_id = second
+                        loser_id = first
+
+                game_over = True
+                score_msg = f"result,{winner_id},{loser_id}"
+                print("GAME OVER RESULT:", score_msg)
+                for client in clients:
+                    protocol_send(client, score_msg.encode())
+
+            print(client_address, "sent:", data.decode())
 
     except (socket.error, ConnectionError)as err:
         print('received socket exception - ' + str(err))
 
     finally:
+        disconnected_id = client_ids.get(client_socket)
         if client_socket in clients:
-            clients.remove(client_socket)
-        error_msg = f"0,0,True,False".encode()
-        for client in clients:
-            protocol_send(client, error_msg)
+            clients.remove(client_socket)  # remove this socket from the clients list
+        if client_socket in client_ids:
+            del client_ids[client_socket]
+            print("CLIENT DISCONNECTED")
+            print("clients left:", len(clients))
+            print("match_started:", match_started, "game_over:", game_over)
+            # remove client socket from the id dir
+        if len(clients) == 0:
+            print("SERVER RESET - READY FOR NEW MATCH")
+            match_started = False
+            game_over = False
+            players_finished.clear()
+        if not game_over and disconnected_id is not None:
+            loser_id = disconnected_id
+            if loser_id == 1:
+                winner_id = 2
+            else:
+                winner_id = 1
+            game_over = True
+            disconnect_msg = "0,0,True,False"
+            score_msg = f"result,{winner_id},{loser_id}"
+            for client in clients:
+                protocol_send(client, disconnect_msg.encode())
+                protocol_send(client, score_msg.encode())
         client_socket.close()
 
 
 def main():
+    global match_started
     # Open a socket and loop forever while waiting for clients
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
@@ -74,8 +132,10 @@ def main():
 
         while True:
             client_socket, client_address = server_socket.accept()
+            print("new connect try")
+            print("clients:", len(clients), "matches started:", match_started, "game over:", game_over)
 
-            if len(clients) >= MAX_CLIENTS:
+            if len(clients) >= MAX_CLIENTS or match_started:
                 print("server full")
                 print("Client disconnected:", client_address)
                 protocol_send(client_socket, "server is full".encode())
@@ -84,11 +144,14 @@ def main():
 
             clients.append(client_socket)
             player_id = len(clients)
+            client_ids[client_socket] = player_id  # adds to the dir client socket: id
             print(client_address, "Player id:", player_id)
             protocol_send(client_socket, f"id,{player_id}".encode())
             if len(clients) == MAX_CLIENTS:
+                print("match started")
                 for client in clients:
                     protocol_send(client, "start".encode())
+                    match_started = True
             print('Accepted connection from: ', client_address)
             thread = Thread(target=handle_connection,
                             args=(client_socket, client_address))
