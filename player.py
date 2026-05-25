@@ -1,6 +1,7 @@
-import logging
 import pygame
 from settings import *
+import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -12,9 +13,6 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.transform.scale(self.image, (TILE_SIZE, TILE_SIZE))
 
         self.camera_x = 0
-        self.limit_x = int(WINDOW_WIDTH * 0.75)
-        self.min_x = int(WINDOW_WIDTH * 0.25)
-        self.limit = False  # did the player reached the 3/4 of the screen
         self.map_height = map_height
         # rect
         self.rect = self.image.get_rect(topleft=pos)
@@ -31,7 +29,6 @@ class Player(pygame.sprite.Sprite):
         self.y_changer = 10
         self.y_speed = 0
         self.x_changer = 5
-        self.max_x = self.rect.x
 
         # collision
         self.collision_sprites = collision_sprites
@@ -45,9 +42,11 @@ class Player(pygame.sprite.Sprite):
     def on_wall(self):
         test_rect_y = self.last_rect.copy()
         test_rect_y.y += self.gravity  # checks 1 pixel in gravity direction
+        logger.info(f"test_rect_y: {test_rect_y}")
 
         for sprite in self.collision_sprites:
             if test_rect_y.colliderect(sprite.rect):  # if there is a collide with collision sprites (only walls)
+                logger.info(f"im on wall sprite")
                 return True
 
         return False
@@ -67,13 +66,9 @@ class Player(pygame.sprite.Sprite):
 
     def move(self):
         # X movement + horizontal collision
+        logger.info(f"before move: {self.rect.x}, {self.rect.y}, {self.y_changer}")
         self.rect.x += self.x_changer
-        limit_x = self.camera_x + self.limit_x
-        min_x = self.camera_x + self.min_x
-        if self.rect.right >= limit_x:
-            self.limit = True
-        if self.rect.left <= min_x:
-            self.limit = False
+        logger.info(f"after move {self.rect.x}, {self.rect.y}, {self.y_changer}")
 
         self.collision('horizontal')
         # Y movement + vertical collision
@@ -88,36 +83,44 @@ class Player(pygame.sprite.Sprite):
             if sprite.rect.colliderect(self.rect):  # checks if the player collides with the wall sprites
                 if axis == 'horizontal':  # (x axis)
                     # player hit the wall from the right -> put his left on wall right
-                    logger.info('x.overlap')
+                    logger.info(f"check horizontal collision: {self.rect.x}, {self.rect.y},"
+                                f" {self.last_rect.x}, {self.last_rect.y}")
                     if self.rect.left <= sprite.rect.right and self.last_rect.left >= sprite.last_rect.right:
                         self.rect.left = sprite.rect.right
+                        logger.info(f"put my left on wall right")
 
                     # player hit the wall from the left -> put his right on wall left
                     if self.rect.right >= sprite.rect.left and self.last_rect.right <= sprite.last_rect.left:
                         self.rect.right = sprite.rect.left
+                        logger.info(f"put my right on wall left")
+                    logger.info(f"{self.rect.x}, {self.rect.y},"
+                                f" {self.last_rect.x}, {self.last_rect.y}")
 
                 else:
                     # not horizontal than vertical (y axis)
-                    logging.info('y overlap')
+                    logger.info(f"check vertical collision: {self.rect.x}, {self.rect.y},"
+                                f" {self.last_rect.x}, {self.last_rect.y}")
 
                     # moving down
                     if self.rect.bottom >= sprite.rect.top >= self.last_rect.bottom:
                         self.rect.bottom = sprite.rect.top
+                        logger.info(f"put my bottom on wall top")
 
                     # moving up
                     if self.rect.top <= sprite.rect.bottom <= self.last_rect.top:
                         self.rect.top = sprite.rect.bottom
+                        logger.info(f"put my top on wall bottom")
+                    logger.info(f"{self.rect.x}, {self.rect.y},"
+                                f" {self.last_rect.x}, {self.last_rect.y}")
 
         for sprite in self.death_sprites:
             if sprite.rect.colliderect(self.rect):
+                logger.info(f"im on death sprite")
                 self.die()
-
-        # for sprite in self.speed_sprites:
-            # if self.limit and sprite.rect.colliderect(self.rect):
-               # self.x_changer = 7
 
         for sprite in self.win_sprite:
             if sprite.rect.colliderect(self.rect):
+                logger.info(f"won")
                 self.win()
 
     def collision_with_player(self, other):
@@ -130,7 +133,7 @@ class Player(pygame.sprite.Sprite):
             return False
 
         other_platform = other.rect.inflate(80, 0)  # make p2 hitbox 20 px larger on x
-
+        logger.info(f"other_platform: {other_platform}")
         horizontal_overlap = (self.rect.right > other_platform.left and self.rect.left < other_platform.right)
 
         if not horizontal_overlap:
@@ -150,6 +153,7 @@ class Player(pygame.sprite.Sprite):
 
             if crossed_top:
                 self.rect.bottom = other_platform.top  # put them together
+                logger.info(f"put my bottom on p2 top")
                 self.y_speed = 0  # stop player fall
                 self.on_player = True
                 return True
@@ -166,6 +170,7 @@ class Player(pygame.sprite.Sprite):
 
             if crossed_bottom:
                 self.rect.top = other_platform.bottom
+                logger.info(f"put my top on p2 bottom")
                 self.y_speed = 0
                 self.on_player = True
                 return True
@@ -174,8 +179,8 @@ class Player(pygame.sprite.Sprite):
 
     def update(self):
         if self.is_dead or self.won:
+            logger.info(f"is dead: {self.is_dead}, won: {self.won}")
             return
         self.last_rect = self.rect.copy()
+        logger.info(f"last_rect: {self.last_rect}")
         self.move()
-        if self.rect.x > self.max_x:
-            self.max_x = self.rect.x

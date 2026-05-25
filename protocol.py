@@ -1,4 +1,6 @@
 import struct
+import logging
+logger = logging.getLogger(__name__)
 
 HEADER_SIZE = 4
 
@@ -16,6 +18,7 @@ def protocol_send(sock, data):
     :param data: Payload data to send (bytes).
     :return: None
     """
+    logger.debug(f"Sending {len(data)} bytes to {sock}")
     final_length = struct.pack("!I", len(data))
     sock.sendall(final_length+data)
 
@@ -38,6 +41,7 @@ def protocol_recive(sock):
         recived += byts
 
     length_msg = struct.unpack("!I", recived)[0]
+    logger.info(f"Received {length_msg} bytes from {sock}")
 
     recive = 0
     recived = b""
@@ -48,5 +52,5 @@ def protocol_recive(sock):
             raise ConnectionError
         recive += len(byts)
         recived += byts
-
+    logger.info(f"Received {recived} bytes from {sock}")
     return recived

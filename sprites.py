@@ -1,4 +1,3 @@
-from settings import *
 import pygame
 import logging
 logger = logging.getLogger(__name__)
