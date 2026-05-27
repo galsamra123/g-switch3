@@ -4,8 +4,8 @@ logger = logging.getLogger(__name__)
 
 HEADER_SIZE = 4
 
-# !I mean use big indian evan if the comp is in little as an
-# unsigned int - positive int 4 byte long
+# !I mean use big indian evan if the comp is in little as a
+# positive int 4 byte long (up to 2^32-1 = 4,294,967,295)
 # and py will make it work for all comp no matter of
 # big or little indian is set in the operation
 
@@ -19,7 +19,7 @@ def protocol_send(sock, data):
     :return: None
     """
     logger.debug(f"Sending {len(data)} bytes to {sock}")
-    final_length = struct.pack("!I", len(data))
+    final_length = struct.pack("!I", len(data))  # take len(data) and make it exactly 4bytes
     sock.sendall(final_length+data)
 
 
@@ -33,8 +33,8 @@ def protocol_recive(sock):
     recive = 0
     recived = b""
 
-    while recive < HEADER_SIZE:
-        byts = sock.recv(HEADER_SIZE - recive)
+    while recive < HEADER_SIZE:  # while smaller than 4 bytes
+        byts = sock.recv(HEADER_SIZE - recive)  # wait and recive again
         if byts == b'':
             raise ConnectionError
         recive += len(byts)

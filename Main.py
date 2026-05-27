@@ -109,6 +109,7 @@ class Game:
 
         self.ip_success = False
         self.num_of_ip = 1
+        self.other_player_restart = False
         while not self.ip_success:
             server_ip = input_serverip(self.display_surface, self.clock, self.num_of_ip)
 
@@ -153,6 +154,17 @@ class Game:
         self.display_surface.blit(titel1, (WINDOW_WIDTH / 2 - titel1.get_width() / 2,
                                   WINDOW_HEIGHT / 2 - title.get_height() - 25))
 
+    def restart_screen(self):
+        title_font = pygame.font.Font(None, 100)
+        title1_font = pygame.font.Font(None, 50)
+        self.display_surface.fill("black")
+        title = title_font.render("other player did restart", True, "white")
+        titel1 = title1_font.render("for restart press R or close the game window", True, "gray")
+
+        self.display_surface.blit(title, (WINDOW_WIDTH / 2 - title.get_width() / 2, WINDOW_HEIGHT / 2))
+        self.display_surface.blit(titel1, (WINDOW_WIDTH / 2 - titel1.get_width() / 2,
+                                           WINDOW_HEIGHT / 2 - title.get_height() - 25))
+
     def receive_from_server(self):
         while True:
             msg = self.network.receive()
@@ -164,6 +176,10 @@ class Game:
 
             if msg == "start":
                 self.started = True
+                continue
+
+            if msg == "restart":
+                self.other_player_restart = True
                 continue
 
             if msg.startswith('disconnect,'):
@@ -213,24 +229,27 @@ class Game:
 
     def run(self):
         while True:
-            # 1. Event Loop
+            # Event Loop
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     player = self.current_stage.player
-                    quit_msg = f"{player.rect.x},{player.rect.y},{True},{False}"
+                    quit_msg = f"{player.rect.x},{player.rect.y},{True},{False}"  # mark the player as dead
                     logger.critical("player disconnects")
                     self.network.send(quit_msg.encode())
                     pygame.quit()
                     sys.exit()
+                    # because he closed the game the socket will be automatically closed and will get to finally in
+                    # the server and mark as disconnected
 
                 if event.type == pygame.KEYDOWN:
                     logger.info('key pressed')
-                    if self.game_over:
+                    if self.game_over or self.other_player_restart:  # while the game is finished
                         if event.key == pygame.K_r:
+                            self.network.send("Restart".encode())
                             logger.info('restart')
                             self.restart()
 
-                    elif event.key == pygame.K_SPACE:
+                    elif event.key == pygame.K_SPACE:  # the game still runs
                         logger.info('space pressed')
                         logger.info(f"my gravity is {self.current_stage.player.gravity}")
                         before_flip_gravity = self.current_stage.player.gravity
@@ -238,7 +257,13 @@ class Game:
                         if self.current_stage.player.gravity == before_flip_gravity:  # if wall flip not happen
                             self.current_stage.flip_on_player()
                         logger.info(f"my gravity now is {self.current_stage.player.gravity}")
-            if self.started or self.game_over:
+            if self.other_player_restart:
+                self.restart_screen()
+                pygame.display.update()
+                self.clock.tick(FPS)
+                continue
+
+            if self.started or self.game_over:  # while the game runs run the level file def run
                 self.current_stage.run(self.game_over)
 
             if self.game_over:

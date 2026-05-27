@@ -3,7 +3,6 @@ from threading import Thread
 from protocol import *
 import logging
 
-
 QUEUE_SIZE = 4  # how many people can connect
 IP = '0.0.0.0'
 PORT = 5002
@@ -33,6 +32,23 @@ def handle_connection(client_socket, client_address):
                 logging.info(f"Client disconnected: {client_address}")
                 break
             msg = data.decode()
+            if msg == "Restart":
+                disconnected_id = client_ids.get(client_socket)
+                if client_socket in clients:
+                    clients.remove(client_socket)  # remove this socket from the clients list
+                if client_socket in client_ids:
+                    del client_ids[client_socket]
+                    logging.info("CLIENT RESTARTED")
+                    logging.info(f"clients left: {len(clients)}")
+                    logging.info(f"match_started: {match_started} game_over: {game_over}")
+                    # remove client socket from the id dir
+                    match_started = False
+                    game_over = False
+                    players_finished.clear()
+                    for client in clients:
+                        protocol_send(client, "restart".encode())
+                    client_socket.close()
+                    return
 
             try:
                 x, y, dead, won = msg.split(',')
@@ -87,7 +103,7 @@ def handle_connection(client_socket, client_address):
 
             logging.info(f"{client_address} sent: {data.decode()}")
 
-    except (socket.error, ConnectionError)as err:
+    except (socket.error, ConnectionError) as err:
         logging.error('received socket exception - ' + str(err))
 
     finally:
