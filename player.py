@@ -9,6 +9,8 @@ class Player(pygame.sprite.Sprite):
     def __init__(self, pos, group, collision_sprites, death_sprite, win_sprite, map_height, my_id):
         super().__init__(group)
         self.image = pygame.image.load(f"graphics/player232.png").convert()  # loads player2 picture
+        if self.image is None:
+            raise ValueError("player1 image was not loaded")
         self.image.set_colorkey('white')
         self.image = pygame.transform.scale(self.image, (TILE_SIZE, TILE_SIZE))
 

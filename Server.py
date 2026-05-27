@@ -91,7 +91,8 @@ def handle_connection(client_socket, client_address):
         logging.error('received socket exception - ' + str(err))
 
     finally:
-        disconnected_id = client_ids.get(client_socket)
+        disconnected_id = client_ids.get(client_socket)  # because if the try failed client had to success with
+        # the connect because else he wouldn't reach the handle connection func
         if client_socket in clients:
             clients.remove(client_socket)  # remove this socket from the clients list
         if client_socket in client_ids:

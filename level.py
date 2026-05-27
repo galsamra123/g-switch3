@@ -11,6 +11,8 @@ class Level:
     def __init__(self, tmx_map, player_id):
 
         self.window = pygame.display.get_surface()
+        if self.window is None:
+            raise ValueError("window was not initialized")
         self.all_sprites = pygame.sprite.Group()
         # creates List<Sprite> allSprites = new List<Sprite>();
         self.collisions_sprites = pygame.sprite.Group()
