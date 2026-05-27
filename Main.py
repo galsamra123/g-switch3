@@ -6,6 +6,7 @@ from level import Level
 from settings import *
 from threading import Thread
 from Network import Connection
+
 logger = logging.getLogger(__name__)
 
 
@@ -126,7 +127,7 @@ class Game:
             except ValueError as e:
                 logger.error(f"error is: {e}")
 
-        self.tmx_maps = {0: load_pygame('graphics/maptest1.tmx')}
+        self.tmx_maps = {0: load_pygame('graphics/level1.tmx')}
         # Creating a dic that will contain all the level to switch
 
         self.current_stage = Level(self.tmx_maps[0], self.player_id)
@@ -142,16 +143,16 @@ class Game:
             daemon=True
         ).start()
 
-    def winner_screen(self, winner, screen):
+    def winner_screen(self, winner):
         title_font = pygame.font.Font(None, 100)
         title1_font = pygame.font.Font(None, 50)
-        screen.fill("black")
+        self.display_surface.fill("black")
         title = title_font.render(winner, True, "white")
         titel1 = title1_font.render("for restart press R", True, "gray")
 
-        screen.blit(title, (WINDOW_WIDTH / 2 - title.get_width() / 2, WINDOW_HEIGHT / 2))
-        screen.blit(titel1, (WINDOW_WIDTH / 2 - titel1.get_width() / 2,
-                             WINDOW_HEIGHT / 2 - title.get_height() - 25))
+        self.display_surface.blit(title, (WINDOW_WIDTH / 2 - title.get_width() / 2, WINDOW_HEIGHT / 2))
+        self.display_surface.blit(titel1, (WINDOW_WIDTH / 2 - titel1.get_width() / 2,
+                                           WINDOW_HEIGHT / 2 - title.get_height() - 25))
 
     def receive_from_server(self):
         while True:
@@ -242,7 +243,7 @@ class Game:
                 self.current_stage.run(self.game_over)
 
             if self.game_over:
-                self.winner_screen(self.winner_txt, self.display_surface)
+                self.winner_screen(self.winner_txt)
 
             if self.started:
                 player = self.current_stage.player
