@@ -22,6 +22,7 @@ def handle_connection(client_socket, client_address):
     :return: None
     """
     global game_over, match_started
+    client_restarted = False
 
     try:
         logging.info('New connection received from ' + client_address[0] + ':' + str(client_address[1]))
@@ -33,7 +34,7 @@ def handle_connection(client_socket, client_address):
                 break
             msg = data.decode()
             if msg == "Restart":
-                disconnected_id = client_ids.get(client_socket)
+                client_restarted = True
                 if client_socket in clients:
                     clients.remove(client_socket)  # remove this socket from the clients list
                 if client_socket in client_ids:
@@ -122,7 +123,7 @@ def handle_connection(client_socket, client_address):
             match_started = False
             game_over = False
             players_finished.clear()
-        if disconnected_id is not None and len(clients) > 0:
+        if disconnected_id is not None and len(clients) > 0 and not game_over and match_started:
             loser_id = disconnected_id
             if loser_id == 1:
                 winner_id = 2
