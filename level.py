@@ -34,7 +34,7 @@ class Level:
     def setup(self, tmx_map):
         logging.info("LAYERS:")
         for layer in tmx_map.layers:
-            logger.info(f"{layer.name} {type(layer)}")  # to see al the layer types in the map
+            logger.debug(f"{layer.name} {type(layer)}")  # to see al the layer types in the map
         self.map_width = tmx_map.width * TILE_SIZE
         self.map_height = tmx_map.height * TILE_SIZE
         self.bg = tmx_map.get_layer_by_name('background').image
@@ -91,7 +91,7 @@ class Level:
 
         alive_right = []
         alive_left = []
-        logger.info(f"alive_right: {alive_right}, alive_left: {alive_left}")
+        logger.debug(f"alive_right: {alive_right}, alive_left: {alive_left}")
         if not self.player.is_dead and not self.player.won:  # if the player alive
             alive_right.append(self.player.rect.right - self.camera_x)  # adds his right x to a list
             alive_left.append(self.player.rect.left - self.camera_x)  # adds his left x to a list
@@ -99,12 +99,12 @@ class Level:
         if not self.p2.is_dead and not self.p2.won:
             alive_right.append(self.p2.rect.right - self.camera_x)
             alive_left.append(self.p2.rect.left - self.camera_x)
-        logger.info(f"after update alive_right: {alive_right}, alive_left: {alive_left}")
+        logger.debug(f"after update alive_right: {alive_right}, alive_left: {alive_left}")
 
         if alive_right:  # if this list not empty at least one player alive so also the left isn't empty
             leader_right = max(alive_right)
             trailer_left = min(alive_left)
-            logger.info(f"leader_right: {leader_right}, trailer_left: {trailer_left}")
+            logger.debug(f"leader_right: {leader_right}, trailer_left: {trailer_left}")
 
             if leader_right >= WINDOW_WIDTH * 0.85:  # if the leader is running out of space speed camera up
                 self.camera_xchanger = 9
@@ -114,11 +114,11 @@ class Level:
 
             elif leader_right >= WINDOW_WIDTH * 0.75:  # if the leader is about to get close to run out of space speed
                 self.camera_xchanger = 7  # up a little
-            logger.info(f"camera_xchanger: {self.camera_xchanger}")
+            logger.debug(f"camera_xchanger: {self.camera_xchanger}")
         # if not self.player.is_dead and not self.player.won:
         if not match_over:  # if match_over == false
             self.camera_x += self.camera_xchanger
-            logger.info(f"camera_x: {self.camera_x}")
+            logger.debug(f"camera_x: {self.camera_x}")
         if not self.player.is_dead and not self.player.won:  # if not dead and not won check:
             if self.player.rect.right < self.camera_x:
                 self.player.die()

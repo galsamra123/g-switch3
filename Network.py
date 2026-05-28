@@ -1,5 +1,6 @@
 import socket
 from protocol import *
+from settings import *
 import logging
 logger = logging.getLogger(__name__)
 
@@ -7,12 +8,13 @@ logger = logging.getLogger(__name__)
 class Connection:
     def __init__(self, serverip):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # creates client_socket
         self.client_socket.settimeout(3)  # when connect() happens wait 3 seconds
         self.server = serverip
-        self.port = 5002
-        self.addr = (self.server, self.port)
+        self.port = SERVER_PORT
+        self.addr = (self.server, self.port)  # tuple
 
-        self.first_msg = self.connect()
+        self.first_msg = self.connect()  # save the first msg cause it's the id
 
     def connect(self):
         try:
@@ -37,7 +39,6 @@ class Connection:
         if msg.startswith('id,'):
 
             return int(msg.split(',')[1])
-
         raise ValueError(f"Expected id message, got: {msg}")
 
     def send(self, data):

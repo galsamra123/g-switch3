@@ -43,11 +43,11 @@ class Player(pygame.sprite.Sprite):
     def on_wall(self):
         test_rect_y = self.last_rect.copy()
         test_rect_y.y += self.gravity  # checks 1 pixel in gravity direction
-        logger.info(f"test_rect_y: {test_rect_y}")
+        logger.debug(f"test_rect_y: {test_rect_y}")
 
         for sprite in self.collision_sprites:
             if test_rect_y.colliderect(sprite.rect):  # if there is a collide with collision sprites (only walls)
-                logger.info(f"im on wall sprite")
+                logger.debug(f"im on wall sprite")
                 return True
 
         return False
@@ -67,9 +67,9 @@ class Player(pygame.sprite.Sprite):
 
     def move(self):
         # X movement + horizontal collision
-        logger.info(f"before move: {self.rect.x}, {self.rect.y}, {self.y_changer}")
+        logger.debug(f"before move: {self.rect.x}, {self.rect.y}, {self.y_changer}")
         self.rect.x += self.x_changer
-        logger.info(f"after move {self.rect.x}, {self.rect.y}, {self.y_changer}")
+        logger.debug(f"after move {self.rect.x}, {self.rect.y}, {self.y_changer}")
 
         self.collision('horizontal')
         # Y movement + vertical collision
@@ -183,5 +183,5 @@ class Player(pygame.sprite.Sprite):
             logger.info(f"is dead: {self.is_dead}, won: {self.won}")
             return
         self.last_rect = self.rect.copy()
-        logger.info(f"last_rect: {self.last_rect}")
+        logger.debug(f"last_rect: {self.last_rect}")
         self.move()

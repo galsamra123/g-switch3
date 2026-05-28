@@ -242,7 +242,7 @@ class Game:
                     # the server and mark as disconnected
 
                 if event.type == pygame.KEYDOWN:
-                    logger.info('key pressed')
+                    logger.debug('key pressed')
                     if self.game_over or self.other_player_restart:  # while the game is finished
                         if event.key == pygame.K_r:
                             self.network.send("Restart".encode())
@@ -250,13 +250,13 @@ class Game:
                             self.restart()
 
                     elif event.key == pygame.K_SPACE:  # the game still runs
-                        logger.info('space pressed')
-                        logger.info(f"my gravity is {self.current_stage.player.gravity}")
+                        logger.debug('space pressed')
+                        logger.debug(f"my gravity is {self.current_stage.player.gravity}")
                         before_flip_gravity = self.current_stage.player.gravity
                         self.current_stage.player.flip_on_wall()
                         if self.current_stage.player.gravity == before_flip_gravity:  # if wall flip not happen
                             self.current_stage.flip_on_player()
-                        logger.info(f"my gravity now is {self.current_stage.player.gravity}")
+                        logger.debug(f"my gravity now is {self.current_stage.player.gravity}")
             if self.other_player_restart:
                 self.restart_screen()
                 pygame.display.update()

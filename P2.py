@@ -18,12 +18,12 @@ class P2(pygame.sprite.Sprite):
 
     def update_pos(self, x, y):
         self.last_rect = self.rect.copy()
-        logger.info(f"last rect: {self.last_rect}")
+        logger.debug(f"last rect: {self.last_rect}")
         self.rect.topleft = (x, y)
-        logger.info(f"update rect: {self.rect}")
+        logger.debug(f"update rect: {self.rect}")
 
     def smoth_draw(self):
         self.draw_x += (self.rect.x - self.draw_x) * 0.45
-        logger.info(f"smoth draw x: {self.draw_x}")
+        logger.debug(f"smoth draw x: {self.draw_x}")
         self.draw_y += (self.rect.y - self.draw_y) * 0.45
-        logger.info(f"smoth draw y: {self.draw_y}")
+        logger.debug(f"smoth draw y: {self.draw_y}")
